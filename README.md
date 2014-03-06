@@ -9,12 +9,12 @@ IPython Notebooks that contain lectures on Temporary Structures
 
 Week 0
 
-* [Course Introduction](nbviewer.ipython.org/urls/raw.github.com/damontallen/Construction-Lectures/master/Week%200%20-%20Greetings.ipynb)
-
+* [Course Introduction](http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%200%20-%20Greetings.ipynb)
+                        
 Week 1
 
 * [Class Introduction](http://nbviewer.ipython.org/urls/raw.github.com/damontallen/Construction-Lectures/master/Week%201%20-%20Class%20Introduction.ipynb)
-* [How to Complete Team and Individual Assignments](nbviewer.ipython.org/urls/raw.github.com/damontallen/Construction-Lectures/master/Week%200%20-%20Greetings.ipynb)
+* [How to Complete Team and Individual Assignments](http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%201%20-%20How%20to%20Complete%20Team%20and%20Individual%20Assignments.ipynb)
 
 Week 2
 
@@ -24,4 +24,4 @@ Week 2
 
 Week 3
 
-* [Timber Beams](nbviewer.ipython.org/urls/raw.github.com/damontallen/Construction-Lectures/master/Week%203%20-%20Timber%20Beam%20Lecture.ipynb)
+* [Timber Beams](http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%203%20-%20Timber%20Beam%20Lecture.ipynb)
