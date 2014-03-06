@@ -1734,396 +1734,1369 @@ text-align: inherit;
 <section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="BCN-4423---Temporary-Structures">BCN 4423 - Temporary Structures<a class="anchor-link" href="#BCN-4423---Temporary-Structures">&#182;</a></h1>
+<h1 id="Timber-Beams">Timber Beams<a class="anchor-link" href="#Timber-Beams">&#182;</a></h1>
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h1>
+<important class="missing">
+Video Placeholder
+<important>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Timber-Beam-Failure-Modes">Timber Beam Failure Modes<a class="anchor-link" href="#Timber-Beam-Failure-Modes">&#182;</a></h2>
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<iframe width="420" height="315" src="//www.youtube.com/embed/g43sFmgHOCk" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>(Press the light blue down arrow at the bottom right next)</em></p>
-<p>If any part of this presentation does not work contact the <a href="http://helpdesk.ufl.edu/">UF Computing Help Desk</a> and tell them you need help with a &quot;reveal.js presentation&quot;.</p>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>(Press the blue down arrow at the bottom right when you are done with the video.)</em></p>
-</div>
-    </div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="You-made-it!">You made it!<a class="anchor-link" href="#You-made-it!">&#182;</a></h2>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Press the play button.</p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Greeting.wav"
-         type='audio/wav'>
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
 <p>
-Your user agent does not support the HTML5 Audio element.
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
 </p>
 <p></audio><a></a></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://helpdesk.ufl.edu/">UF Computing Help Desk</a></p>
-<p><em>(Note: you made need to tell them that you are using a &quot;reveal.js&quot; presentation)</em></p>
-<p><strong><font style="font:italic bold 16px arial;">Keep a look out for the <font style="color:LightBlue;">LIGHT</font> and <font style = "color:DarkBlue;">DARK BLUE</font> down arrows.</font></strong></p>
-<h3 id="useful-tip">Useful Tip:</h3>
-<p>If you use Firefox or Chrome then installind one of the following extensions will make viewing inages in lectures easier.</p>
+<p>You can see an animation of the three failure modes of a timber beam that we will be checking this semester, shear, bending, and deflection. (<a href="http://timber.ce.wsu.edu/Supplements/BeamDesign/defaultpage.asp">Source page</a>).</p>
+<p><em>Note that you may have to right click on the images and select play if the animations do not play in a loop.</em></p>
+<iframe src="http://timber.ce.wsu.edu/Supplements/BeamDesign/defaultpage.asp"  style="width:610px; height:495px;"></iframe>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Don't know and want to know why the shear stress failure presents as a horizontal crack, read <a href="http://fp.optics.arizona.edu/optomech/references/OPTI_222/OPTI_222_W10.pdf">this</a>.</p>
+<p><em>(Click the down arrow to hear a brief description of the failure mode we won't be looking at.)</em></p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Wind-Uplift">Wind Uplift<a class="anchor-link" href="#Wind-Uplift">&#182;</a></h3>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When a timber beam is loaded in a way such that the compression side of the beam in bending is on the opposite side from the loading, i.e. wind uplift, then we need to check beam stability. In a steel beam this is know as lateral torsional buckling. In timber we check this with the <span class="math">\(C_L\)</span> adjustment factor.</p>
+<p>Because we are always loading the beams, in this course, on the same side as the compression, we will not be using <span class="math">\(C_L\)</span>. If you want to learn about it I subject reading through the beam examples in the &quot;Structural Wood Design Solved Example Problems&quot; of your wood design package.</p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Timber-Beam-Analysis">Timber Beam Analysis<a class="anchor-link" href="#Timber-Beam-Analysis">&#182;</a></h2>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The process of analyzing a timber beam goes like this.</p>
+<ol style="list-style-type: decimal">
+<li>Determine the section properties, in Table 1B of the Supplement, based on the cross sectional size of the beam.</li>
+<li>Find out the material properties of the beam based on the species, grade, and size of the beam by looking in either Table 4A, 4B or 4D.</li>
+<li>Apply the adjustment factors to <span class="math">\(F_b\)</span>, <span class="math">\(F_v\)</span>, and <span class="math">\(E\)</span> to find the allowable stresses.</li>
+<li>Calculate the actual stresses for bending, and shear, and find the actual deflections of the beam.</li>
+<li>Make comparisons between the actual and allowable values.</li>
+<li>Write a summary of your results and conclude is the beam is adequate.</li>
+</ol>
+<p>In hand soutiond we will typically go back and forth between steps 3 and 4 looking at the the allowable and actual values for bending, shear, and deflection rather than finding all of the allowable vales then all of the actual values. In the design process we can stop as soon as we find a failure mode rather than doing additional work.</p>
+<p>You should be aware that in this course I will want you to solve all the values regardless if you find a failure mode early on.</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's work through an example to see the whole process.</p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Typical Problem Statement:</strong></p>
+<p>A 2x10 Douglas Fir-South Grade No.2 beam is used as a floor joist. The joists span are 10'-6&quot;, and they are spaced 16&quot; on center. Wet service conditions prevail. The deflection limits are L/360 for live load and L/240 for total load. <em>(This comes from Chapter 16 of the <a href="http://www2.iccsafe.org/states/florida_codes/">Floida Building Code</a> (FBC).)</em> The floor is subjected to a uniform dead load of 15 psf and live load of 75 psf.</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Values from problem statement:</p>
 <ul>
-<li>Firefox - <a href="https://addons.mozilla.org/en-US/firefox/addon/thumbnail-zoom-plus/?src=search">Thumbnail Zoom Plus</a></li>
-<li>Chrome - <a href="https://chrome.google.com/webstore/detail/hover-free/hcmnnggnaofmhflgomfjfbndngdoogkj">Hover Free</a> (Not to be confused with Hover Zoom.)</li>
+<li><span class="math">\(\text{Span }=L = 10&#39; 6&quot; = 10.5 ft\)</span></li>
+<li><span class="math">\(\text{Grade }=\text{ No.2}\)</span></li>
+<li><span class="math">\(\text{Size }=\text{ 2x10}\)</span></li>
+<li><span class="math">\(\text{Spacing }= 16&quot; = 1.333 ft = \text{ on center}\)</span></li>
+<li><span class="math">\(\text{Live Load }=LL=75 psf\)</span></li>
+<li><span class="math">\(\text{Dead Load }=DL=15 psf\)</span></li>
+<li><span class="math">\(\text{Deflection Limits: }\)</span><br /></li>
+<li><span class="math">\(\frac{L}{360} \text{ for Live Load}\)</span></li>
+<li><span class="math">\(\frac{L}{240} \text{ for Dead Load}\)</span></li>
 </ul>
-<p><em>(Press the blue arrow to the right at the bottom right of the screen to move on the the Course Objectives.)</em></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note about this course:</p>
+<p>To be clear, for simplisty reasons, I generally will give you a deflection limit to use so you will not have to look it up. I often will give you a deflection limit that is more conservative than you you will find in the table but in practice you should look at the construction specifications for the limits you need to use.</p>
+<p><em>(See below for the Deflection Limits table and notes.)</em></p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="http://i.imgur.com/HDSPyHh.png"><img src="http://i.imgur.com/HDSPyHh.png" title="FBC: Table 1604.3 Deflection Limits" style = "max-width:300px; max-height:300px;  border:1px solid blue; float:left; margin-right:3px;"/></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Table 1604.3 Notes:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>For structural roofing and siding made of formed metal sheets, the total load deflection shall not exceed l/60. For secondary roof structural members supporting formed metal roofing, the live load deflection shall not exceed l/150. For secondary wall members supporting formed metal siding, the design wind load deflection shall not exceed l/90. For roofs, this exception only applies when the metal sheets have no roof covering.</p></li>
+<li><p>Interior partitions not exceeding 6 feet in height and flexible, folding and portable partitions are not governed by the provisions of this section. The deflection criterion for interior partitions is based on the horizontal load defined in Section 1607.13.</p></li>
+<li><p>See Section 2403 for glass supports.</p></li>
+<li><p>For wood structural members having a moisture content of less than 16 percent at time of installation and used under dry conditions, the deflection resulting from L + 0.5 D is permitted to be substituted for the deflection resulting from L + D.</p></li>
+<li><p>The above deflections do not ensure against ponding. Roofs that do not have sufficient slope or camber to assure adequate drainage shall be investigated for ponding. See Section 1611 for rain and ponding requirements and Section 1503.4 for roof drainage requirements.</p></li>
+<li><p>The wind load is permitted to be taken as 0.42 times the &quot;component and cladding&quot; loads for the purpose of determining deflection limits herein.</p></li>
+<li><p>For steel structural members, the dead load shall be taken as zero.</p></li>
+<li><p>For aluminum structural members or aluminum panels used in skylights and sloped glazing framing, roofs or walls of sunroom additions or patio covers, not supporting edge of glass or aluminum sandwich panels, the total load deflection shall not exceed l/60. For continuous aluminum structural members supporting edge of glass, the total load deflection shall not exceed l/175 for each glass lite or l/60 for the entire length of the member, whichever is more stringent. For aluminum sandwich panels used in roofs or walls of sunroom additions or patio covers, the total load deflection shall not exceed l/120.</p></li>
+<li><p>For cantilever members, l shall be taken as twice the length of the cantilever.</p></li>
+<li><p>Screen surfaces shall be permitted to include a maximum of 25% solid flexible finishes.</p></li>
+</ol>
 </div><div style=display:none>
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="added-to-test-other-audio-file-sources">ADDED TO TEST OTHER AUDIO FILE SOURCES</h3>
-<p><em>This player only shows when the source link can be streamed.</em></p>
-<audio controls data-autoplay> <source src="http://www.4shared.com/music/-1cE9xD7ce/Greeting.html"
-         type='audio/wav'>
-<p>
-Your user agent does not support the HTML5 Audio element.
-</p>
-<p></audio></p>
+<h3 id="Load-Timber_Beam-Class:">Load Timber_Beam Class:<a class="anchor-link" href="#Load-Timber_Beam-Class:">&#182;</a></h3>
+</div>
+
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="o">%</span><span class="k">run</span> <span class="n">Beams</span><span class="o">/</span><span class="n">Timber_beam_v_02</span><span class="o">.</span><span class="n">py</span>
+<span class="n">beam</span> <span class="o">=</span> <span class="n">Timber_Beam</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+In order to display plots inline in the IPython notebook you must include the following magic command:
+%matplotlib inline
+If you need to display plot you will need to used the following commmand
+%matplotlib inline
+
+Note: The atribute &apos;pick_list&apos; is now available_grades (added Jan, 6, 2014)
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Course-Objectives">Course Objectives<a class="anchor-link" href="#Course-Objectives">&#182;</a></h2>
+<h2 id="Looking-up-Additional-Beam-Properties">Looking up Additional Beam Properties<a class="anchor-link" href="#Looking-up-Additional-Beam-Properties">&#182;</a></h2>
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.-Course-Introduction-Objectives">1. Course Introduction Objectives<a class="anchor-link" href="#1.-Course-Introduction-Objectives">&#182;</a></h3>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Introduction.wav"
-         type='audio/wav'>
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
 <p>
-Your user agent does not support the HTML5 Audio element.
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
 </p>
-<p></audio></p>
+<p></audio><a></a></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Because I did not indicate otherwise in the problem statement we will assume that this is a floor subject to construction loading. This means that my load duration factor, <span class="math">\(C_D = 1.25\)</span>. Note that I will indicate what load duration factor to use by saying &quot;wind loading&quot; <span class="math">\((C_D= 1.6)\)</span>, &quot;design for multiple reuses&quot; or &quot;assume long term load duration&quot; <span class="math">\((C_D = 1.0)\)</span>.</p>
+<p>From Table 1B in the <a href="http://www.awc.org/pdf/2005-NDS-Supplement.pdf">Supplement</a> we find:</p>
 <ul>
-<li>Be able to find the information contained within the course syllabus.</li>
-<li>Be able to state why temporary structures are important to the construction industry.</li>
-<li>Be able to use the course discussion page and make a post.</li>
+<li><span class="math">\(\text{Thickness} = b = 1 \frac{1}{2}&quot; = 1.5 \text{inches}\)</span></li>
+<li><span class="math">\(\text{Width} = d = 9 \frac{1}{4}&quot; = 9.25 \text{inches}\)</span></li>
+<li><span class="math">\(\text{Section Area}=A=13.88 in^2\)</span></li>
 </ul>
-</div></section><section>
+<p>Because the problem statement did not have any indication that the beam was in the weak orientation, or &quot;on the flat&quot;, we will assume that it is in the strong orientation. This means that the bending is occurring about the X-X axis.</p>
+<ul>
+<li><span class="math">\(\text{Section Modulus} = S_{xx} = 21.39 in^3\)</span></li>
+<li><span class="math">\(\text{Moment of Inertia} = I_{xx} = 98.93 in^4\)</span></li>
+</ul>
+<p>In equations I will drop the xx (or yy) subscript, for convenience, making these values <span class="math">\(S\)</span> and <span class="math">\(I\)</span>. You should also not that if you know the values for <span class="math">\(b\)</span> and <span class="math">\(d\)</span> you can easiely calculate the values for <span class="math">\(A\)</span>, <span class="math">\(S\)</span> and <span class="math">\(I\)</span> because all sawn lumber timber sections are rectangular.</p>
+<p><span class="math">\[A = b \times d\]</span></p>
+<p><span class="math">\[S = \frac{1}{6}\times b \times d^2\]</span></p>
+<p><span class="math">\[I = \frac{1}{12}\times  b \times d^3\]</span></p>
+<p>(Of course if the beam is on the flat the values for <span class="math">\(b\)</span> and <span class="math">\(d\)</span> switch in these equaions.)</p>
+</div><div style=display:none>
+    
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.-Introduction-to-Timber-Objectives">2. Introduction to Timber Objectives<a class="anchor-link" href="#2.-Introduction-to-Timber-Objectives">&#182;</a></h3>
+<h3 id="Set-the-Basic-Attributes-of-the-Beam:">Set the Basic Attributes of the Beam:<a class="anchor-link" href="#Set-the-Basic-Attributes-of-the-Beam:">&#182;</a></h3>
+</div>
+
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">C_D</span> <span class="o">=</span> <span class="mf">1.25</span> <span class="c">#duration factor</span>
+<span class="n">beam</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="c">#in</span>
+<span class="n">beam</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="mf">9.25</span> <span class="c">#in</span>
+<span class="n">beam</span><span class="o">.</span><span class="n">span</span> <span class="o">=</span> <span class="mf">10.5</span> <span class="c">#ft</span>
+<span class="n">beam</span><span class="o">.</span><span class="n">C_r_setter</span><span class="p">(</span><span class="n">spacing</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span> <span class="c">#in (beam spacing)</span>
+<span class="n">beam</span><span class="o">.</span><span class="n">C_M</span><span class="o">.</span><span class="n">use</span> <span class="o">=</span> <span class="bp">True</span> <span class="c">#Use wet sevice factor</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Beam-Geometric-Properties:">Beam Geometric Properties:<a class="anchor-link" href="#Beam-Geometric-Properties:">&#182;</a></h3>
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Wood%20Intro.wav"
-         type='audio/wav'>
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
 <p>
-Your user agent does not support the HTML5 Audio element.
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
 </p>
-<p></audio></p>
+<p></audio><a></a></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Be able to recall aspects of wood as a material.</li>
-<li>Be able to find appropriate sections in the Timber NDS code.</li>
-<li>Be able to differentiate the need for tributary area and width.</li>
-</ul>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.-Timber-Beam-Objectives">3. Timber Beam Objectives<a class="anchor-link" href="#3.-Timber-Beam-Objectives">&#182;</a></h3>
+<p>In summary the beam geomertric values are:</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">geometry_latex</span>
+</pre></div>
+
+</div>
 </div>
 
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Timber%20Beam.wav"
-         type='audio/wav'>
-<p>
-Your user agent does not support the HTML5 Audio element.
-</p>
-<p></audio></p>
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[3]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+$$b = 1.50" \text{, }d = 9.25" \text{, }A = 13.88 in^2 \text{, }S = 21.39 in^3 \text{, }I = 98.93 in^4 \text{, }L = 10.50'  = 126.00"$$
+
 </div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Be able to analyze and compare allowable vs actual bending stress.</li>
-<li>Be able to analyze and compare allowable vs actual shear stress.</li>
-<li>Be able to analyze and compare allowable vs actual deflections</li>
-</ul>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.-Timber-Column-Objectives">4. Timber Column Objectives<a class="anchor-link" href="#4.-Timber-Column-Objectives">&#182;</a></h3>
 </div>
 
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Timber%20Column.wav"
-         type='audio/wav'>
-<p>
-Your user agent does not support the HTML5 Audio element.
-</p>
-<p></audio></p>
 </div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Be able to analyze and compare allowable vs actual slenderness ratio.</li>
-<li>Be able to analyze and compare allowable vs actual compressive stress parallel to grain.</li>
-<li>(Optional) Be able to recognize Euler buckling.</li>
-</ul>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="5.-Bracing-Objectives">5. Bracing Objectives<a class="anchor-link" href="#5.-Bracing-Objectives">&#182;</a></h3>
 </div>
 
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Bracing.wav"
-         type='audio/wav'>
-<p>
-Your user agent does not support the HTML5 Audio element.
-</p>
-<p></audio></p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Be able to calculate the lateral load on a brace from a wall form.</li>
-<li>Be able to calculate the lateral load on a brace from a slab form.</li>
-<li>Be able to discuss why braces should be loaded in tension.</li>
-<li>Be able to analyze and compare allowable vs actual tension stress in a brace.</li>
-<li>(Optional) The student should be able to discuss why a brace’s connection stiffness is important to the stability of a slab form.</li>
-</ul>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="6.-(Optional)-Span-Limit-Derivations-Objectives">6. (Optional) Span Limit Derivations Objectives<a class="anchor-link" href="#6.-(Optional)-Span-Limit-Derivations-Objectives">&#182;</a></h3>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Span%20Derivation.wav"
-         type='audio/wav'>
-<p>
-Your user agent does not support the HTML5 Audio element.
-</p>
-<p></audio></p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Be able to interpret the typical span limit calculations.</li>
-</ul>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="7.-Wall-Form-Objectives">7. Wall Form Objectives<a class="anchor-link" href="#7.-Wall-Form-Objectives">&#182;</a></h3>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Wall%20form.wav"
-         type='audio/wav'>
-<p>
-Your user agent does not support the HTML5 Audio element.
-</p>
-<p></audio></p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Be able to identify the components of a wall form.</li>
-<li>Be able to calculate the concrete pressure for a wall form.</li>
-<li>Be able to calculate the required spacing for plywood supports.</li>
-<li>Be able to calculate the required spacing for stud support.</li>
-<li>Be able to calculate the required spacing for wale support.</li>
-<li>Be able to analyze and compare the allowable vs actual compression perpendicular to grain for studs and wales.</li>
-<li>Be able to calculate the required strength for wall ties.</li>
-<li>Be able to summarize the design requirements for a wall form.</li>
-<li>Be able to use the design tables in the Formwork text to design a wall form.</li>
-</ul>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://farm6.staticflickr.com/5220/5413970858_4d9e8d63aa_o.jpg"><img src="http://farm6.staticflickr.com/5220/5413970858_4d9e8d63aa_o.jpg" alt="Wall Formwork" style="max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;"></a></p>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="8.-Column-Form-Objectives">8. Column Form Objectives<a class="anchor-link" href="#8.-Column-Form-Objectives">&#182;</a></h3>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Column%20form.wav"
-         type='audio/wav'>
-<p>
-Your user agent does not support the HTML5 Audio element.
-</p>
-<p></audio></p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Be able to calculate the concrete pressure for a concrete form.</li>
-<li>Be able to analyze and compare the allowable vs actual bending stress for flat studs in column forms.</li>
-<li>Be able to find the correct spacings for column form clamps</li>
-</ul>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://farm7.staticflickr.com/6017/5872155429_12086e489c_b.jpg"> <img src="http://farm7.staticflickr.com/6017/5872155429_12086e489c_b.jpg" alt="Column Form" style="max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;"></a></p>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="9.-Slab-Form-Objectives">9. Slab Form Objectives<a class="anchor-link" href="#9.-Slab-Form-Objectives">&#182;</a></h3>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Slab%20form.wav"
-         type='audio/wav'>
-<p>
-Your user agent does not support the HTML5 Audio element.
-</p>
-<p></audio></p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Be able to identify the components of a slab form.</li>
-<li>Be able to calculate the required spacing for plywood supports.</li>
-<li>Be able to calculate the required spacing for joist support.</li>
-<li>Be able to calculate the required spacing for stringer support.</li>
-<li>Be able to analyze and compare the allowable vs actual compression perpendicular to grain for joist and strings as well as for shores and strings.</li>
-<li>Be able to analyze and compare allowable vs actual compressive load of a timber shore.</li>
-<li>Be able to use the design tables in the Formwork text to design a slab form.</li>
-</ul>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href = "http://farm3.staticflickr.com/2788/4502345383_0378219f7a.jpg"><img src="http://farm3.staticflickr.com/2788/4502345383_0378219f7a.jpg" alt="Slab Formwork" style="max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;"></a></p>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="10.-Re-shoring-Objectives">10. Re-shoring Objectives<a class="anchor-link" href="#10.-Re-shoring-Objectives">&#182;</a></h3>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Reshoring.wav"
-         type='audio/wav'>
-<p>
-Your user agent does not support the HTML5 Audio element.
-</p>
-<p></audio></p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Be able to calculate the loads on shores and the slabs they support.</li>
-</ul>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://upload.wikimedia.org/wikipedia/commons/3/3a/Slab_Formwork_Tables.JPG"> <img src="http://upload.wikimedia.org/wikipedia/commons/3/3a/Slab_Formwork_Tables.JPG" alt="Slab Shoring" style="max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;"></a></p>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="11.-Scaffolding-Objectives">11. Scaffolding Objectives<a class="anchor-link" href="#11.-Scaffolding-Objectives">&#182;</a></h3>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Scaffold.wav"
-         type='audio/wav'>
-<p>
-Your user agent does not support the HTML5 Audio element.
-</p>
-<p></audio></p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Be able to identify the types of common scaffolding.</li>
-<li>Be able to identify who can design a scaffold.</li>
-<li>Be able to recall the types and amounts of scaffold loads.</li>
-<li>Be able to calculate the ASD load combinations for a scaffold platform.</li>
-<li>Be able to devise a frame scaffold plan.</li>
-</ul>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://upload.wikimedia.org/wikipedia/commons/8/80/Cincinnati-scaffolding.jpg"> <img src="http://upload.wikimedia.org/wikipedia/commons/8/80/Cincinnati-scaffolding.jpg" alt="Scaffolfing Image" style="max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;"></a></p>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="12.-Excavation-Objectives">12. Excavation Objectives<a class="anchor-link" href="#12.-Excavation-Objectives">&#182;</a></h3>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Excavation.wav"
-         type='audio/wav'>
-<p>
-Your user agent does not support the HTML5 Audio element.
-</p>
-<p></audio></p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Be able to identify characteristics of soil types A, B, and C.</li>
-<li>Be able to classify soil based on the OSHA field tests.</li>
-<li>Be able to identify the parts of excavation shoring components.</li>
-<li>Be able to demonstrate the correct interpretation of the the OSHA Timber Trench Shoring design tables.</li>
-</ul>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href=""></p>
-<p><img src="http://upload.wikimedia.org/wikipedia/commons/8/85/Sbh_s600.JPG" alt = "Trench Shoring" style="max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;"> </a></p>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="13.-Equipment-Objectives">13. Equipment Objectives<a class="anchor-link" href="#13.-Equipment-Objectives">&#182;</a></h3>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Equipment.wav"
-         type='audio/wav'>
-<p>
-Your user agent does not support the HTML5 Audio element.
-</p>
-<p></audio></p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Be able to identify material hoisting equipment based on load requirements.</li>
-<li>Be able to identify personnel hoisting equipment based on usage requirements.</li>
-<li>Be able to be able to state alternative formwork systems.</li>
-</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Required-Texts">Required Texts<a class="anchor-link" href="#Required-Texts">&#182;</a></h2>
+<h2 id="Loads">Loads<a class="anchor-link" href="#Loads">&#182;</a></h2>
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Required%20Text.wav"
-         type='audio/wav'>
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
 <p>
-Your user agent does not support the HTML5 Audio element.
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
 </p>
-<p></audio></p>
+<p></audio><a></a></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://www.awc.org/standards/nds.php">The 2005 Wood Design Package</a> (I recommend that you purchase the hard copy)</p>
-<p>Required text: Hurd, M. K. “Formwork for Concrete” 7 th edition: ISBN-10: 0870311778</p>
+<p>We know from the problem statement that:</p>
+<ul>
+<li><span class="math">\(\text{Live Load }=LL=75 psf\)</span></li>
+<li><span class="math">\(\text{Dead Load }=DL=15 psf\)</span></li>
+</ul>
+<p>But they are not in the form we can use them in our beam equations. Beams are analyzed using line loads not pressure. We need to use the triburary width to convert these loads to line loads.</p>
+<p>The triburary width is half the distance from one beam to the next on both sides. To make sense of this let's make the variable for the spacing from one beam to the next to be lower case <span class="math">\(s\)</span>.</p>
+<p><span class="math">\(W_{trib} = \frac{1}{2} \times s + \frac{1}{2} \times s = s\)</span></p>
+<p>In our case the spacing is <span class="math">\(16&quot;\)</span>, so <span class="math">\(W_{trib} = 16&quot;\)</span>.</p>
+<p>The variable for line loads is usually <span class="math">\(w\)</span>, and we find <span class="math">\(w\)</span> by multiplying the pressure by the tributary width.</p>
+<p><em>(Click down for the line load calculations.)</em></p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a></a></p>
-<p><a href="http://www.awc.org/standards/nds.php"> <img src = "http://www.awc.org/new_images/2005WDP_new2_AWC.jpg" alt = "2005 Wood Design Package" style="max-width:200px; max-height:200px; border:1px solid blue; float:left; margin-right:3px;" ></a></p>
-<p><a href="http://www.amazon.com/s?ie=UTF8&field-keywords=Hurd%2C%20M.%20K.%20%3FFormwork%20for%20Concrete%3F&index=blended&link_code=qs&sourceid=Mozilla-search&tag=wwwcanoniccom-20"> <img src = "http://g-ecx.images-amazon.com/images/G/01/ciu/97/87/fef7a2c008a0ece6eb30c010.L._SY300_.jpg" alt = '“Formwork for Concrete” 7 th edition' style="max-width:200px; max-height:200px; border:1px solid blue; float:left; margin-right:3px;" ></a></p>
+<p>For the Live Load:</p>
+<ul>
+<li><span class="math">\(w_{live} = LL \times W_{trib}\)</span></li>
+<li><span class="math">\(w_{live} = 75 psf \times 16&quot; \times \frac{1 ft}{12 in} \text{ (for the unit conversion)}\)</span></li>
+<li><span class="math">\(w_{live} = 100 \frac{lb}{ft} \text{ or } 100 plf\)</span></li>
+</ul>
+<p>and for the Dead Load:</p>
+<ul>
+<li><span class="math">\(w_{dead} = DL \times W_{trib}\)</span></li>
+<li><span class="math">\(w_{dead} = 15 psf \times 16&quot; \times \frac{1 ft}{12 in}\)</span></li>
+<li><span class="math">\(w_{dead} = 20 plf\)</span></li>
+</ul>
+<p>The total line load <span class="math">\(w\)</span> is just the super position of the two (just add them):</p>
+<p><span class="math">\[w = w_{dead} + w_{live}\]</span></p>
+<p><span class="math">\[w = 20 plf + 100 plf\]</span></p>
+<p><span class="math">\[w = 120 plf\]</span></p>
+</div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Set-Beam-Loads:">Set Beam Loads:<a class="anchor-link" href="#Set-Beam-Loads:">&#182;</a></h3>
+</div>
+
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">D</span> <span class="o">=</span> <span class="mi">15</span> <span class="c">#psf - Dead Load</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">6</span><span class="o">/</span><span class="mi">12</span><span class="o">*</span><span class="mi">150</span> <span class="c">#psf - Live Load (concrete slab without workers [an addidtional 50 psf])</span>
+<span class="n">w_live</span> <span class="o">=</span> <span class="n">L</span><span class="o">*</span><span class="mi">16</span><span class="o">/</span><span class="mi">12</span>
+<span class="n">w_dead</span> <span class="o">=</span> <span class="n">D</span><span class="o">*</span><span class="mi">16</span><span class="o">/</span><span class="mi">12</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">w_dead</span><span class="o">+</span><span class="n">w_live</span>
+<span class="n">beam</span><span class="o">.</span><span class="n">loads</span><span class="o">=</span><span class="p">[{</span><span class="s">&quot;x0&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;x1&quot;</span><span class="p">:</span><span class="n">beam</span><span class="o">.</span><span class="n">span</span><span class="p">,</span><span class="s">&quot;w&quot;</span><span class="p">:</span><span class="n">w</span><span class="p">}]</span>
+<span class="n">beam</span><span class="o">.</span><span class="n">u_c_f</span> <span class="o">=</span> <span class="mi">12</span><span class="o">**</span><span class="mi">3</span> <span class="c">#in^3 (for deflection calculations)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;L = </span><span class="si">%g</span><span class="s"> psf&quot;</span><span class="o">%</span><span class="k">L</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;w_live = </span><span class="si">%g</span><span class="s"> plf&quot;</span><span class="o">%</span><span class="k">w_live</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;w_dead = </span><span class="si">%g</span><span class="s"> plf&quot;</span><span class="o">%</span><span class="k">w_dead</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;w = </span><span class="si">%g</span><span class="s"> plf&quot;</span><span class="o">%</span><span class="k">w</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+L = 75 psf
+w_live = 100 plf
+w_dead = 20 plf
+w = 120 plf
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Pick-the-Species-and-Grade:">Pick the Species and Grade:<a class="anchor-link" href="#Pick-the-Species-and-Grade:">&#182;</a></h3>
+</div>
+
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">list_wood</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+&apos;ALASKA CEDAR&apos;               &apos;ALASKA HEMLOCK&apos;             &apos;ALASKA SPRUCE&apos;             
+&apos;ALASKA YELLOW CEDAR&apos;        &apos;ASPEN&apos;                      &apos;BALDCYPRESS&apos;               
+&apos;BEECH-BIRCH-HICKORY&apos;        &apos;COTTONWOOD&apos;                 &apos;DOUGLAS FIR-LARCH&apos;         
+&apos;DOUGLAS FIR-LARCH (NORTH)&apos;  &apos;DOUGLAS FIR-SOUTH&apos;          &apos;EASTERN HEMLOCK-BALSAM FIR&apos;
+&apos;EASTERN HEMLOCK-TAMARACK&apos;   &apos;EASTERN SOFTWOODS&apos;          &apos;EASTERN WHITE PINE&apos;        
+&apos;HEM-FIR&apos;                    &apos;HEM-FIR (NORTH)&apos;            &apos;MIXED MAPLE&apos;               
+&apos;MIXED OAK&apos;                  &apos;NORTHERN RED OAK&apos;           &apos;NORTHERN SPECIES&apos;          
+&apos;NORTHERN WHITE CEDAR&apos;       &apos;RED MAPLE&apos;                  &apos;RED OAK&apos;                   
+&apos;REDWOOD&apos;                    &apos;SOUTHERN PINE&apos;              &apos;SPRUCE-PINE-FIR&apos;           
+&apos;SPRUCE-PINE-FIR (SOUTH)&apos;    &apos;WESTERN CEDARS&apos;             &apos;WESTERN WOODS&apos;             
+&apos;WHITE OAK&apos;                  &apos;YELLOW POPLAR&apos;              
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="s">&#39;DOUGLAS FIR-SOUTH&#39;</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[7]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">available_grades</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&apos;Select Structural&apos;, &apos;No.1&apos;, &apos;No.2&apos;, &apos;No.3&apos;, &apos;Stud&apos;, &apos;Construction&apos;, &apos;Standard&apos;, &apos;Utility&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">grade</span><span class="o">=</span><span class="s">&#39;No.2&#39;</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Unmodified-Stresses-from-Tables-4A,-4B,-or-4D">Unmodified Stresses from Tables 4A, 4B, or 4D<a class="anchor-link" href="#Unmodified-Stresses-from-Tables-4A,-4B,-or-4D">&#182;</a></h2>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>(Press the Right arrow at the bottom right)</em></p>
+<p>We know that the species of lumber of the beam is Douglas Fir-South and the grade is No.2. We also know that the beam is <span class="math">\(2&quot;\)</span> thick so what table do you think we should look in?</p>
+<ul>
+<li>Table 4A (page 31) Reference Design Values for Visually Graded Dimension Lumber (2&quot; - 4&quot; thick)</li>
+<li>Table 4B (page 38) Reference Design Values for Visually Graded Southern Pine Dimension Lumber (2&quot; - 4&quot; thick)</li>
+<li>Table 4D (page 45) Reference Design Values for Visually Graded Timbers (5&quot; x 5&quot; and larger)</li>
+</ul>
+<p><em>(Click the light blue down arrow to find out)</em></p>
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Well the beam is <span class="math">\(2&quot;\)</span> thick, so we don't use Table 4D; it is for members that are <span class="math">\(5&quot; \times 5&quot;\)</span> or larger.</p>
+<p>The species is not Southern Pine, so we don't use Table 4B.</p>
+<p>That means wee need to look up the unmodifies allowable stresses in Table 4A of the <a href="http://www.awc.org/pdf/2005-NDS-Supplement.pdf">Supplement</a>.</p>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Table-4A-Values">Table 4A Values<a class="anchor-link" href="#Table-4A-Values">&#182;</a></h3>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On page 32 of the in the Supplement we find that,</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">unmodified_stresses_latex</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[9]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+$$\text{The unmodified stresses for a No.2 grade, douglas fir-south, member are:}$$ 
+$${}$$
+ $$F_b = 850 psi\text{ - for bending}$$
+$$F_t = 525 psi\text{ - for axial tension}$$
+$$F_v = 180 psi\text{ - for shear}$$
+$$F_{c \perp} = 520 psi\text{ - for crushing (compresion perpendicular to grain)}$$
+$$F_c = 1350 psi\text{ - for axial compression (compresion parallel to grain)}$$
+$$E = 1.2e+06 psi\text{ - the unadjusted Young's modulus}$$
+$$E_{min} = 440000 psi\text{ - the unadjusted Young's modulus used in column loading analysis}$$
+
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Pre-Quiz">Pre-Quiz<a class="anchor-link" href="#Pre-Quiz">&#182;</a></h2>
+<h2 id="Loading-Analysis">Loading Analysis<a class="anchor-link" href="#Loading-Analysis">&#182;</a></h2>
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/Prequiz.wav"
-         type='audio/wav'>
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
 <p>
-Your user agent does not support the HTML5 Audio element.
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
 </p>
-<p></audio></p>
+<p></audio><a></a></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Download and fill out the prequiz. You will need to scan it (or that a photo of it) and upload it to the class website.</p>
-<p><a href="prequiz">Prequiz Download</a></p>
+<p>For timber beams under a uniform line loading we generally check check bending first since it is the most likely failure mode. We will then check shear and finally deflection.</p>
+<p>In this course we are generally only concerned with one load combination; that is the construction total load. We always will use it for bending and shear and most of the time we will use it for deflection as well. Since this is or first example it is a more complete example, e.g. we will be checking deflections for the Live Load <em>and</em> the Total Load.</p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Bending-Analysis:">Bending Analysis:<a class="anchor-link" href="#Bending-Analysis:">&#182;</a></h3>
+</div>
+</section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The total uniform line load of our beam <span class="math">\(w=120plf\)</span>. For a beam with a uniform line load the value of the bending moment can be found with the following equation.</p>
+<p><span class="math">\[\text{Moment} = \frac{\text{Line Load} \times (\text{Beam Span (or Length)})^2}{8}\]</span></p>
+<p><span class="math">\[M = \frac{w L^2}{8}\]</span></p>
+<p><span class="math">\[M = \frac{120 plf \times (10.5 ft)^2}{8}\]</span></p>
+<p>so,</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">M_latex</span> <span class="c">#in foot pounds</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[10]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+$$M = 1653.75 \text{ ft-lb}$$ 
+${}$
+
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><span class="math">\[S = \frac{1}{6}b d^2\]</span></p>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Actual-Bending-Stress">Actual Bending Stress<a class="anchor-link" href="#Actual-Bending-Stress">&#182;</a></h4>
+</div>
+</section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The actual stresses are denoted using lower case <span class="math">\(f\)</span> instead of the upper case <span class="math">\(F\)</span> for the allowable stresses. The allowable bending stress is <span class="math">\(F_b&#39;\)</span> so our actual bending stress is <span class="math">\(f_b\)</span>. You may recall from your previous classes that the bending moment,</p>
+<p><span class="math">\(\text{Moment} = \text{Maximum Bending Stress} \times \text{Section Modulus}\)</span></p>
+<p>or,</p>
+<p><span class="math">\(M = f_b \times S\)</span></p>
+<p>so,</p>
+<p><span class="math">\(f_b = \frac{M}{S}\)</span></p>
+<p>where <span class="math">\(f_b\)</span> is the stress at the extreme fibers of the top and bottom surfaces.</p>
+<p>You may have also seen the realtionship written as <span class="math">\(\sigma = \frac{M \times c}{I}\)</span> but <span class="math">\(S = \frac{I}{c}\)</span>.</p>
+<p><em>(Click the down arrow to see our beam's actual bending stress.)</em></p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">f_b_latex</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[11]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+$$f_b = \frac{M}{S}$$  
+${}$
+ $$f_b = \frac{1653.75 ft\text{-}lb}{21.39 in^3}$$ 
+$${}$$
+ $f_b = 927.74 psi$
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>(Note that this is equation 3.3-1 on page 13 in the 2005 Timber NDS.)</em></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Allowable-Stress">Allowable Stress<a class="anchor-link" href="#Allowable-Stress">&#182;</a></h4>
+</div>
+</section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We need to know what adjustment factors we have to apply to <span class="math">\(F_b\)</span> to get the allowable bending stress. These are listed in the NDS Table 4.3.1. For bending we have: <span class="math">\(C_D\)</span>, <span class="math">\(C_M\)</span>, <span class="math">\(C_t\)</span>, <span class="math">\(C_L\)</span>, <span class="math">\(C_F\)</span>, <span class="math">\(C_{fu}\)</span>, <span class="math">\(C_i\)</span>, and <span class="math">\(C_r\)</span>. Lets look at each of them in turn.</p>
+<p><span class="math">\(C_D = 1.25\)</span> as was discussed previously because this problem is for construction loading on a temporary structure.</p>
+<p><span class="math">\(C_M\)</span> is found at the from of the tables where we found <span class="math">\(F_b\)</span>. In this case we used Table 4A and on page 30 we see that for a beam loaded in wet service conditions we have a <span class="math">\(C_M =0.85\)</span>. But there is the footnote *. Based on the footnote we need to check to see if <span class="math">\(F_b \times C_F\)</span> is less than 1,150 psi.</p>
+<p><span class="math">\(C_F\)</span> is found on the same page (since this is not Southern Pine). We look at the rows with the white background because the grade is No.2; the beam is nominally 10&quot; wide, and 2&quot; thick so <span class="math">\(C_F = 1.1\)</span></p>
+<p><span class="math">\(F_b \times C_F = 850 psi \times 1.1 = 935 psi\)</span> which is less than 1,150 psi therefore <span class="math">\(C_M = 1.0\)</span>.</p>
+<p>Whenever one of the adjustment factors does not apply, then the value you use for it is always one. In a hand solution you can indicate that the adjustment factor does not apply by drawing a slash through it in the symbolic form of the equation if it is one, (look at the example hand solution to see this).</p>
+<p><span class="math">\(C_t\)</span> is the adjustment factor for high temperature exposure. You can look that up in Table 2.3.3 of the Timber NDS but in this course none of the timber members will be exposed to high temperatures, so <span class="math">\(C_t = 1\)</span>.</p>
+<p><span class="math">\(C_L\)</span> is used only when we have a wind uplift condition in a roof, so... not in this course and <span class="math">\(C_L = 1\)</span></p>
+<p><span class="math">\(C_{fu}\)</span> is for flat use. This is on the same page as <span class="math">\(C_M\)</span> but our beam is loaded in the strong direction so <span class="math">\(C_{fu}=1\)</span>.</p>
+<p><span class="math">\(C_r\)</span> is the repetitive member factor. This is also on the same page as <span class="math">\(C_M\)</span> and by reading the description of when it is applied we see that our beam is less than 24&quot; on center, and is connected by a floor to 3 or more members. (If it is part of a floor that is of any usable size this is always true.) Since we have met the usage criteria then <span class="math">\(C_r = 1.15\)</span>.</p>
+<p><em>(Click the down arrow for the Allowable Stress calculations.)</em></p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[12]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">F_b_latex</span> <span class="c">#(allowable)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stderr">
+<pre>
+Beams/Timber_beam_v_02.py:215: UserWarning: Warning: Becuase F_b*C_F&lt;=1150 then C_M = 1 (see note)
+  warnings.warn(&quot;Warning: Becuase F_b*C_F&lt;=1150 then C_M = 1 (see note)&quot;)
+
+</pre>
+</div>
+</div>
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[12]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+$$F_b' = F_b \times C_D \times C_M \times C_t \times C_L \times C_F \times C_{fu} \times C_i \times C_r$$ 
+$${}$$
+ $$F_b' = 850 psi \times 1.25 \times 1 \times 1 \times 1.00 \times 1.1 \times 1 \times 1\times 1.15$$ 
+$${}$$
+ $$F_b' = 1344.06 psi$$
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><span class="math">\(F_b&#39; = 1344 psi \geq f_b = 928 psi \text{ so this beam is GOOD in bending.}\)</span></p>
+<p><em>(You may motice that there is the warning message alerting us to the change in the value of <span class="math">\(C_M\)</span>. This is something that I display automatically to check homework solutions.)</em></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Shear-Analysis:">Shear Analysis:<a class="anchor-link" href="#Shear-Analysis:">&#182;</a></h3>
+</div>
+</section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For a beam under a uniformly distrubuted line load the maximum shear in the beam can be found using the following equation.</p>
+<p><span class="math">\[\text{Shear} = \frac{\text{Line Load} \times \text{Beam Span (or Length)}}{2}\]</span></p>
+<p><span class="math">\[V = \frac{w L}{2}\]</span></p>
+<p>Recall that <span class="math">\(w=120plf\)</span> and <span class="math">\(L = 10.5 ft\)</span>.</p>
+<p><span class="math">\[V = \frac{120 plf \times 10.5 ft}{2}\]</span></p>
+<p>so</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">V_latex</span> <span class="c"># in pounds</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[13]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+$$V = 630.00 \text{ lb}$$ 
+${}$
+
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Actual-Stress">Actual Stress<a class="anchor-link" href="#Actual-Stress">&#182;</a></h3>
+</div>
+</section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You might remember from previous classes that the shear stress the maximum shear stress is,</p>
+<p><span class="math">\(\text{Shear Stress} = \frac{3}{2} \times \frac{\text{Shear}}{\text{Cross Sectional Area}}\)</span></p>
+<p><span class="math">\(\text{Shear Stress} = \frac{3}{2}  \frac{V}{A}\)</span></p>
+<p><em>(If not you can look at <a href="http://fp.optics.arizona.edu/optomech/references/OPTI_222/OPTI_222_W10.pdf">this</a> to review.)</em></p>
+<p>Remember that in Timber we use a lower case <span class="math">\(f\)</span> to indicate actual stress. That means for our beam the shear stress is,</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">f_v_latex</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[14]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+$$f_v = \frac{3}{2}\frac{V}{A}$$  
+${}$
+ $$f_v = \frac{3 \times 630.00 lb}{2 \times 13.88 in^2}$$ 
+$${}$$
+ $f_v = 68.11 psi$
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>(Note that this is equation 3.4-2 in the Timber NDS.)</em></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Allowable-Stress">Allowable Stress<a class="anchor-link" href="#Allowable-Stress">&#182;</a></h3>
+</div>
+</section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Again we refer to Table 4.3.1 to derermine the adjustment factors we need to apply to <span class="math">\(F_v\)</span> to find the allowable shear stress <span class="math">\(F_v&#39;\)</span>.</p>
+<p>We find that we need <span class="math">\(C_D\)</span>, <span class="math">\(C_M\)</span>, <span class="math">\(C_t\)</span>, and <span class="math">\(C_i\)</span>.</p>
+<p><span class="math">\(C_D = 1.25\)</span> from before.</p>
+<p><span class="math">\(C_M\)</span> is found from the adjustment values for Table 4A on page 30 of the <a href="http://www.awc.org/pdf/2005-NDS-Supplement.pdf">Supplement</a>. Since our beam is being used in wet service conditions, <span class="math">\(C_M = 0.97\)</span>.</p>
+<p><span class="math">\(C_t = 1\)</span> for the same reason we previosly covered in bending.</p>
+<p><span class="math">\(C_i\)</span>, the incising factor, is found on the same page as Table 4.3.1 of the Timber NDS. Suffice it to say that <span class="math">\(C_i\)</span> is only used if the beam has been notched for some reason like the installation of plumbing lines in older buildings. None of the beams in this course will be notched in any way; so <span class="math">\(C_i =1\)</span> always.</p>
+<p>Our beam's allowabe shear stress <span class="math">\((F_v&#39;)\)</span> is,</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[15]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">F_v_latex</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[15]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+$$F_v' = F_v \times C_D \times C_M \times C_t \times C_i$$ 
+$${}$$
+ $$F_v' = 180 psi \times 1.25 \times 0.97 \times 1 \times 1$$ 
+$${}$$
+ $$F_v' = 218.25 psi$$
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><span class="math">\(F_v&#39; = 218 psi \geq f_v = 68 psi \text{ so this beam is GOOD in shear.}\)</span></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Deflection-Analysis:">Deflection Analysis:<a class="anchor-link" href="#Deflection-Analysis:">&#182;</a></h2>
+</div>
+</section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Deflection analysis is done slightly differently from the rest of allowable stress design. In all of the other checks we are applying the adjustment factors to the allowable stress. When checking deflection we are modifying the actual deflection by adjusting the allowable Young's modulus (or elastic modulus).</p>
+<p>Part of the reason for this is that the allowable deflection is specified by the use case and is not an intrinsic property of a beam.</p>
+<p>Anyway, the adjustment factors for the Young's modulus listed in Table 4.3.1 of the Timber NDS are, <span class="math">\(C_M\)</span>, <span class="math">\(C_t\)</span>, <span class="math">\(C_i\)</span>, and <span class="math">\(C_T\)</span>.</p>
+<p>You will notice that <span class="math">\(C_D\)</span> is not listed. The load duration does not have an effect on the initial deflection of a beam. The effect of long term loading to a beam's deflection is called creep and is discussed in section 3.5.2 of the NDS but we do not need to concern ourselves with this.</p>
+<p><span class="math">\(C_M\)</span> is found at the beginning of Table 4A (on page 30) of the <a href="http://www.awc.org/pdf/2005-NDS-Supplement.pdf">Supplement</a> and since our beam is being used in wet service conditions, <span class="math">\(C_M = 0.9\)</span> for <span class="math">\(E\)</span>.</p>
+<p><span class="math">\(C_t = 1\)</span> as was discussed previously.</p>
+<p><span class="math">\(C_i = 1\)</span> as was discussed previously.</p>
+<p><span class="math">\(C_T\)</span> is found in section 4.4.2 of the Timber NDS and that section only applies to wood trusses. Which means, <span class="math">\(C_T = 1\)</span> for our beam.</p>
+<p><em>(Click on the down arrow to see the calculation for <span class="math">\(E&#39;\)</span>.)</em></p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div></section><section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[16]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">E_latex</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[16]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+$$E' = E \times C_M \times C_t \times C_i \times C_T$$ 
+$${}$$
+ $$E' = 1200000 psi \times 0.9 \times 1 \times 1 \times 1$$ 
+$${}$$
+ $$E' = 1080000 psi$$
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><span class="math">\[I = \frac{1}{12} b d^3\]</span></p>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Actual-Deflection">Actual Deflection<a class="anchor-link" href="#Actual-Deflection">&#182;</a></h3>
+</div>
+</section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The deflection equation for a beam subject to a uniformly distributed line load is, <span class="math">\[\text{Deflection} = \Delta = \frac{5 \times \text{Line Load} \times \text{(Span Length)}^4}{384 \times \text{Allowable Young&#39;s Modulus} \times \text{Moment of Inertia}}\]</span></p>
+<p>or just,</p>
+<p><span class="math">\[\Delta = \frac{5 \times w \times L^4}{384 \times E&#39; \times I}\]</span></p>
+<p>The equation can also be found on page 4 of the <a href="http://www.awc.org/pdf/DA6-BeamFormulas.pdf">BEAM DESIGN FORMULAS WITH SHEAR AND MOMENT DIAGRAMS</a>, a free pdf download from the American Wood Council.</p>
+<p>Becaue the units of <span class="math">\(E&#39;\)</span> are <span class="math">\(psi\)</span>, <span class="math">\(I\)</span> are <span class="math">\(in^4\)</span>, <span class="math">\(w\)</span> are <span class="math">\(plf\)</span>, <span class="math">\(L\)</span> are in <span class="math">\(ft\)</span> and we want <span class="math">\(\Delta\)</span> to come out inches, we need to apply a unit conversion factor.</p>
+<p>Let's work one out.</p>
+<p><em>(Click the down arrow to see the calculations for the unit conversion factor)</em></p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The unit of deflection are going to be in inches.</p>
+<p><span class="math">\[in=\frac{5 \times plf \times ft^4}{384 \times psi \times in^4}\]</span></p>
+<p>The constants don't mater to the units,</p>
+<p><span class="math">\[in=\frac{plf \times ft^4}{psi \times in^4} = \frac{\frac{lb}{ft} \times ft \times ft^3}{\frac{lb}{in^2} \times in^4}\]</span></p>
+<p><span class="math">\[in=\frac{lb \times ft^3}{lb \times in^2} = \frac{ft^3}{in^2}\]</span></p>
+<p>So we need to convert <span class="math">\(ft^3\)</span> to <span class="math">\(in^3\)</span>.</p>
+<p><span class="math">\[in=\frac{ft \times ft \times ft}{in^2} \times \frac{12 in}{1 ft}\times \frac{12 in}{1 ft}\times \frac{12 in}{1 ft}\]</span></p>
+<p>or</p>
+<p><span class="math">\[in=\frac{ft \times ft \times ft}{in^2} \times \left(\frac{12 in}{1 ft}\right)^3\]</span></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Live-Load-Deflections">Live Load Deflections<a class="anchor-link" href="#Live-Load-Deflections">&#182;</a></h2>
+</div>
+</section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[17]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">loads</span><span class="o">=</span><span class="p">[{</span><span class="s">&quot;x0&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;x1&quot;</span><span class="p">:</span><span class="n">beam</span><span class="o">.</span><span class="n">span</span><span class="p">,</span><span class="s">&quot;w&quot;</span><span class="p">:</span><span class="n">w_live</span><span class="p">}]</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The value for the line load <span class="math">\((w)\)</span> in the delfection equation for the Live Load is <span class="math">\(w_{live} = 100plf\)</span>.</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[18]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">deflect_simple_latex</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[18]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+$$\Delta =\frac{5 w L^4}{384 E' I}$$ 
+$${}$$
+ $$\text{or if the units of }w\text{ are plf and }L\text{ is in ft,}$$ 
+$${}$$
+ $$\Delta =\frac{5 w L^4}{384 E' I}\times \left(\frac{12"}{1'}\right)^3$$ 
+$${}$$
+ $$\Delta =\frac{5 \times 100 plf \times (10.5 ft)^4}{384 \times 1080000 psi \times 98.93 in^4} \times \left(\frac{12"}{1'}\right)^3$$ 
+$${}$$
+ $$\Delta = 0.256"$$
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>(Click the down arrow to see the allowable Live Load deflections.)</em></p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Allowable-Live-Load-Deflection">Allowable Live Load Deflection<a class="anchor-link" href="#Allowable-Live-Load-Deflection">&#182;</a></h3>
+</div>
+</section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since the Allowable deflection for Live load only is <span class="math">\(\frac{L}{360}\)</span> for a floor member,</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[18]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">deflect_allow</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">360</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[18]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+$$\Delta_{allowed} = \frac{L}{360}$$ 
+$${}$$
+ $$\Delta_{allowed} = \frac{10.5 ft}{360}\times\frac{12 in}{1 ft} $$ 
+$${}$$
+ $$\Delta_{allowed} = 0.35"$$
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><span class="math">\(\Delta_{allowed} = 0.35&quot; \geq \Delta_{live} = 0.256&quot; \text{ the beam is GOOD for Live Load Deflection.}\)</span></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Total-Load-Deflection">Total Load Deflection<a class="anchor-link" href="#Total-Load-Deflection">&#182;</a></h2>
+</div>
+</section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[19]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">loads</span><span class="o">=</span><span class="p">[{</span><span class="s">&quot;x0&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;x1&quot;</span><span class="p">:</span><span class="n">beam</span><span class="o">.</span><span class="n">span</span><span class="p">,</span><span class="s">&quot;w&quot;</span><span class="p">:</span><span class="n">w</span><span class="p">}]</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The value for the line load <span class="math">\((w)\)</span> in the delfection equation for the Total Load is <span class="math">\(w = 120plf\)</span>.</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[20]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">deflect_simple_latex</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[20]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+$$\Delta =\frac{5 w L^4}{384 E' I}$$ 
+$${}$$
+ $$\text{or if the units of }w\text{ are plf and }L\text{ is in ft,}$$ 
+$${}$$
+ $$\Delta =\frac{5 w L^4}{384 E' I}\times \left(\frac{12"}{1'}\right)^3$$ 
+$${}$$
+ $$\Delta =\frac{5 \times 120 plf \times (10.5 ft)^4}{384 \times 1080000 psi \times 98.93 in^4} \times \left(\frac{12"}{1'}\right)^3$$ 
+$${}$$
+ $$\Delta = 0.307"$$
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>(Click the down arrow to see the allowable Total Load deflections.)</em></p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Allowable-Total-Load-Deflection">Allowable Total Load Deflection<a class="anchor-link" href="#Allowable-Total-Load-Deflection">&#182;</a></h3>
+</div>
+</section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since the Allowable deflection for Total load is <span class="math">\(\frac{L}{240}\)</span> for a floor member,</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[21]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">beam</span><span class="o">.</span><span class="n">deflect_allow</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">240</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[21]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+$$\Delta_{allowed} = \frac{L}{240}$$ 
+$${}$$
+ $$\Delta_{allowed} = \frac{10.5 ft}{240}\times\frac{12 in}{1 ft} $$ 
+$${}$$
+ $$\Delta_{allowed} = 0.52"$$
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><span class="math">\(\Delta_{allowed} = 0.52&quot; \geq \Delta_{total} = 0.307&quot; \text{ the beam is GOOD for Total Load Deflection.}\)</span></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Analysis-Summary">Analysis Summary<a class="anchor-link" href="#Analysis-Summary">&#182;</a></h2>
+</div>
+</section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav"
+     type='audio/wav'>
+<p>
+<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+</p>
+<p></audio><a></a></p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>An analysis of a 2x10 Douglas Fir-South Grade No.2 beam, used as a floor joist with a span of 10'-6&quot;, spaced 16&quot; on center, in wet service conditions, with a Live Load deflection limit of L/360 and a Total Load deflection limit of L/240, yields these results.</p>
+<p><span class="math">\(F_b&#39; = 1344 psi \geq f_b = 928 psi \text{ so this beam is GOOD in bending.}\)</span></p>
+<p><span class="math">\(F_v&#39; = 218 psi \geq f_v = 68 psi \text{ so this beam is GOOD in shear.}\)</span></p>
+<p><span class="math">\(\Delta_{\text{live allowed}} = 0.35&quot; \geq \Delta_{live} = 0.256&quot; \text{ the beam is GOOD for Live Load Deflection.}\)</span></p>
+<p><span class="math">\(\Delta_{\text{total allowed}} = 0.52&quot; \geq \Delta_{total} = 0.307&quot; \text{ the beam is GOOD for Total Load Deflection.}\)</span></p>
+<p>Therefore this beam is adequate for these loading conditions.</p>
 </div><div style=display:none>
     
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>CSS stylesheet</p>
 <head>
-<link rel="stylesheet" type="text/css" href="custom.css">
 <style>
 important {font:italic bold 16px arial;}
 .missing {color:Red}
@@ -2142,7 +3115,19 @@ subslide {color:DarkBlue;}
 
 .fix {max-height:200px; max-width:200px;}
 
-.maxbox {max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;}
+.narb { width:54em; word-wrap: break-word; }
+
+.nar_cell { width:16em; word-wrap: break-word; }
+
+
+
+table 
+{
+width:85%;
+
+}
+
+
 
 </style>
 </head>
@@ -2151,12 +3136,12 @@ subslide {color:DarkBlue;}
 
 &lt;audio controls data-autoplay preload&gt;
  &lt;source src=&quot;https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav&quot;
-         type=&#39;audio/wav&#39;&gt;
- &lt;p&gt;Your user agent does not support the HTML5 Audio element.&lt;/p&gt;
+     type=&#39;audio/wav&#39;&gt;
+ &lt;p&gt;&lt;strong&gt;Your user agent does not support the HTML5 Audio element or the files are missing.&lt;/strong&gt;&lt;/p&gt;
 &lt;/audio&gt;&lt;a&gt;&lt;/a&gt;
 
 */
-max box == style=&quot;max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;&quot;</code></pre>
+class = &quot;max box&quot; == style=&quot;max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;&quot;</code></pre>
 </div>
     </div></section>
     </section>
