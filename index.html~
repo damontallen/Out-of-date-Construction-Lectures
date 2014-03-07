@@ -40,7 +40,7 @@
 <h4>
 <a name="Week 0 Lectures" class="anchor" href="#week-0"><span class="octicon octicon-link"></span></a>Week 0</h4>
 
-<pre><code><a href="Greetings.slides.html">Course Introduction</a>
+<pre><code><a href="Week 0 - Greetings.slides.html">Course Introduction</a>
 
 </code></pre>
 
@@ -58,10 +58,45 @@
 </h4>
 
 <pre><code><a href="Week 2 - Introduction to Wood as a Building Material.slides.html">Introduction to Wood as a Building Material</a>
-<a href="Tributary Width vs Tributary Area .slides.html">Tributary Width vs Tributary Area</a>
+<a href="Week 2 - Tributary Width vs Tributary Area.slides.html">Tributary Width vs Tributary Area</a>
 <a href="Week 2- Introduction to Timber NDS.slides.html">Introduction to the Timber Code</a>
 
 </code></pre>
+
+<h4>
+<a name="Week 3 Lectures" class="anchor" href="#week-3"><span class="octicon octicon-link"></span></a>Week 3
+</h4>
+
+<pre><code><a href="Week 3 - Timber Beam Lecture.slides.html">Timber Beams</a>
+
+</code></pre>
+
+<h4>
+<a name="Week 4 Lectures" class="anchor" href="#week-4"><span class="octicon octicon-link"></span></a>Week 4
+</h4>
+
+<pre><code><a href="Week 4 - (Optional) Euler Buckling.html">Euler Buckling (Optional)</a>
+<a href="Week 4 - Timber Column Lecture.html">Timber Column</a>
+
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <h3>
 <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
