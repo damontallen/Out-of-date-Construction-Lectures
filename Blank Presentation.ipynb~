@@ -39,8 +39,8 @@
      "metadata": {},
      "source": [
       "<audio controls data-autoplay preload>\n",
-      " <source src=\"https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3\"\n",
-      "         type='audio/mp3'>\n",
+      " <source src=\"https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav\"\n",
+      "         type='audio/wav'>\n",
       " <p><strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong></p>\n",
       "</audio><a></a>"
      ]
@@ -61,8 +61,8 @@
      "metadata": {},
      "source": [
       "<audio controls data-autoplay preload>\n",
-      " <source src=\"https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3\"\n",
-      "         type='audio/mp3'>\n",
+      " <source src=\"https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav\"\n",
+      "         type='audio/wav'>\n",
       " <p><strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong></p>\n",
       "</audio><a></a>"
      ]
@@ -118,15 +118,14 @@
       "    /* class = \"max box\" for img tags\n",
       "    \n",
       "    <audio controls data-autoplay preload>\n",
-      "     <source src=\"https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3\"\n",
-      "             type='audio/mp3'>\n",
+      "     <source src=\"https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.wav\"\n",
+      "             type='audio/wav'>\n",
       "     <p><strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong></p>\n",
       "    </audio><a></a>\n",
       "    \n",
       "    */\n",
       "    class = \"max box\" == style=\"max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;\"\n",
-      "    important == <strong><font style=\"font:italic bold 16px arial;\"> Text here </font></strong>\n",
-      "    Example <important class=\"missing\">Video Placeholder</important>"
+      "    important == <strong><font style=\"font:italic bold 16px arial;\"> Text here </font></strong>"
      ]
     }
    ],
