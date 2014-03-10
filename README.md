@@ -20,7 +20,7 @@ Week 2
 
 * [Introduction to Wood as a Building Material](http://nbviewer.ipython.org/urls/raw.github.com/damontallen/Construction-Lectures/master/Week%202%20-%20Introduction%20to%20Wood%20as%20a%20Building%20Material.ipynb)
 * [Tributary Width vs Tributary Area](http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%202%20-%20Tributary%20Width%20vs%20Tributary%20Area.ipynb)
-* [Introduction to the Timber Code](http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%202-%20Introduction%20to%20Timber%20NDS.ipynb)
+* [Introduction to the Timber Code](http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%202%20-%20Introduction%20to%20Timber%20NDS.ipynb)
 
 Week 3
 
