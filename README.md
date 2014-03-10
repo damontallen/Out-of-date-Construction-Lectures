@@ -25,3 +25,15 @@ Week 2
 Week 3
 
 * [Timber Beams](http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%203%20-%20Timber%20Beam%20Lecture.ipynb)
+
+Week 4
+
+* <a href="http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%204%20-%20(Optional)%20Euler%20Buckling.ipynb">(Optional) Euler Buckling</a>
+* [Timber Columns](http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%204%20-%20Timber%20Column%20Lecture.ipynb)
+
+Week 5
+
+* <a href="http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%205%20-%20Braced%20Wall%20(Part%20-%201%20Compression%20Bracing).ipynb">Bracing Introduction (Part 1 - Compresion Bracing)</a>
+* <a href="http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%205%20-%20Braced%20Wall%20(Part%20-%202%20Tension%20Bracing%20with%20Fasteners).ipynb">Bracing Introduction (Part 2 - Wall Form Tension Bracing)</a>
+* [Slab Bracing](http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%205%20-%20Slab%20Braces.ipynb)
+* <a href="http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%205%20-%20(Optional)%20Bracing%20Stiffness%20Requirements.ipynb">(Optional) Bracing Stiffness Requirements</a>
