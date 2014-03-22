@@ -1741,6 +1741,8 @@ text-align: inherit;
 <important class="missing">
 Video Placeholder
 <important>
+
+<p><em>(You can click on this link to skip the derivations and go to &quot;<a href="http://damontallen.github.io/Construction-Lectures/Week%206%20-%20(Optional)%20Span%20Length%20Derivations.slides.html#/13">How to use the Span Length Limits</a>&quot;.)</em></p>
 </div></section>
     </section><section>
     <section>
@@ -2039,12 +2041,13 @@ Video Placeholder
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The span limit for plywood panels, supported over three or more spans, due to rolling shear can be found based using Equation 11 from the <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/D510.pdf">APA Panel Design Specification</a>.</p>
-<p><span class="math">\(w  = \frac{20 F_s&#39; (Ib/Q)}{L}\)</span></p>
-<p>Correcting the equation for the units we want to use with we get.</p>
-<p><span class="math">\(w \times 1 ft = \frac{20 F_s&#39; (Ib/Q)}{L}\times 1 ft\)</span></p>
+<p><span class="math">\[w  = \frac{20 F_s&#39; (Ib/Q)}{L} \]</span></p>
+<p>Since this equation results in <span class="math">\(w\)</span> being in units of, <span class="math">\(\frac{plf}{1 ft}\)</span>, we'll convert it to the units we want to use by multiplying both sides by <span class="math">\(1 ft\)</span>.</p>
+<p><span class="math">\[w \times 1 ft = \frac{20 F_s&#39; (Ib/Q)}{L}\times 1 ft \]</span></p>
+<p>Solving for <span class="math">\(L\)</span> we get,</p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><span class="math">\(L  = \frac{20 F_s&#39; (Ib/Q)}{w}\)</span></p>
+<p><span class="math">\[L  = \frac{20 F_s&#39; (Ib/Q)}{w} \]</span></p>
 <p>Where:</p>
 <ul>
 <li><span class="math">\(L\)</span> is the length of the panel in units of <span class="math">\(inches\)</span></li>
@@ -2053,8 +2056,43 @@ Video Placeholder
 <li><span class="math">\(w\)</span> is the uniformly distributed load on the panel in units of <span class="math">\(plf\)</span></li>
 </ul>
 <p>Sometimes this equation is written in a way that <span class="math">\(L\)</span> comes out in feet. This looks like,</p>
-<p><span class="math">\(L  = \frac{F_s&#39; (Ib/Q)}{0.6 w}\)</span></p>
+<p><span class="math">\[L  = \frac{F_s&#39; (Ib/Q)}{0.6 w} \]</span></p>
 <p>Note: In both versions of this equation <span class="math">\(F_s&#39; = F_s \times C_D\)</span>.</p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-to-use-the-Span-Length-Limits">How to use the Span Length Limits<a class="anchor-link" href="#How-to-use-the-Span-Length-Limits">&#182;</a></h2>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this class, our typical set of span length equations are:</p>
+<p><span class="math">\[L = 10.95 \times \sqrt{\frac{F_b&#39; \times S }{w}} \text{ (For bending)}\]</span> <span class="math">\[L = 13.33\times \frac{F_v&#39; \times A}{w} + 2d \text{ (For shear)}\]</span> <span class="math">\[L = \frac{20 F_s&#39; (Ib/Q)}{w} \text{ (For plywood rolling shear)}\]</span> <span class="math">\[L = 1.69 \sqrt[3]{ \frac{ E&#39; I}{w}} \text{ (For limiting deflections to L/360)}\]</span> <span class="math">\[L = 3.23 \sqrt[4]{ \frac{ E&#39; I}{w}} \text{ (For limiting deflections to 1/16&quot;)}\]</span></p>
+<p><em>(See the slide below for all the variable definitions.)</em></p>
+<p>Once you solve the four for the member that you are working on you will have a list of four span lengths which correspond to particular failure modes. Since any span larger that the smallest length will result in that member failing in the failure mode of the smallest length, we have to set our span length to something smaller than that. For instance:</p>
+<ul>
+<li><span class="math">\(L_{bend} = 20.5&quot;\)</span></li>
+<li><span class="math">\(L_{shear} = 36.1&quot;\)</span></li>
+<li><span class="math">\(L_{L/360} = 25.6&quot;\)</span></li>
+<li><span class="math">\(L_{1/16&quot;} = 23.2&quot;\)</span></li>
+</ul>
+<p>For this beam bending controls and we cannot set our supports any farther apart than <span class="math">\(20.5&quot;\)</span> or the beam will fail in bending. However, <span class="math">\(20.5&quot;\)</span> is not the <em>optimal</em> support spacing; it's just the limit. Since this optimal value will depend on the use case, we will discuss that more when we get into formwork for walls, and again when we discuss slab forms.</p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the span length equations:</p>
+<ul>
+<li><span class="math">\(L\)</span> is the length of the beam in units of <span class="math">\(inches (in)\)</span></li>
+<li><p><span class="math">\(w\)</span> is the uniformly distributed load on the beam in units of <span class="math">\(plf\)</span></p></li>
+<li><span class="math">\(d\)</span> is the width of the beam in units of <span class="math">\(in\)</span></li>
+<li><span class="math">\(A\)</span> is the cross sectional area of the beam in units of <span class="math">\(in^2\)</span></li>
+<li><span class="math">\(S\)</span> is the section modulus of the beam in units of <span class="math">\(in^3\)</span></li>
+<li><p><span class="math">\(I\)</span> is the moment of inertia of the beam in units of <span class="math">\(in^4\)</span></p></li>
+<li><span class="math">\(F_b&#39;\)</span> is the maximum allowable bending stress of the beam in units of <span class="math">\(psi\)</span></li>
+<li><span class="math">\(F_v&#39;\)</span> is the maximum allowable shear stress in the beam in units of <span class="math">\(psi\)</span></li>
+<li><span class="math">\(F_s&#39;\)</span> is the maximum allowable rolling shear stress in the panel in units of <span class="math">\(psi\)</span></li>
+<li><span class="math">\(E&#39;\)</span> is the adjusted Young's modulus of the beam material in units of <span class="math">\(psi\)</span></li>
+<li><p><span class="math">\(Ib/Q\)</span> is the rolling shear constant of the panel units of <span class="math">\(in^2/ft\)</span></p></li>
+</ul>
 </div></section>
     </section><section>
     <section>
