@@ -1768,8 +1768,8 @@ Video Placeholder
 <p>Where:</p>
 <ul>
 <li><span class="math">\(w\)</span> is the uniformly distributed load on the beam, in units of <span class="math">\(plf\)</span></li>
-<li><span class="math">\(L\)</span> is the length of the beam, in units of <span class="math">\(inches\)</span></li>
-<li><span class="math">\(E&#39;\)</span> is the adjusted Young's modulus of the beam material, in units of <span class="math">\(psi\)</span></li>
+<li><span class="math">\(L\)</span> is the distance between supports, in units of <span class="math">\(inches\)</span></li>
+<li><span class="math">\(E&#39;\)</span> is the adjusted Young's modulus of the beam's material, in units of <span class="math">\(psi\)</span></li>
 <li><span class="math">\(I\)</span> is the moment of inertia of the beam, in units of <span class="math">\(in^4\)</span></li>
 </ul>
 <p>To start with we solve for <span class="math">\(L^4\)</span> in terms of <span class="math">\(\Delta_{max}\)</span>.</p>
@@ -1820,7 +1820,7 @@ Video Placeholder
 <p><span class="math">\[L =  1.69 \sqrt[3]{ \frac{ E&#39; I}{w}}\]</span></p>
 <p>Where:</p>
 <ul>
-<li><span class="math">\(L\)</span> is the length of the beam, in units of <span class="math">\(inches\)</span></li>
+<li><span class="math">\(L\)</span> is distance between the supports, in units of <span class="math">\(inches\)</span></li>
 <li><span class="math">\(w\)</span> is the uniformly distributed load on the beam, in units of <span class="math">\(plf\)</span></li>
 <li><span class="math">\(E&#39;\)</span> is the adjusted Young's modulus of the beam's material, in units of <span class="math">\(psi\)</span></li>
 <li><span class="math">\(I\)</span> is the moment of inertia of the beam, in units of <span class="math">\(in^4\)</span></li>
@@ -1873,7 +1873,7 @@ Video Placeholder
 <p><span class="math">\[ L = 3.23 \sqrt[4]{ \frac{ E&#39; I}{w}}\]</span></p>
 <p>Where:</p>
 <ul>
-<li><span class="math">\(L\)</span> is the length of the beam, in units of <span class="math">\(inches\)</span></li>
+<li><span class="math">\(L\)</span> is the distance between supports, in units of <span class="math">\(inches\)</span></li>
 <li><span class="math">\(E&#39;\)</span> is the adjusted Young's modulus of the beam's material, in units of <span class="math">\(psi\)</span></li>
 <li><span class="math">\(I\)</span> is the moment of inertia of the beam, in units of <span class="math">\(in^4\)</span></li>
 <li><span class="math">\(w\)</span> is the uniformly distributed load on the beam, in units of <span class="math">\(plf\)</span></li>
@@ -1901,8 +1901,8 @@ Video Placeholder
 <p><span class="math">\[M = \frac{w L^2}{10} \times \frac{1 ft}{12 in}\]</span></p>
 <p>Where:</p>
 <ul>
-<li><span class="math">\(M\)</span> is the maximum bending moment in the beam, in units of <span class="math">\(in-lbs\)</span></li>
-<li><span class="math">\(L\)</span> is the length of the beam, in units of <span class="math">\(inches\)</span></li>
+<li><span class="math">\(M\)</span> is the maximum bending moment in the beam, in units of <span class="math">\(in\)</span>-<span class="math">\(lbs\)</span></li>
+<li><span class="math">\(L\)</span> is distance between the supports, in units of <span class="math">\(inches\)</span></li>
 <li><span class="math">\(w\)</span> is the uniformly distributed load on the beam, in units of <span class="math">\(plf\)</span></li>
 </ul>
 <p><em>(Continued on the next slide)</em></p>
@@ -1929,7 +1929,7 @@ Video Placeholder
 <p><span class="math">\[L = 10.95 \sqrt{ \frac{in}{ft}} \times \sqrt{\frac{F_b&#39; \times S }{w}} \textbf{ or if the units are just implied } L = 10.95 \times \sqrt{\frac{F_b&#39; \times S }{w}}\]</span></p>
 <p>Where:</p>
 <ul>
-<li><span class="math">\(L\)</span> is the length of the beam, in units of <span class="math">\(inches\)</span></li>
+<li><span class="math">\(L\)</span> is the distance between supports, in units of <span class="math">\(inches\)</span></li>
 <li><span class="math">\(F_b&#39;\)</span> is the allowable bending stress of the beam, in units of <span class="math">\(psi\)</span></li>
 <li><span class="math">\(S\)</span> is the section modulus of the beam, in units of <span class="math">\(in^3\)</span></li>
 <li><span class="math">\(w\)</span> is the uniformly distributed load on the beam, in units of <span class="math">\(plf\)</span></li>
@@ -1960,9 +1960,9 @@ Video Placeholder
 <ul>
 <li><span class="math">\(V_{max}\)</span> is the maximum shear in a beam supported over three or more spans, in units of <span class="math">\(lbs\)</span></li>
 <li><span class="math">\(w\)</span> is the uniformly distributed load on the beam, in units of <span class="math">\(plf\)</span></li>
-<li><span class="math">\(L\)</span> is the length of the beam, in units of <span class="math">\(inches\)</span></li>
+<li><span class="math">\(L\)</span> is the distance between supports, in units of <span class="math">\(inches\)</span></li>
 </ul>
-<p>For beams that are loaded on the opposite side from the supports, we can take advantage of Section 3.4.3 in the Timber NDS. That section states, the maximum shear may be measured at a distance <span class="math">\(d\)</span> over from the edge of the supports. This is instead of the usual way, which is right at the supports. You may recall something similar to this from studying concrete beams. Instead of going over that explanation again, I've included the drawing of a concrete beam failing in shear to serve as a reminder about why this can be done.</p>
+<p>For beams that are loaded on the opposite side from the supports, we can take advantage of Section 3.4.3 in the Timber NDS. That section states, the maximum shear may be measured at a distance <span class="math">\(d\)</span> over from the edge of the supports. This is instead of the usual way, which is right at the supports. You may recall something similar to this from studying concrete beams. Instead of going over that explanation again, I've included the drawing of a concrete beam, failing in shear, to serve as a reminder about why this can be done.</p>
 <p><em>(Continued on the next slide.)</em></p>
 </div></section>
     </section><section>
@@ -2004,7 +2004,7 @@ Video Placeholder
 <p><span class="math">\[ L =  13.33\times \frac{F_v&#39; \times A}{w} + 2d \]</span></p>
 <p>Where:</p>
 <ul>
-<li><span class="math">\(L\)</span> is the length of the beam, in units of <span class="math">\(inches\)</span></li>
+<li><span class="math">\(L\)</span> is the distance between supports, in units of <span class="math">\(inches\)</span></li>
 <li><span class="math">\(F_v&#39;\)</span> is the maximum allowable shear stress in the beam, in units of <span class="math">\(psi\)</span></li>
 <li><span class="math">\(A\)</span> is the cross sectional area of the beam, in units of <span class="math">\(in^2\)</span></li>
 <li><span class="math">\(w\)</span> is the uniformly distributed load on the beam, in units of <span class="math">\(plf\)</span></li>
@@ -2026,7 +2026,7 @@ Video Placeholder
 <p></audio><a></a></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The span limit for plywood panels, supported over three or more spans, due to rolling shear, can be found based using Equation 11 from the <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/D510.pdf">APA Panel Design Specification</a>.</p>
+<p>The span limit for plywood panels, supported over three or more spans, due to rolling shear, can be found using Equation 11 from the <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/D510.pdf">APA Panel Design Specification</a>.</p>
 <p><span class="math">\[w  = \frac{20 F_s&#39; (Ib/Q)}{L} \]</span></p>
 <p>Since plywood is designed using a per unit foot procedure<span class="math">\(*\)</span>, this equation, (as well as all the other equations, when they are used with plywood), results in <span class="math">\(w\)</span> being in units of, <span class="math">\(\frac{plf}{1 ft}\)</span>. We convert it to the units we want to use by multiplying both sides by <span class="math">\(1 ft\)</span>.</p>
 <p><span class="math">\[w \times 1 ft = \frac{20 F_s&#39; (Ib/Q)}{L}\times 1 ft \]</span></p>
@@ -2036,7 +2036,7 @@ Video Placeholder
 <p><span class="math">\[L  = \frac{20 F_s&#39; (Ib/Q)}{w} \]</span></p>
 <p>Where:</p>
 <ul>
-<li><span class="math">\(L\)</span> is the length of the panel support spacing, in units of <span class="math">\(inches\)</span></li>
+<li><span class="math">\(L\)</span> is the distance between supports, in units of <span class="math">\(inches\)</span></li>
 <li><span class="math">\(F_s&#39;\)</span> is the maximum allowable rolling shear stress in the panel, in units of <span class="math">\(psi\)</span></li>
 <li><span class="math">\(Ib/Q\)</span> is the rolling shear constant of the panel, in units of <span class="math">\(in^2/ft\)</span></li>
 <li><span class="math">\(w\)</span> is the uniformly distributed load on the panel, in units of <span class="math">\(plf\)</span></li>
