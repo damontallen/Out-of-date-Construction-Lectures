@@ -37,3 +37,10 @@ Week 5
 * <a href="http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%205%20-%20Braced%20Wall%20(Part%20-%202%20Tension%20Bracing%20with%20Fasteners).ipynb">Bracing Introduction (Part 2 - Wall Form Tension Bracing)</a>
 * [Slab Bracing](http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%205%20-%20Slab%20Braces.ipynb)
 * <a href="http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%205%20-%20(Optional)%20Bracing%20Stiffness%20Requirements.ipynb">(Optional) Bracing Stiffness Requirements</a>
+
+Week 6
+
+* <a href="http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%206%20-%20Importance%20of%20Formwork%20Safety.ipynb">Importance of Formwork Safety</a>
+* <a href="http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%206%20-%20(Optional)%20Span%20Length%20Derivations.ipynb">(Optional) Span Length Derivations</a>
+
+Week 7
