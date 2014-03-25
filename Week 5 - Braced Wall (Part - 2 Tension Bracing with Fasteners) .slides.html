@@ -1775,9 +1775,7 @@ Note: The atribute &apos;pick_list&apos; is now available_grades (added Jan, 6, 
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<important class="missing">
-Video Placeholder
-<important>
+<iframe width="420" height="315" src="//www.youtube.com/embed/hiKsr4kot0k" frameborder="0" allowfullscreen></iframe>
 </div></section>
     </section><section>
     <section>
@@ -1786,25 +1784,27 @@ Video Placeholder
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%205/Wall%20form%20braces%20part%202/Recap%20of%20the%20Problem.mp3"
          type='audio/mp3'>
 <p>
-<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+Your user agent does not support the HTML5 Audio element or the files are missing.
 </p>
-<p></audio><a></a></p>
+<p></audio></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Using tension only braced allows us to use smaller, more readliy available members. Let's rework the previous example using tension braces.</p>
+<p>Designing the braces to act in tension allows us to use smaller, and more readliy available members. Let's rework the previous example using tension braces.</p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Given: A wallform is 10' high and is expected to be exposed to a wind force of 20 psf with tension braces at 4 feet on center.</p>
+<p>Given: A wallform that is 10' high, expected to be exposed to a wind force of 20 psf, and is supported with tension braces at 4 feet on center.</p>
 <p><a href="http://i.imgur.com/UFmHTcT.png"><img src="http://i.imgur.com/UFmHTcT.png"  style="max-width:300px; max-height:300px; border:1px solid blue;  float:left; margin-right:3px;" alt = "Braced Wall"/></a></p>
-<p>We need design for the same the axial load as was on the compression brace.</p>
+<p>We need design for the same magnitude of axial load that was on the compression brace.</p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><span class="math">\[w_{hor} = p \times h \times \left(\frac{h/2}{h} \right)\]</span> <span class="math">\[w_{hor} = 20 psf \times 10 ft \left(\frac{5 ft}{10 ft} \right)\]</span> <span class="math">\[w_{hor} = 100 plf\]</span></p>
-<p><span class="math">\[T_{brace}=w_{hor} \times \frac{L_{brace}}{Hor} \times W_{trib} \]</span></p>
-<p><span class="math">\[Hor = \sqrt{(16 ft)^2 - (10 ft)^2}\]</span> <span class="math">\[Hor = 12.5 ft\]</span> <span class="math">\[T_{brace} = 100 plf \times \frac{16 ft}{12.5 ft} \times 4 ft\]</span> <span class="math">\[T_{brace} = 512.4 lb\]</span></p>
+<p><span class="math">\[T_{brace}=w_{hor} \times \frac{L_{brace}}{Hor} \times W_{trib}\]</span></p>
+<p><span class="math">\[L_{brace} = \sqrt{Hor^2 + h^2} \Rightarrow Hor = \sqrt{L_{brace}^2 - h^2}\]</span></p>
+<p><span class="math">\[Hor = \sqrt{(16 ft)^2 - (10 ft)^2} = 12.5 ft\]</span> <span class="math">\[T_{brace} = 100 plf \times \frac{16 ft}{12.5 ft} \times 4 ft\]</span> <span class="math">\[T_{brace} = 512.4 lb\]</span></p>
+<p><span class="math">\[\text{Or by using trigonometry: } T_{brace}=w_{hor} \times \cos(\theta) \times W_{trib}\]</span></p>
 </div><div style=display:none>
     
 <div class="cell border-box-sizing code_cell vbox">
@@ -1885,12 +1885,12 @@ In&nbsp;[4]:
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%205/Wall%20form%20braces%20part%202/Brace%20Geometry.mp3"
          type='audio/mp3'>
 <p>
-<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+Your user agent does not support the HTML5 Audio element or the files are missing.
 </p>
-<p></audio><a></a></p>
+<p></audio></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>After looking in Table 1B the summary the geometry of the brace is,</p>
@@ -2020,16 +2020,16 @@ In&nbsp;[8]:
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%205/Wall%20form%20braces%20part%202/Allowable%20Stress.mp3"
          type='audio/mp3'>
 <p>
-<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+Your user agent does not support the HTML5 Audio element or the files are missing.
 </p>
-<p></audio><a></a></p>
+<p></audio></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Since the this loading is due to wind pressure alone the load duration factor <span class="math">\(C_D = 1.6\)</span>. This is one of those few occasions in this course where <span class="math">\(C_P \ne 1.25\)</span>.</p>
-<p>Using the stress values and adjustment factors found in Table 4A we can calulate <span class="math">\(F_t&#39;\)</span>.</p>
+<p>Since the this loading is due to wind pressure alone the load duration factor <span class="math">\(C_D = 1.6\)</span>. This is one of those few occasions in this course where <span class="math">\(C_D \ne 1.25\)</span>.</p>
+<p>Using the stress values and adjustment factors found in Table 4A (of the Supplement) we can calulate <span class="math">\(F_t&#39;\)</span>.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -2072,12 +2072,12 @@ $${}$$
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%205/Wall%20form%20braces%20part%202/Actual%20Stress.mp3"
          type='audio/mp3'>
 <p>
-<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+Your user agent does not support the HTML5 Audio element or the files are missing.
 </p>
-<p></audio><a></a></p>
+<p></audio></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Using the tension load and the cross sectional area of a 2x4 we can find the actual tension stress <span class="math">\(f_t\)</span>.</p>
@@ -2158,17 +2158,17 @@ Factor of safety = 14.14
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%205/Wall%20form%20braces%20part%202/Fasteners.mp3"
          type='audio/mp3'>
 <p>
-<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+Your user agent does not support the HTML5 Audio element or the files are missing.
 </p>
-<p></audio><a></a></p>
+<p></audio></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In tension bracing fasteners are more important. That is because the fasteners are directly part of the load path. The load starts with the wall, then to the nails at the top of the brace, then to the brace, then finally to the nails at the bottom of the brace and the stake in the ground or the cleat on the slab.</p>
+<p>In tension bracing fasteners are more important. That is because the fasteners are directly part of the load path. The load starts with the wall, then to the nails at the top of the brace, then to the brace, then to the nails at the bottom of the brace, and finally into a stake in the ground or a cleat on the slab.</p>
 <p>Failures can easily occur due to inadequate fasteners.</p>
-<p>If you are familiar with nails, take a second and guess at how many 12 penny nails we will need to fasten the brace at each end.</p>
+<p>If you are familiar with nails, take a second and guess at how many 12 penny nails we're going to need to use at both ends of the brace.</p>
 </div></section>
     </section><section>
     <section>
@@ -2177,12 +2177,12 @@ Factor of safety = 14.14
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%205/Wall%20form%20braces%20part%202/Required%20Nails.mp3"
          type='audio/mp3'>
 <p>
-<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+Your user agent does not support the HTML5 Audio element or the files are missing.
 </p>
-<p></audio><a></a></p>
+<p></audio></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The strength of nails in shear is found in your Formwork for Concrete text on page 4-29 (Table 4-8) and in Table 11N (page 97) of your NDS code book. Shear strength is denoted using a <span class="math">\(Z\)</span>. The size of the nail that is now typically used is a 12d nail (AKA a 12 <em>pennyweight</em> or <em>penny</em> nail). Using a 12d sinker nail, driven through a 1 <span class="math">\(\frac{1}{2}\)</span>&quot; thick Douglas Fir Larch 2x4 we find:</p>
@@ -2206,12 +2206,12 @@ Factor of safety = 14.14
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%205/Wall%20form%20braces%20part%202/Connection%20Nail%20Count.mp3"
          type='audio/mp3'>
 <p>
-<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+Your user agent does not support the HTML5 Audio element or the files are missing.
 </p>
-<p></audio><a></a></p>
+<p></audio></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Finally, to find out how many nails we need at each end of the brace we just:</p>
@@ -2265,15 +2265,25 @@ we need 3.11 nails so use 4 nails on each end.
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+<audio controls data-autoplay preload> <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%205/Wall%20form%20braces%20part%202/Conclusion.mp3"
          type='audio/mp3'>
 <p>
-<strong>Your user agent does not support the HTML5 Audio element or the files are missing.</strong>
+Your user agent does not support the HTML5 Audio element or the files are missing.
 </p>
-<p></audio><a></a></p>
+<p></audio></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If we design our braces to only act in tension we act just uas a 2x4. This is as apposed to the rough sawn 4x4 which would have to be special ordered and a lot more expensive. Additionally, the 2x4 will be easier to install which will also save money on labor costs. For these reasons, it is more economical to try to design your braces to act in tension.</p>
+<p>If we design our braces to only act in tension we can just use a 2x4. This is as apposed to the rough sawn 4x4, which would have to be special ordered and a lot more expensive. Additionally, the 2x4 will be easier to install, which will also save money on labor costs. For these reasons, it is more economical to try to design your braces to act in tension.</p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="References:">References:<a class="anchor-link" href="#References:">&#182;</a></h2>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://elearning2.courses.ufl.edu/portal/site/UFL-BCN4423C-40908-52014">Class website</a> <em>(Use this link to if you are taking the course on e-learning.)</em></p>
+<p><a href="http://damontallen.github.io/Construction-Lectures/">Github.io version of course website</a> <em>(Do not use this link is you are taking this course in Summer A or B.)</em></p>
 </div><div style=display:none>
     
 <div class="text_cell_render border-box-sizing rendered_html">
