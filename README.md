@@ -44,3 +44,9 @@ Week 6
 * <a href="http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Week%206%20-%20(Optional)%20Span%20Length%20Derivations.ipynb">(Optional) Span Length Derivations</a>
 
 Week 7
+
+
+
+
+
+ <a href="http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Resources.ipynb">Opensource software credit</a>
