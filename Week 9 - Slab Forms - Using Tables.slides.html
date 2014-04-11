@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>Week 6 - (Optional) Span Length Derivations slides</title>
+<title>Week 9 - Wall Forms - Using Tables-Copy0 slides</title>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="reveal.js/css/reveal.css">
@@ -1712,7 +1712,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Span-Length-Derivation">Span Length Derivation<a class="anchor-link" href="#Span-Length-Derivation">&#182;</a></h1>
+<h1 id="Slab-Forms---Using-Formwork-Tables">Slab Forms - Using Formwork Tables<a class="anchor-link" href="#Slab-Forms---Using-Formwork-Tables">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -1722,9 +1722,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<iframe width="420" height="315" src="//www.youtube.com/embed/lqmcegeIwpU" frameborder="0" allowfullscreen></iframe>
-
-<p><em>(You can click on this link to skip the derivations and go to &quot;<a href="http://damontallen.github.io/Construction-Lectures/Week%206%20-%20(Optional)%20Span%20Length%20Derivations.slides.html#/12">How to use the Span Length Limits</a>&quot;.)</em></p>
+<p>Video Place Holder</p>
 </div>
 </div>
 </div></section>
@@ -1736,7 +1734,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Limiting-the-Deflection-of-a-Beam">Limiting the Deflection of a Beam<a class="anchor-link" href="#Limiting-the-Deflection-of-a-Beam">&#182;</a></h2>
+<h2 id="Which-Tables?-...-Needs-Editing-from-here-down">Which Tables? ... Needs Editing from here down<a class="anchor-link" href="#Which-Tables?-...-Needs-Editing-from-here-down">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -1747,7 +1745,7 @@ div.output_prompt {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Limiting%20the%20Deflection%20of%20a%20Beam.mp3"
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
          type='audio/mp3'>
  <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
 </audio>
@@ -1759,342 +1757,12 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In most problems, we want to limit the deflection of a beam (or member acting like a beam) to either some fraction of the length of the beam, or some fixed value.  To do this we can either pick the support spacing, and design the member to satisfy these limits over that span, or we can pick a member size, species, and grade, and solve for the support spacing.  This second alternative is the most common approach used in concrete formwork.</p>
-<p>To determine the support spacing of a beam, based deflection limits, we&#39;ll start with the deflection equation for a uniformly distributed load, and solve for $L$.</p>
-<p>$$\Delta = \frac{5 w L^4}{384 E' I} \Rightarrow L^4 = \Delta \frac{ 384 E' I}{5 w}$$</p>
-<p>However, this is for a simply supported beam, and it is more efficient for structural members, in forms of any useful size, to be have intermetiate supports rather than just be simply supported.  Typically, you will see a beam supported over three or more spans.  </p>
-<p>For that reason we need to start with the maximum defection equation for a beam that is supported over three or more spans.  This found in Table 6-1 of the Formwork text.</p>
-<p>$$\Delta_{max} = \frac{w L^4}{145 E' I}\frac{1 ft}{12 in}$$</p>
-<p>Where:</p>
-<ul>
-<li>$w$ is the uniformly distributed load on the beam, in units of $plf$</li>
-<li>$L$ is the distance between supports, in units of $inches$</li>
-<li>$E'$ is the adjusted Young&#39;s modulus of the beam&#39;s material, in units of $psi$</li>
-<li>$I$ is the moment of inertia of the beam, in units of $in^4$</li>
-</ul>
-<p>To start with we solve for $L^4$ in terms of $\Delta_{max}$.</p>
-<p>$$ L^4 = \Delta_{max} \frac{145 E' I}{w }\frac{12 in}{1 ft} =   \Delta_{max} \frac{(1,740 in/ft) E' I}{w}$$</p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Limit-Deflection-to-a-Fraction-of-the-Span">Limit Deflection to a Fraction of the Span<a class="anchor-link" href="#Limit-Deflection-to-a-Fraction-of-the-Span">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Limit%20Deflection%20to%20a%20Fraction%20of%20the%20Span.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We left our equation in terms of $L^4$ because we might want to set the deflection to either a fixed amount, <em>or</em> some fraction of the span length.  An example of this type of fractional limit is, $\Delta \leq L/360$.  We could use that to work with, but for now I will represent the constant, $360$, as a unknown value, $C$.</p>
-<p>$$ L^4 = \Delta_{max} \frac{(1,740 in/ft) E' I}{w} = \frac{L}{C} \frac{(1,740 in/ft) E' I}{w}$$</p>
-<p>$$ L^3 =  \frac{1}{C} \frac{(1,740 in/ft) E' I}{w}$$</p>
-<p>$$ L^3 =  \frac{1,740 in/ft}{C} \frac{ E' I}{w}$$</p>
-<p>$$ L =  \sqrt[3]{\frac{1,740 in/ft}{C} \frac{ E' I}{w}}$$</p>
-<p>$$ L =  \sqrt[3]{\frac{1,740 in/ft}{C}}\sqrt[3]{ \frac{ E' I}{w}} \text{ (or) } $$</p>
-<p>$$L = \sqrt[3]{\frac{1,740 }{C}}\left(\frac{in}{ft} \right)^{1/3}\sqrt[3]{ \frac{ E' I}{w}}$$</p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Deflection-Limit-of-$L/360$">Deflection Limit of $L/360$<a class="anchor-link" href="#Deflection-Limit-of-$L/360$">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Deflection%20Limit%20of%20L_360.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>For a specific fractional limit like $L/360$ we just take our equation and substitute 360 for the constant $C$.</p>
-<p>$$L = \sqrt[3]{\frac{1,740 }{C}}\left(\frac{in}{ft} \right)^{1/3}\sqrt[3]{ \frac{ E' I}{w}} \Rightarrow L = \sqrt[3]{\frac{1,740 }{360}}\left(\frac{in}{ft} \right)^{1/3}\sqrt[3]{ \frac{ E' I}{w}}$$ </p>
-<p>$$ L =  1.69 \left(\frac{in}{ft} \right)^{1/3}\sqrt[3]{ \frac{ E' I}{w}}$$</p>
-<p>The value $1.69$ has some unusual units associated with it. However, if we can just remember what the variables&#39; units are supposed to be in the equation, we can have the units of $1.69$ implied, and write it like this, </p>
-<p>$$L =  1.69 \sqrt[3]{ \frac{ E' I}{w}}$$</p>
-<p>Where:</p>
-<ul>
-<li>$L$ is distance between the supports, in units of $inches$</li>
-<li>$w$ is the uniformly distributed load on the beam, in units of $plf$</li>
-<li>$E'$ is the adjusted Young&#39;s modulus of the beam&#39;s material, in units of $psi$</li>
-<li>$I$ is the moment of inertia of the beam, in units of $in^4$</li>
-</ul>
-<p>If, on your particular project, you are using a different fractional deflection limit, you can just solve the equation again with a new $C$.</p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Fixed-Deflection-Limit">Fixed Deflection Limit<a class="anchor-link" href="#Fixed-Deflection-Limit">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Fixed%20Deflection%20Limit.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>With a fixed diflection limit, like $1/16"$ for example, we need to start with out original solution and solve for $L$.</p>
-<p>$$ L^4 = \Delta_{max} \frac{(1,740 in/ft) E' I}{w}$$</p>
-<p>$$ L = \sqrt[4]{\Delta_{max} \frac{(1,740 in/ft) E' I}{w}}$$</p>
-<p>$$ L = \sqrt[4]{\Delta_{max} \times 1,740 \frac{in}{ft}} \times \sqrt[4]{ \frac{ E' I}{w}}$$</p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Limiting-Deflection-to-$1/16&quot;$">Limiting Deflection to $1/16"$<a class="anchor-link" href="#Limiting-Deflection-to-$1/16&quot;$">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Limiting%20Deflection%20to%201_16_in.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>If we pick a fixed deflection like $1/16"$ we just need to substitue it for $\Delta_{max}$ in our equation.</p>
-<p>$$ L = \sqrt[4]{\Delta_{max} \times 1,740 \frac{in}{ft}} \times \sqrt[4]{ \frac{ E' I}{w}} \Rightarrow L = \sqrt[4]{\frac{1}{16}" \times 1,740 \frac{in}{ft}} \times \sqrt[4]{ \frac{ E' I}{w}}$$</p>
-<p>$$ L = \sqrt[4]{\frac{1,740 in^2}{16 ft}}\times \sqrt[4]{ \frac{ E' I}{w}}$$</p>
-<p>$$ L = \sqrt[4]{108.75} \left(\frac{in^2}{ft} \right)^{1/4}\times \sqrt[4]{ \frac{ E' I}{w}}$$</p>
-<p>$$ L = 3.23 \frac{\sqrt{in}}{\sqrt[4]{ft}} \sqrt[4]{ \frac{ E' I}{w}}$$</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Like before, we have some unusual units associated with the constant in our soulution.  If we want to leave out those units, we just need to remember what all the variables&#39; units are supposed to be.</p>
-<p>$$ L = 3.23 \sqrt[4]{ \frac{ E' I}{w}}$$</p>
-<p>Where:</p>
-<ul>
-<li>$L$ is the distance between supports, in units of $inches$</li>
-<li>$E'$ is the adjusted Young&#39;s modulus of the beam&#39;s material, in units of $psi$</li>
-<li>$I$ is the moment of inertia of the beam, in units of $in^4$</li>
-<li>$w$ is the uniformly distributed load on the beam, in units of $plf$</li>
-</ul>
-<p>If you are using a different deflection limit, just resolve the equation using the new $\Delta_{max}$.</p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Using-Bending-Stress-in-a-Beam-to-Determine-Allowable-Spans">Using Bending Stress in a Beam to Determine Allowable Spans<a class="anchor-link" href="#Using-Bending-Stress-in-a-Beam-to-Determine-Allowable-Spans">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Using%20Bending%20Stress%20in%20a%20Beam%20to%20Determine%20Allowable%20Spans%20pt1.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>There are three (or four) failure modes that need to be checked with any beam: the deflection(s), bending, and shear.  For bending, we just compare $f_b$ to $F_b'$.  However, in order to find the actual bending stress, we need to know the equation for the maximum bending moment.  In a simply supported beam, the maximum bending moment due to a uniformly distributed load, is,</p>
-<p>$$M = \frac{w L^2}{8}$$</p>
-<p>But, we are not using a simply supported beam.  Instead, we need the equation for the maximum bending moment in a beam that is supported over three or more spans.  That equation can be found in Table 6-1 of the Formwork text.</p>
-<p>$$M = \frac{w L^2}{10} \times \frac{1 ft}{12 in}$$</p>
-<p>Where:</p>
-<ul>
-<li>$M$ is the maximum bending moment in the beam, in units of $in$-$lbs$</li>
-<li>$L$ is distance between the supports, in units of $inches$</li>
-<li>$w$ is the uniformly distributed load on the beam, in units of $plf$</li>
-</ul>
-<p><em>(Continued on the next slide)</em></p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Using%20Bending%20Stress%20in%20a%20Beam%20to%20Determine%20Allowable%20Spans%20pt2.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Since the actual bending stress is proportional to the bending moment divided by the section modulus, we find the bending moment like this.</p>
-<p>$$M = f_b \times S$$</p>
-<p>By setting the actual bending stress equal to the allowable bending stress, we can rewrite the bending moment equation in terms of $F_b'$.</p>
-<p>$$F_b' \times S = M = \frac{w L^2}{120} \times 1 \frac{ft}{in}$$</p>
-<p>Solving for $L^2$ we get,</p>
-<p>$$L^2 = 120 \frac{in}{ft} \times \frac{F_b' \times S }{w} $$</p>
-<p>and $L$ is,</p>
-<p>$$L = \sqrt{120 \frac{in}{ft}} \times \sqrt{\frac{F_b' \times S }{w}} $$</p>
-<p>$$L = 10.95 \sqrt{ \frac{in}{ft}} \times \sqrt{\frac{F_b' \times S }{w}} \textbf{ or if the units are just implied } L = 10.95 \times \sqrt{\frac{F_b' \times S }{w}}$$</p>
-<p>Where:</p>
-<ul>
-<li>$L$ is the distance between supports, in units of $inches$</li>
-<li>$F_b'$ is the allowable bending stress of the beam, in units of $psi$</li>
-<li>$S$ is the section modulus of the beam, in units of $in^3$</li>
-<li>$w$ is the uniformly distributed load on the beam, in units of $plf$</li>
-</ul>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Span-Limit-when-Shear-Controls">Span Limit when Shear Controls<a class="anchor-link" href="#Span-Limit-when-Shear-Controls">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Span%20Limit%20when%20Shear%20Controls%20pt1.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href = "http://i.imgur.com/E2UUjpH.png"><img src="http://i.imgur.com/E2UUjpH.png" alt = "Concrete Beam"style="max-width:300px; max-height:300px; border:1px solid blue; float:right; margin-left:10px;"/></a></p>
-<p>Like with bending, and deflection before, the value for the maximum shear, in a beam supported over three or more spans, is not the same as for a simply supported beam.</p>
-<p>From Table 6-1 in the Formwork text we find,</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>$$V_{max} = 0.6 \times w \times L \times \frac{1 ft}{12 in} \left(\text{ or } V_{max} = 1.2 \times w \times \frac{L}{2} \times \frac{1 ft}{12 in} \right)$$ </p>
-<p>Where:</p>
-<ul>
-<li>$V_{max}$ is the maximum shear in a beam supported over three or more spans, in units of $lbs$</li>
-<li>$w$ is the uniformly distributed load on the beam, in units of $plf$</li>
-<li>$L$ is the distance between supports, in units of $inches$</li>
-</ul>
-<p>For beams that are loaded on the opposite side from the supports, we can take advantage of Section 3.4.3 in the Timber NDS. That section states, the maximum shear may be measured at a distance $d$ over from the edge of the supports.  This is instead of the usual way, which is right at the supports.  You may recall something similar to this from studying concrete beams.  Instead of going over that explanation again, I&#39;ve included the drawing of a concrete beam, failing in shear, to serve as a reminder about why this can be done.</p>
+<p>As an alternative to a strictly analytically approach, there are tables in the Formwork text that you can use.  These tables, however, are limited to a smaller selection of material.  For instance, instead of plywood you will have to design using Class I Plyform if you use Table 7-2.</p>
+<p>Table 7-2 has values for 1/2&quot; to 1&quot;, wet, Class I Plyform, with both $C_D = 1.0$ and $C_D = 1.25$, in either the strong or weak orientation.  This is the only material used in the Formwork text in the tables of pre-calculated span limits for sheathing.  There are other sheathing tables but they are for other support conditions and we are only interested in sheathing supported over three or more spans.</p>
+<p>Tables 7-5, 7-6, and 7-7 are similar to the sheathing tables; they are for different support conditions, and both duration factors.  There are more sizes than for the sheathing though, eight instead of four, or sixteen instead of four if you count the flat use orientations.  These beam tables are arranged such that the .1 version contains values found using $C_D = 1.0$, and the .2 version contains values using $C_D= 1.25$.  Both the .1 and .2 versions are for No.2 Douglas Fir-Larch lumber.  For example Table 7-5.2 contain pre-calculated span limits for No.2, Douglas Fir-Larch lumber, supported over three or more spans.  There are .3 and .4 versions of these tables as well.  They are just the same as the .1 and .2 versions, except that those values are found using No.1/No.2 grade Spruce Pine Fir.</p>
+<p>Tables 7-8 through 7-10 are for double wales.  In this case the .1 version uses No.2 Douglas Fir-Larch, and the .2 version uses Spruce Pine Fir.  Each individual table is broken up into a left and right side for, $C_D = 1.0$ and $C_D = 1.25$ respectively.  Each of these sub-tables contains span limits for nine different double wale sizes, ranging form double 2x4s to double 4x8s.</p>
+<p>We haven&#39;t done any shoring calculations yet, but Table 7-11 contains allowable axial loads of a variety of species, sizes, and effective lengths.  However, the values in this table are all found using a $C_D=1.0$.  This is not unreasonable since you are much more likely to reuse shores which means their capacity would have to be calculated using a $C_D=1.0$.  I do have a couple words of caution about using these values in the future.  First, there are six obvious typos in the table.  Second, these values correspond to an older version of the Timber code, and as such they don&#39;t exactly match up with the Florida Building Code.  I will say that these values are close, but they are not exact; some will be smaller and some will be larger than the actual allowed values.  We will talk more about Table 7-11 in the slab form modulus.</p>
+<p>I will not be spending any time beyond now talking about Table 7-12.  I think you can figure it out by yourself and I actually think it would be quicker calculating the values form the Timber code than using this Table.  Either way, be aware that you are responsible for using the correct (or newer) version of the building code. </p>
 <p><em>(Continued on the next slide.)</em></p>
 </div>
 </div>
@@ -2108,7 +1776,7 @@ div.output_prompt {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Span%20Limit%20when%20Shear%20Controls%20pt2.mp3"
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
          type='audio/mp3'>
  <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
 </audio>
@@ -2120,14 +1788,8 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>After accounting for this allowance, the maximum shear equation becomes,</p>
-<p>$$V_{max} =  1.2 \times w \times \left( \frac{L}{2} - d \right) \times \frac{1 ft}{12 in} \text{ or }$$ </p>
-<p>$$V_{max} =  0.6 \times w \times \left( L - 2d \right) \times \frac{1 ft}{12 in} = \frac{0.6 ft}{12 in} \times w \times \left( L - 2d \right) $$ </p>
-<p>$$V_{max} = \frac{1 ft}{20 in} \times w \times \left( L - 2d \right) $$ </p>
-<p>By rewriting $V_{max}$ in terms of allowable shear stress we get,</p>
-<p>$$F_v' = \frac{3}{2}\frac{V_{max}}{A} = \frac{3}{2 \times A}\frac{1 ft}{20 in} \times w \times \left( L - 2d \right) $$ </p>
-<p>$$F_v' = \left(\frac{3 ft}{40 in} \times \frac{w}{A}\right) \times \left( L - 2d \right) $$ </p>
-<p><em>(Continues on the next slide.)</em></p>
+<p>I&#39;ll probably mention this again, but if you look at Tables 7-5 through 7-10 you will not see where it is written that they are for particular species.  Nor will you see where the $C_D$ is written in any of the tables.  That is because it isn&#39;t.  The species and $C_D$ values I&#39;ve given you are based on matching the properties listed to species in the Timber Supplement, and calculating support spacing limits using various adjustment factors.  In other words, I determined this information through a trial and error.  This is another reason why I like the Timber building codes, good documentation.</p>
+<p>If you want to quickly find what table (or portion of a table) goes with what species, and which $C_D$ value, you should label the tables based on my descriptions in the previous slide.  For this class, however, I will try to specify at least which table to use for a particular problem.  If the table is divided based on load duration factor, then just remember that the higher allowable stress indicated in the table corresponds to a $C_D=1.25$.</p>
 </div>
 </div>
 </div></section>
@@ -2139,45 +1801,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Span%20Limit%20when%20Shear%20Controls%20pt3.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we solve for $L$.</p>
-<p>$$F_v' = \left(\frac{3 ft}{40 in} \times \frac{w}{A}\right) \times \left( L - 2d \right) \Rightarrow \left( L - 2d \right) = F_v' \times \left(\frac{40 in}{3 ft} \times \frac{A}{w}\right) $$ </p>
-<p>by adding $2d$ to both sides we get,</p>
-<p>$$ L =  \frac{40 in}{3 ft} \times \frac{F_v' \times A}{w} + 2d  $$ </p>
-<p>$$ L =  13.33\frac{ in}{ ft} \times \frac{F_v' \times A}{w} + 2d  \text{ or just,}$$ </p>
-<p>$$ L =  13.33\times \frac{F_v' \times A}{w} + 2d $$ </p>
-<p>Where:</p>
-<ul>
-<li>$L$ is the distance between supports, in units of $inches$</li>
-<li>$F_v'$ is the maximum allowable shear stress in the beam, in units of $psi$</li>
-<li>$A$ is the cross sectional area of the beam, in units of $in^2$</li>
-<li>$w$ is the uniformly distributed load on the beam, in units of $plf$</li>
-<li>$d$ is the width of the beam, in units of $in$</li>
-</ul>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Plywood-Rolling-Shear">Plywood Rolling Shear<a class="anchor-link" href="#Plywood-Rolling-Shear">&#182;</a></h2>
+<h1 id="Wall-Form">Wall Form<a class="anchor-link" href="#Wall-Form">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -2188,7 +1812,7 @@ div.output_prompt {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Plywood%20Rolling%20Shear.mp3"
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
          type='audio/mp3'>
  <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
 </audio>
@@ -2200,11 +1824,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The span limit for plywood panels, supported over three or more spans, due to rolling shear, can be found using Equation 11 from the <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/D510.pdf">APA Panel Design Specification</a>.</p>
-<p>$$w  = \frac{20 F_s' (Ib/Q)}{L} $$ </p>
-<p>Since plywood is designed using a per unit foot procedure$*$, this equation, (as well as all the other equations, when they are used with plywood), results in $w$ being in units of, $\frac{plf}{1 ft}$.  We convert it to the units we want to use by multiplying both sides by $1 ft$.</p>
-<p>$$w \times 1 ft = \frac{20 F_s' (Ib/Q)}{L}\times 1 ft $$</p>
-<p>Solving for $L$ we get,</p>
+<p>Just so we can see the process of using these tables, lets rework the previous wall form problem.  We still have to calculate the concrete pressure (and later, the line loads).</p>
 </div>
 </div>
 </div>
@@ -2213,41 +1833,23 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>$$L  = \frac{20 F_s' (Ib/Q)}{w} $$</p>
-<p>Where:</p>
-<ul>
-<li>$L$ is the distance between supports, in units of $inches$</li>
-<li>$F_s'$ is the maximum allowable rolling shear stress in the panel, in units of $psi$</li>
-<li>$Ib/Q$ is the rolling shear constant of the panel, in units of $in^2/ft$</li>
-<li>$w$ is the uniformly distributed load on the panel, in units of $plf$</li>
-</ul>
-<p>Sometimes this equation is written in a way that $L$ comes out in feet.  This looks like,</p>
-<p>$$L  = \frac{F_s' (Ib/Q)}{0.6 w} $$</p>
-<p>Note: In both versions of this equation $F_s' = F_s \times C_D$.</p>
-<p><em>( $*$ - See the slide below for the explanation of why the per unit foot procedure is used.)</em></p>
+<h2 id="Example-Problem">Example Problem<a class="anchor-link" href="#Example-Problem">&#182;</a></h2>
 </div>
 </div>
 </div>
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Explanation%20of%20why%20the%20per%20unit%20foot%20procedure%20is%20used.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Because plywood panels are regularly cut to irregular widths, the writing of tables that contain all the section properties, for all the possible widths, is not only a daunting task, but it would take forever to accomplish.  However, tables written in a per-unit-width basis can be used to find any section property by simply multiplying the table values by that particular plywood section&#39;s width.</p>
-<p>In practice, plywood is typically designed to resist a pressure load.  It can be shown that, if you use the pressure load in the analysis, instead of an actual line load, and you use the values straight from the per-unit-width table, you will get the same result.  The reason for this is that the width of a plywood section and the tributary width for the section are the same, and during the analysis, these two values cancel each other out.</p>
+<p>Lateral Pressure from concrete, Max $P = 150 pcf \times h$</p>
+<p>Pour Rate: $R\le 7 \frac{ft}{hr}$</p>
+<p>$\hspace{4 cm} P = 150 +\frac{9000 R}{T} \le 150 pcf \times h$</p>
+<p>Pour Rate: $ 7 \frac{ft}{hr}&lt; R \le 10 \frac{ft}{hr}$</p>
+<p>$\hspace{4 cm} P = 150 +\frac{43,400}{T} +\frac{2800 R}{T} \le 150 pcf \times h$</p>
+<p>Pour Rate: $R&gt; 10 \frac{ft}{hr}$</p>
+<p>$\hspace{4 cm} P = 150 pcf \times h \text{ (Maximum Pressure)}$</p>
 </div>
 </div>
 </div></section>
@@ -2259,7 +1861,23 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-use-the-Span-Length-Limits">How to use the Span Length Limits<a class="anchor-link" href="#How-to-use-the-Span-Length-Limits">&#182;</a></h2>
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Determine-the-Following">Determine the Following<a class="anchor-link" href="#Determine-the-Following">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -2269,11 +1887,13 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/How%20to%20use%20the%20Span%20Length%20Limits.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
+<ol>
+<li>Concrete Presure</li>
+<li>Stud spacing</li>
+<li>Wale spacing</li>
+<li>Tie spacing</li>
+<li>Required tie strength</li>
+</ol>
 </div>
 </div>
 </div>
@@ -2282,47 +1902,26 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this class, our typical set of span length equations are:</p>
-<p>$$L = 10.95 \times \sqrt{\frac{F_b' \times S }{w}} \text{ (For bending)}$$
-$$L = 13.33\times \frac{F_v' \times A}{w} + 2d \text{ (For shear for everthing but plywood)}$$ 
-$$L = \frac{20 F_s' (Ib/Q)}{w} \text{ (For rolling shear for plywood only)}$$
-$$L = 1.69 \sqrt[3]{ \frac{ E' I}{w}} \text{ (For limiting deflections to L/360)}$$
-$$L = 3.23 \sqrt[4]{ \frac{ E' I}{w}} \text{ (For limiting deflections to 1/16")}$$</p>
-<p><em>(See the slide below for all the variable definitions.)</em></p>
-<p>For a given member being used as a beam, you will solve four of these span length equations.  What you will end up with is a list of four maximum span lengths. Each of these span lengths corresponds the particular failure mode of its original equation.  Since any span greater than the smallest length will result in that member failing, and failing in the failure mode of the smallest length, we have to set the support spacing to something less than that.  For instance:</p>
-<ul>
-<li>$L_{bend} = 20.5"$</li>
-<li>$L_{shear} = 36.1"$</li>
-<li>$L_{L/360} = 25.6"$</li>
-<li>$L_{1/16"} = 23.2"$</li>
-</ul>
-<p>For this beam, bending controls, and we cannot set our supports any farther apart than $20.5"$, or the beam will fail in bending.  However, $20.5"$ is not the <em>optimal</em> support spacing; it&#39;s just the limit.  Since this optimal value will depend on the use case, we will discuss it more when we cover formwork for walls, and again when we discuss slab forms.</p>
+<h3 id="Given:">Given:<a class="anchor-link" href="#Given:">&#182;</a></h3>
 </div>
 </div>
-</div></section><section>
-    
+</div>
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In the span length equations:</p>
 <ul>
-<li>$L$ is the spacing between supports, in units of $inches (in)$</li>
-<li><p>$w$ is the uniformly distributed load on the beam, in units of $plf$</p>
-</li>
-<li><p>$d$ is the width of the beam, in units of $in$</p>
-</li>
-<li>$A$ is the cross sectional area of the beam, in units of $in^2$ </li>
-<li>$S$ is the section modulus of the beam, in units of $in^3$ (or $in^3/ft$ for plywood)</li>
-<li><p>$I$ is the moment of inertia of the beam, in units of $in^4$ (or $in^4/ft$ for plywood)</p>
-</li>
-<li><p>$F_b'$ is the maximum allowable bending stress of the beam, in units of $psi$</p>
-</li>
-<li>$F_v'$ is the maximum allowable shear stress in the beam, in units of $psi$</li>
-<li>$F_s'$ is the maximum allowable rolling shear stress in the panel, in units of $psi$</li>
-<li>$E'$ is the adjusted Young&#39;s modulus of the beam&#39;s material, in units of $psi$</li>
-<li>$Ib/Q$ is the rolling shear constant of the panel, in units of $in^2/ft$</li>
+<li>Height of wall = 15 ft</li>
+<li>Rate of filling = 10 ft/hr</li>
+<li>Temperature = 80$^o$ F</li>
+<li>Concrete unit weight = 150 lb/ft$^3$</li>
+<li>Wet conditions prevail</li>
+<li>Limit deflection to L/360 but not greater than 1/16&quot;</li>
+<li>All lumber will be 2x4 S4S lumber, No.2 Douglas Fir-Larch with no splits</li>
+<li>Sheathing will be 3/4&quot; Class I Plyform</li>
+<li>Use double 2x4 wales</li>
 </ul>
 </div>
 </div>
@@ -2335,7 +1934,7 @@ $$L = 3.23 \sqrt[4]{ \frac{ E' I}{w}} \text{ (For limiting deflections to 1/16")
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="References:">References:<a class="anchor-link" href="#References:">&#182;</a></h2>
+<h2 id="Pressure">Pressure<a class="anchor-link" href="#Pressure">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -2345,104 +1944,560 @@ $$L = 3.23 \sqrt[4]{ \frac{ E' I}{w}} \text{ (For limiting deflections to 1/16")
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/D510.pdf">APA Panel Design Specification</a></p>
-<p><a href="https://elearning2.courses.ufl.edu/portal/site/UFL-BCN4423C-40908-52014">Class website</a> <em>(Use this link to if you are taking the course on e-learning.)</em></p>
-<p><a href="http://damontallen.github.io/Construction-Lectures/">Github.io version of course website</a> <em>(Do not use this link is you are taking this course in Summer A or B.)</em></p>
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
 </div>
 </div>
 </div><div style=display:none>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
+In&nbsp;[2]:
 </div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>CSS stylesheet</p>
-<head>
-<style>
-important {font:italic bold 16px arial;}
-.missing {color:Red}
-fragment {color:LightBlue;}
-subslide {color:DarkBlue;}
+    <div class="input_area">
+<div class="highlight"><pre><span class="o">%</span><span class="k">run</span> <span class="n">Older_Classes</span><span class="o">/</span><span class="n">Temp_struc</span><span class="o">.</span><span class="n">py</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">P_</span> <span class="o">=</span> <span class="n">Pressure</span><span class="p">(</span><span class="n">R</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="n">h</span><span class="p">)</span>
+<span class="n">P</span><span class="o">=</span><span class="n">P_</span><span class="p">[</span><span class="s">&quot;value&quot;</span><span class="p">]</span>
+</pre></div>
 
-.rgt {float:right;}
-
-.lt {float:left;}
-
-.cnt {text-align:center; vertical-align:text-top;}
-
-.box { border:1px solid blue; float:left; margin-right:3px;}
-
-.max {max-width:300px; max-height:300px;}
-
-.fix {max-height:200px; max-width:200px;}
-
-</style>
-</head>
-
-<pre><code>###Useful Tip:
-
-If you use Firefox or Chrome then installing one of the following extensions will make viewing images in lectures easier.
-
-* Firefox - [Thumbnail Zoom Plus](https://addons.mozilla.org/en-US/firefox/addon/thumbnail-zoom-plus/?src=search)
-* Chrome - [Hover Free](https://chrome.google.com/webstore/detail/hover-free/hcmnnggnaofmhflgomfjfbndngdoogkj) (Not to be confused with Hover Zoom.)
-
-/* class = &quot;max box&quot; for img tags
-
-
-Audio Player:
-&lt;audio controls data-autoplay preload&gt;
- &lt;source src=&quot;https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3&quot;
-         type=&#39;audio/mp3&#39;&gt;
- &lt;p&gt;&lt;strong&gt;Your user agent does not support the HTML5 Audio element or the files are missing.&lt;/strong&gt;&lt;/p&gt;
-&lt;/audio&gt;&lt;a&gt;&lt;/a&gt;
-
-*/
-class = &quot;max box&quot; == style=&quot;max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;&quot;
-important == &lt;strong&gt;&lt;font style=&quot;font:italic bold 16px arial;&quot;&gt; Text here &lt;/font&gt;&lt;/strong&gt;
-Example &lt;important class=&quot;missing&quot;&gt;Video Placeholder&lt;/important&gt;
-
-Picture Examples: 
-(Right side)
-&lt;a href = &quot;http://i.imgur.com/h7H0m0b.png&quot;&gt;&lt;img src=&quot;http://i.imgur.com/h7H0m0b.png&quot; alt = &quot;Elevated Slab with Worker&quot;style=&quot;max-width:300px; max-height:300px; border:1px solid blue; float:right; margin-left:10px;&quot;/&gt;&lt;/a&gt;
-
-(Left side)
-&lt;a href = &quot;http://i.imgur.com/EWHj3eh.png&quot;&gt;&lt;img src=&quot;http://i.imgur.com/EWHj3eh.png&quot; alt = &quot;Braced Slab&quot; Title = &quot;Braced Slab&quot;style=&quot;max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;&quot;/&gt;&lt;/a&gt;
-
-(hover over image)
-&lt;a href=&quot;http://i.imgur.com/aTxezXX.png&quot; id=&quot;Top Down Slab&quot;&gt;
-    &lt;img title=&quot;Top Down Slab (Bracing in the 60 ft direction)&quot; alt = &quot;Top Down Slab&quot;
-        src=&quot;http://i.imgur.com/EL2FYDQ.png&quot; 
-        onmouseover=&quot;this.src=&#39;http://i.imgur.com/aTxezXX.png&#39;&quot;.
-        onmouseout=&quot;this.src=&#39;http://i.imgur.com/EL2FYDQ.png&#39;&quot; 
-        style=&quot;max-width:300px; max-height:300px; border:1px solid blue; 
-                float:right; margin-left:10px;&quot;/&gt;
-&lt;/a&gt;
-
-Video:
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/g43sFmgHOCk&quot; frameborder=&quot;0&quot; allowfullscreen style=&quot; float:left; margin-right:20px;&quot;&gt;&lt;/iframe&gt;
-</code></pre>
 </div>
 </div>
 </div>
-    </div><div style=display:none>
+
+</div>
+    </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">P_</span><span class="p">[</span><span class="s">&#39;work&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[3]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$$\text{Since R = 10}\frac{ft}{hr}  \text{ then } P =  150 + \frac{43,400}{T} + \frac{2800 \times R}{T}$$ 
+${}$
+ $$P = 150 + \frac{43,000}{ 80 }+\frac{2800 \times 10 }{ 80 } =  1042 psf $$ 
+${}$
+ $$P_{max} = 150 pcf \times h= 150 pcf \times 15 ft$$ 
+${}$
+ $$P_{max} = 2250 psf$$ 
+${}$
+ $$\text{Therefore }P =  1042 psf $$ 
+${}$
+ 
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(hover over image)
-    <a href="http://i.imgur.com/aTxezXX.png" id="Top Down Slab">
-        <img title="Top Down Slab (Bracing in the 60 ft direction)" alt = "Top Down Slab"
-            src="http://i.imgur.com/EL2FYDQ.png" 
-            onmouseover="this.src='http://i.imgur.com/aTxezXX.png'".
-            onmouseout="this.src='http://i.imgur.com/EL2FYDQ.png'" 
-            style="max-width:300px; max-height:300px; border:1px solid blue; 
-                    float:right; margin-left:10px;"/>
-    </a></p>
+<h2 id="Plywood-Analysis-(Stud-Spacing)">Plywood Analysis (Stud Spacing)<a class="anchor-link" href="#Plywood-Analysis-(Stud-Spacing)">&#182;</a></h2>
 </div>
 </div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href = "http://i.imgur.com/NnwmzD3.png"><img src="http://i.imgur.com/NnwmzD3.png" alt = "Formwork for Concrete Table 7-2" title = "Formwork for Concrete Table 7-2" style="max-width:200px; max-height:200px; border:1px solid blue; float:right; margin-left:10px;"/></a></p>
+<p>Since the problem statement did not indicate otherwise, the load duration factor $C_D = 1.25$.  This means,we are using the left hand side of Table 7-2.  The concrete pressure is pretty close to the $1,000 psf$ in the left hand column, but it is over.  This illistrates the first problem with using these tables, there are not exact values listed for every case.  However, as a rule of thumb (taken with a gain of salt...), if the value is within 5% of a lower pressure, you can use that pressure.  This means that you can use the values at $1,000 psf$ in this class; in your professional life, I recommend using the spreadsheets you write in this class.</p>
+<p>For $3/4"$ Class I Plyform, subjected to a $1,000 psf$ pressure load, using a 7 day load duration factor, orientating the Plyform in the strong direction (grain perpendicular to the supports), and supported over three or more spans, the maximum support spacing is $10"$.  Or in other words read down to $1,000 psf$ in the first column and then read over to the first $3/4"$ column.</p>
+<p>For the purposes of preparing you for the <a href="http://www.professionalconstructor.org/exam-info">AIC exam</a>, I am telling you to not determine the constuctuable spacings for any problem in this course that is solved using these tables.  This means that our stud spacing <em>will be</em> $10"$ on center.</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Wale-Spacing-(Stud-Support)">Wale Spacing (Stud Support)<a class="anchor-link" href="#Wale-Spacing-(Stud-Support)">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We need to determine the new line load to calculate the spacing of the stud supports.</p>
+</div>
+</div>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">stud</span><span class="o">=</span><span class="n">two_by_four</span><span class="p">()</span> 
+<span class="n">stud</span><span class="o">.</span><span class="n">F_b</span> <span class="o">=</span> <span class="mi">900</span> <span class="c">#psi</span>
+<span class="n">stud</span><span class="o">.</span><span class="n">F_v</span> <span class="o">=</span> <span class="mi">180</span> <span class="c">#psi</span>
+<span class="n">stud</span><span class="o">.</span><span class="n">F_c_p</span> <span class="o">=</span> <span class="mi">625</span> <span class="c">#psi</span>
+<span class="n">stud</span><span class="o">.</span><span class="n">E</span> <span class="o">=</span> <span class="mi">1600000</span> <span class="c">#psi</span>
+<span class="n">stud</span><span class="o">.</span><span class="n">C_D</span> <span class="o">=</span> <span class="mf">1.25</span>
+<span class="n">stud</span><span class="o">.</span><span class="n">C_F</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">stud</span><span class="o">.</span><span class="n">C_M</span><span class="o">.</span><span class="n">wet</span><span class="o">=</span><span class="bp">True</span>
+<span class="n">stud</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="mi">10</span> <span class="c">#for C_r</span>
+<span class="n">stud</span><span class="o">.</span><span class="n">connected</span> <span class="o">=</span> <span class="bp">True</span> <span class="c">#for C_r</span>
+<span class="n">w_</span> <span class="o">=</span> <span class="n">line_load</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="mi">10</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">w</span><span class="o">=</span><span class="n">w_</span><span class="p">[</span><span class="s">&#39;value&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">w_</span><span class="p">[</span><span class="s">&#39;work&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[11]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$$\text{Line load} = w = \text{pressure}\times\text{tributary width}$$ $$w = P \times s = 1042.5 psf \times 10.0" \times \frac{1 ft}{12 in}$$$$w = 868.75 plf$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href = "http://i.imgur.com/BahdSNW.png"><img src="http://i.imgur.com/BahdSNW.png" alt = "Formwork for Concrete Table 7-5.*" title = "Formwork for Concrete Table 7-5.*" style="max-width:200px; max-height:200px; border:1px solid blue; float:right; margin-left:10px;"/></a></p>
+<p>Now we look up the allowable support spacings for the studs in Table 7-5, again because the studs are being supported over three or more spans.  Since, we are using Douglass Fir-Larch and $C_D=1.25$ so w need to specifically use Table 7-5.2, (if we are reusing the studs again in another form then we would look in Table 7-5.1).</p>
+<p>Reading down to $900 plf$ in the pressure column and over to the 2x4 column, (not the 4x2 column since that is for a 2x4 on the flat) we find that the maximum support spacings for the studs is $21"$.</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Wale-Bearing-Stress-Check">Wale Bearing Stress Check<a class="anchor-link" href="#Wale-Bearing-Stress-Check">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href = "http://i.imgur.com/z279ije.png"><img src="http://i.imgur.com/z279ije.png" alt = "Bearing Area" title = "Bearing Area"style="max-width:300px; max-height:300px; border:1px solid blue; float:right; margin-left:10px;"/></a></p>
+<p>We still would have to check the bearing stress the same way as before.</p>
+<p>$A_{bearing} = (1.5" \times 1.5") \times 2 = 4.5 in^2$</p>
+<p>The load that is on that area is the pressure times the tributary area, or,</p>
+<p>$\text{Bearing Load } = P_{bearing} = P \times A_{trib}$</p>
+<p>$P_{bearing} = P \times s_{stud} \times s_{wale}$</p>
+<p>$P_{bearing} = 1042 psf \times 10 in \times 21 in \times \left(\frac{1 ft}{12 in}\right)^2= 1520 lbs$</p>
+</div>
+</div>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">load</span> <span class="o">=</span> <span class="n">P</span> <span class="o">*</span> <span class="mi">21</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">144</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[12]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">bearing_check</span><span class="p">(</span><span class="n">stud</span><span class="p">,</span><span class="n">load</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[12]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$$f_{c,\perp} = \frac{P_{bearing}}{A_{bearing}} = \frac{ 1520 lb }{ 4.50 in^2 }= 337.85 psi $$ 
+${}$
+ $$F_{c,\perp}' = F_{c,\perp} \times C_M =  625.00 psi \times 0.67 = 418.75 psi $$ 
+${}$
+ $$P_{bearing,allowed} = F_{c,\perp}' \times A_{bearing} =419 psi \times  4.50 in^2 = 1884 lb $$ 
+${}$
+ $$\text{Since the allowable load due to bearing is } 1884 lb \text{ the  and the actual load is } 1520 lb \text{,}$$ $$\text{the wales are good in bearing.}$$ 
+${}$
+ 
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Tie-Spacing-(Wale-Analysis)">Tie Spacing (Wale Analysis)<a class="anchor-link" href="#Tie-Spacing-(Wale-Analysis)">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">w_</span> <span class="o">=</span> <span class="n">line_load</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="mi">21</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We need to determine the new line load to calculate the spacing of the wale supports.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">w_</span><span class="p">[</span><span class="s">&#39;work&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[14]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$$\text{Line load} = w = \text{pressure}\times\text{tributary width}$$ $$w = P \times s = 1042.5 psf \times 21.0" \times \frac{1 ft}{12 in}$$$$w = 1824.38 plf$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href = "http://i.imgur.com/T2VLoFP.png"><img src="http://i.imgur.com/T2VLoFP.png" alt = "Formwork for Concrete Table 7-8.*" title = "Formwork for Concrete Table 7-8.*" style="max-width:200px; max-height:200px; border:1px solid blue; float:right; margin-left:10px;"/></a></p>
+<p>To determine the tie spacing we turn to Table 7-8.1, No.2 Douglas Fir-Larch.  The right half of the table is for $C_D = 1.25$ and we are using double 2x4 wales.  We read down to $1,900 plf$ and then over to the 2x4 column on the right hald to find that the allowable support spacing is $24"$ on center.</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Tie-Strength">Tie Strength<a class="anchor-link" href="#Tie-Strength">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[18]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">tie_spacing</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;in feet&#39;</span><span class="p">:</span><span class="mi">24</span><span class="o">/</span><span class="mi">12</span><span class="p">}</span>
+<span class="n">wale_spacing</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;in feet&#39;</span><span class="p">:</span><span class="mi">21</span><span class="o">/</span><span class="mi">12</span><span class="p">}</span>
+<span class="n">tie_strength</span> <span class="o">=</span> <span class="n">tie_check</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">tie_spacing</span><span class="p">,</span> <span class="n">wale_spacing</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To determine the required tie strength we need to find the load that each tie must carry.  That load is equal to the pressure times the tributary area of a tie.  This tributary area is the found by multiplying the tie spacing by the wale spacing.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[19]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">tie_strength</span><span class="p">[</span><span class="s">&#39;work&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[19]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$$\text{The load on the ties is,}$$ 
+${}$
+ $$P_{ties} = P \times s_{ties} \times s_{wales} =  1042 psf \times  2.000 ft \times  1.750 ft  =  3649 lb$$ 
+${}$
+ $$\text{Use 4000 lb ties.}$$ 
+${}$
+ 
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$\text{With }3/4"\text{ Class I Plyform space the 2x4 studs every }10"\text{.}$</p>
+<p>$\text{The double 2x4 wales need to be spaced }21"\text{ on center.}$</p>
+<p>$\text{The }4000 lb\text{ ties need to be spaced at }24"\text{ on center.}$</p>
+<p>You notice that the spacings are very different.  This is mainly due to the fact that we sprung for the more expensive Plyform rather than just use $3/4"$ plywood.  There are fewer calculations, but we are locked into using more expensive material.  Additionally, if we use a spreadsheet solution we would be able to use the material we want, and have an exact solution.  Once the spreadsheet is set up correctly the first time, it will be easier to use than these tables.</p>
+<p>That being said, you might ask why are we bothering to learn about this?  The reason is that this material will show up on the <a href="http://www.professionalconstructor.org/exam-info">AIC exam</a>, and you might end up going to work for someone that believes this is the fastest way to work.  Either way, you need to be able to use these tables.</p>
+</div>
+</div>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
     </div></section>
     </section>

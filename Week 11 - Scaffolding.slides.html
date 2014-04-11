@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>Week 6 - (Optional) Span Length Derivations slides</title>
+<title>Week 11 - Scaffolding slides</title>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="reveal.js/css/reveal.css">
@@ -1712,7 +1712,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Span-Length-Derivation">Span Length Derivation<a class="anchor-link" href="#Span-Length-Derivation">&#182;</a></h1>
+<h1 id="Scaffold-Design">Scaffold Design<a class="anchor-link" href="#Scaffold-Design">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -1722,9 +1722,26 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<iframe width="420" height="315" src="//www.youtube.com/embed/lqmcegeIwpU" frameborder="0" allowfullscreen></iframe>
+<p>Video Place Holder</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-am-I-going-to-cover?">What am I going to cover?<a class="anchor-link" href="#What-am-I-going-to-cover?">&#182;</a></h2>
+</div>
+</div>
+</div>
 
-<p><em>(You can click on this link to skip the derivations and go to &quot;<a href="http://damontallen.github.io/Construction-Lectures/Week%206%20-%20(Optional)%20Span%20Length%20Derivations.slides.html#/12">How to use the Span Length Limits</a>&quot;.)</em></p>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You have already covered scaffold safety so you should know how to construct and operate a safe scaffold.  Therefore, I am not going to cover that.  I am going to cover how to calculate the loads to determine the correct scaffold components when an engineer is not going to be involved.</p>
 </div>
 </div>
 </div></section>
@@ -1736,7 +1753,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Limiting-the-Deflection-of-a-Beam">Limiting the Deflection of a Beam<a class="anchor-link" href="#Limiting-the-Deflection-of-a-Beam">&#182;</a></h2>
+<h2 id="When-is-an-engineer-NOT-required?">When is an engineer NOT required?<a class="anchor-link" href="#When-is-an-engineer-NOT-required?">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -1747,7 +1764,7 @@ div.output_prompt {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Limiting%20the%20Deflection%20of%20a%20Beam.mp3"
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
          type='audio/mp3'>
  <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
 </audio>
@@ -1759,21 +1776,282 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In most problems, we want to limit the deflection of a beam (or member acting like a beam) to either some fraction of the length of the beam, or some fixed value.  To do this we can either pick the support spacing, and design the member to satisfy these limits over that span, or we can pick a member size, species, and grade, and solve for the support spacing.  This second alternative is the most common approach used in concrete formwork.</p>
-<p>To determine the support spacing of a beam, based deflection limits, we&#39;ll start with the deflection equation for a uniformly distributed load, and solve for $L$.</p>
-<p>$$\Delta = \frac{5 w L^4}{384 E' I} \Rightarrow L^4 = \Delta \frac{ 384 E' I}{5 w}$$</p>
-<p>However, this is for a simply supported beam, and it is more efficient for structural members, in forms of any useful size, to be have intermetiate supports rather than just be simply supported.  Typically, you will see a beam supported over three or more spans.  </p>
-<p>For that reason we need to start with the maximum defection equation for a beam that is supported over three or more spans.  This found in Table 6-1 of the Formwork text.</p>
-<p>$$\Delta_{max} = \frac{w L^4}{145 E' I}\frac{1 ft}{12 in}$$</p>
+<p>If ALL the following criteria are met:</p>
+<ol>
+<li>The scaffold is NOT designed to be moved with employees on it.</li>
+<li>The scaffold is NOT going to be part of a masons’ multi-point adjustable suspension scaffolds. </li>
+<li>The scaffold is NOT going to carry a cantilevered load.</li>
+<li>The scaffold is NOT going to require specially designed outriggers or other components.</li>
+<li>The scaffold is under the following height restrictions:</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<tr><th>Scaffold Type</th><th>Maximum Height</th></tr>
+<tr>
+    <td>Pole </td>
+    <td>Up to 60 feet</td><br></tr>
+<tr>
+    <td>Tube and Coupler </td>
+    <td>Up to 125 feet</td><br></tr>
+<tr>
+    <td>Fabricated Frame</td>
+    <td>Up to 125 feet above the base plate</td><br></tr>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note: There are a lot of scaffolds that meet this criteria.  </p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Where-to-start?-(Loads)">Where to start? (Loads)<a class="anchor-link" href="#Where-to-start?-(Loads)">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note: This is select information from ASCE 37-02</p>
+<ul>
+<li>Very Light-Duty Loading<ul>
+<li>20 psf maximum working load</li>
+<li>For access, painting, and maintenance with hand tools</li>
+<li>AKA “Inspection scaffold”</li>
+</ul>
+</li>
+<li>Light-Duty Loading<ul>
+<li>25 psf maximum working load</li>
+<li>For light weight construction <ul>
+<li>Concrete transport and placement by hose and concrete finishing by hand tools</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Medium-Duty Loading<ul>
+<li>50 psf maximum working load</li>
+<li>For supporting people and materials (general construction work)<ul>
+<li>Concrete transport and placement by buckets, chutes, or handcarts</li>
+<li>Concrete finishing using motorized screeds</li>
+<li>Masonry construction with tile or hollow lightweight concrete units</li>
+<li>Structural steel erection or concrete reinforcing steel placement</li>
+</ul>
+</li>
+<li>AKA “Brick layer&#39;s scaffold” or “Plasterer&#39;s scaffold”<ul>
+<li>Do not put a pallet of bricks on it.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Heavy-Duty Loading<ul>
+<li>75 psf maximum working load</li>
+<li>For supporting people and stored material<ul>
+<li>Concrete transport and placement using motorized buggies</li>
+<li>Masonry of brick or heavy-weight concrete units</li>
+<li>Material storage</li>
+</ul>
+</li>
+<li>AKA “Stone mason&#39;s scaffold”</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Minimum-Concentrated-Personnel-and-Equipment-Loads">Minimum Concentrated Personnel and Equipment Loads<a class="anchor-link" href="#Minimum-Concentrated-Personnel-and-Equipment-Loads">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Workers are assumed to weigh 250 lbs each (200 lb for the person and 50 lb for equipment) and the load is applied over a 12” x 12” area.</li>
+<li>Manually powered wheeled vehicle (wheelbarrow) is assumed to weigh 500 lbs and the load is over an area found by dividing the load by the tire pressure.</li>
+<li>Powered wheeled vehicle (concrete buggy) is assumed to weigh 2000 lbs and the load is over an area found by dividing the load by the tire pressure.</li>
+</ul>
+<p>Note: if the loads are larger than those shown here then use the actually load.</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Impact-Modification">Impact Modification<a class="anchor-link" href="#Impact-Modification">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Reactions shall be increased by 30% to allow for impact unless other values are recommended by the manufacturer or are required by the authority having jurisdiction.</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-Allowable-Stress-Design-(Direct-quote-from-commentary-of-ASCE-37-02)">Using Allowable Stress Design (Direct quote from commentary of ASCE 37-02)<a class="anchor-link" href="#Using-Allowable-Stress-Design-(Direct-quote-from-commentary-of-ASCE-37-02)">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>OSHA (1977) requires that “scaffolds shall be capable of supporting, without failure, their own weight and at least four times the maximum intended load.”  ANSI (1989) has a similar requirement.  Allowable stress design ordinarily provides for safety factors somewhat less than 2.  Thus, to satisfy OSHA criteria, the superimposed design loads effectively must be doubled.</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Load-Combinations">Load Combinations<a class="anchor-link" href="#Load-Combinations">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>D+CD+CFML+CVML</li>
+<li>D+CD+CFML+CVML+CP+CH+L</li>
+<li>D+CD+CFML+CVML+W+CP+L</li>
+<li>etc....</li>
+</ul>
 <p>Where:</p>
 <ul>
-<li>$w$ is the uniformly distributed load on the beam, in units of $plf$</li>
-<li>$L$ is the distance between supports, in units of $inches$</li>
-<li>$E'$ is the adjusted Young&#39;s modulus of the beam&#39;s material, in units of $psi$</li>
-<li>$I$ is the moment of inertia of the beam, in units of $in^4$</li>
+<li>D    - Dead load</li>
+<li>CD    - Construction dead load</li>
+<li>CFML    - Fixed material load (i.e. formwork)</li>
+<li>CVML    - Variable material load (i.e. fresh concrete)</li>
+<li>CP    - Personnel and equipment load</li>
+<li>CH    - Horizontal construction loads (you might need an engineer)</li>
+<li>L    - Live load</li>
+<li>W    - Wind load (get an engineer if this is needs to be considered)</li>
+<li>etc...</li>
 </ul>
-<p>To start with we solve for $L^4$ in terms of $\Delta_{max}$.</p>
-<p>$$ L^4 = \Delta_{max} \frac{145 E' I}{w }\frac{12 in}{1 ft} =   \Delta_{max} \frac{(1,740 in/ft) E' I}{w}$$</p>
 </div>
 </div>
 </div></section>
@@ -1785,7 +2063,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Limit-Deflection-to-a-Fraction-of-the-Span">Limit Deflection to a Fraction of the Span<a class="anchor-link" href="#Limit-Deflection-to-a-Fraction-of-the-Span">&#182;</a></h2>
+<h2 id="Putting-it-all-Together">Putting it all Together<a class="anchor-link" href="#Putting-it-all-Together">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -1796,7 +2074,7 @@ div.output_prompt {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Limit%20Deflection%20to%20a%20Fraction%20of%20the%20Span.mp3"
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
          type='audio/mp3'>
  <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
 </audio>
@@ -1808,495 +2086,8 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We left our equation in terms of $L^4$ because we might want to set the deflection to either a fixed amount, <em>or</em> some fraction of the span length.  An example of this type of fractional limit is, $\Delta \leq L/360$.  We could use that to work with, but for now I will represent the constant, $360$, as a unknown value, $C$.</p>
-<p>$$ L^4 = \Delta_{max} \frac{(1,740 in/ft) E' I}{w} = \frac{L}{C} \frac{(1,740 in/ft) E' I}{w}$$</p>
-<p>$$ L^3 =  \frac{1}{C} \frac{(1,740 in/ft) E' I}{w}$$</p>
-<p>$$ L^3 =  \frac{1,740 in/ft}{C} \frac{ E' I}{w}$$</p>
-<p>$$ L =  \sqrt[3]{\frac{1,740 in/ft}{C} \frac{ E' I}{w}}$$</p>
-<p>$$ L =  \sqrt[3]{\frac{1,740 in/ft}{C}}\sqrt[3]{ \frac{ E' I}{w}} \text{ (or) } $$</p>
-<p>$$L = \sqrt[3]{\frac{1,740 }{C}}\left(\frac{in}{ft} \right)^{1/3}\sqrt[3]{ \frac{ E' I}{w}}$$</p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Deflection-Limit-of-$L/360$">Deflection Limit of $L/360$<a class="anchor-link" href="#Deflection-Limit-of-$L/360$">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Deflection%20Limit%20of%20L_360.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>For a specific fractional limit like $L/360$ we just take our equation and substitute 360 for the constant $C$.</p>
-<p>$$L = \sqrt[3]{\frac{1,740 }{C}}\left(\frac{in}{ft} \right)^{1/3}\sqrt[3]{ \frac{ E' I}{w}} \Rightarrow L = \sqrt[3]{\frac{1,740 }{360}}\left(\frac{in}{ft} \right)^{1/3}\sqrt[3]{ \frac{ E' I}{w}}$$ </p>
-<p>$$ L =  1.69 \left(\frac{in}{ft} \right)^{1/3}\sqrt[3]{ \frac{ E' I}{w}}$$</p>
-<p>The value $1.69$ has some unusual units associated with it. However, if we can just remember what the variables&#39; units are supposed to be in the equation, we can have the units of $1.69$ implied, and write it like this, </p>
-<p>$$L =  1.69 \sqrt[3]{ \frac{ E' I}{w}}$$</p>
-<p>Where:</p>
-<ul>
-<li>$L$ is distance between the supports, in units of $inches$</li>
-<li>$w$ is the uniformly distributed load on the beam, in units of $plf$</li>
-<li>$E'$ is the adjusted Young&#39;s modulus of the beam&#39;s material, in units of $psi$</li>
-<li>$I$ is the moment of inertia of the beam, in units of $in^4$</li>
-</ul>
-<p>If, on your particular project, you are using a different fractional deflection limit, you can just solve the equation again with a new $C$.</p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Fixed-Deflection-Limit">Fixed Deflection Limit<a class="anchor-link" href="#Fixed-Deflection-Limit">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Fixed%20Deflection%20Limit.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>With a fixed diflection limit, like $1/16"$ for example, we need to start with out original solution and solve for $L$.</p>
-<p>$$ L^4 = \Delta_{max} \frac{(1,740 in/ft) E' I}{w}$$</p>
-<p>$$ L = \sqrt[4]{\Delta_{max} \frac{(1,740 in/ft) E' I}{w}}$$</p>
-<p>$$ L = \sqrt[4]{\Delta_{max} \times 1,740 \frac{in}{ft}} \times \sqrt[4]{ \frac{ E' I}{w}}$$</p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Limiting-Deflection-to-$1/16&quot;$">Limiting Deflection to $1/16"$<a class="anchor-link" href="#Limiting-Deflection-to-$1/16&quot;$">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Limiting%20Deflection%20to%201_16_in.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>If we pick a fixed deflection like $1/16"$ we just need to substitue it for $\Delta_{max}$ in our equation.</p>
-<p>$$ L = \sqrt[4]{\Delta_{max} \times 1,740 \frac{in}{ft}} \times \sqrt[4]{ \frac{ E' I}{w}} \Rightarrow L = \sqrt[4]{\frac{1}{16}" \times 1,740 \frac{in}{ft}} \times \sqrt[4]{ \frac{ E' I}{w}}$$</p>
-<p>$$ L = \sqrt[4]{\frac{1,740 in^2}{16 ft}}\times \sqrt[4]{ \frac{ E' I}{w}}$$</p>
-<p>$$ L = \sqrt[4]{108.75} \left(\frac{in^2}{ft} \right)^{1/4}\times \sqrt[4]{ \frac{ E' I}{w}}$$</p>
-<p>$$ L = 3.23 \frac{\sqrt{in}}{\sqrt[4]{ft}} \sqrt[4]{ \frac{ E' I}{w}}$$</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Like before, we have some unusual units associated with the constant in our soulution.  If we want to leave out those units, we just need to remember what all the variables&#39; units are supposed to be.</p>
-<p>$$ L = 3.23 \sqrt[4]{ \frac{ E' I}{w}}$$</p>
-<p>Where:</p>
-<ul>
-<li>$L$ is the distance between supports, in units of $inches$</li>
-<li>$E'$ is the adjusted Young&#39;s modulus of the beam&#39;s material, in units of $psi$</li>
-<li>$I$ is the moment of inertia of the beam, in units of $in^4$</li>
-<li>$w$ is the uniformly distributed load on the beam, in units of $plf$</li>
-</ul>
-<p>If you are using a different deflection limit, just resolve the equation using the new $\Delta_{max}$.</p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Using-Bending-Stress-in-a-Beam-to-Determine-Allowable-Spans">Using Bending Stress in a Beam to Determine Allowable Spans<a class="anchor-link" href="#Using-Bending-Stress-in-a-Beam-to-Determine-Allowable-Spans">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Using%20Bending%20Stress%20in%20a%20Beam%20to%20Determine%20Allowable%20Spans%20pt1.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>There are three (or four) failure modes that need to be checked with any beam: the deflection(s), bending, and shear.  For bending, we just compare $f_b$ to $F_b'$.  However, in order to find the actual bending stress, we need to know the equation for the maximum bending moment.  In a simply supported beam, the maximum bending moment due to a uniformly distributed load, is,</p>
-<p>$$M = \frac{w L^2}{8}$$</p>
-<p>But, we are not using a simply supported beam.  Instead, we need the equation for the maximum bending moment in a beam that is supported over three or more spans.  That equation can be found in Table 6-1 of the Formwork text.</p>
-<p>$$M = \frac{w L^2}{10} \times \frac{1 ft}{12 in}$$</p>
-<p>Where:</p>
-<ul>
-<li>$M$ is the maximum bending moment in the beam, in units of $in$-$lbs$</li>
-<li>$L$ is distance between the supports, in units of $inches$</li>
-<li>$w$ is the uniformly distributed load on the beam, in units of $plf$</li>
-</ul>
-<p><em>(Continued on the next slide)</em></p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Using%20Bending%20Stress%20in%20a%20Beam%20to%20Determine%20Allowable%20Spans%20pt2.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Since the actual bending stress is proportional to the bending moment divided by the section modulus, we find the bending moment like this.</p>
-<p>$$M = f_b \times S$$</p>
-<p>By setting the actual bending stress equal to the allowable bending stress, we can rewrite the bending moment equation in terms of $F_b'$.</p>
-<p>$$F_b' \times S = M = \frac{w L^2}{120} \times 1 \frac{ft}{in}$$</p>
-<p>Solving for $L^2$ we get,</p>
-<p>$$L^2 = 120 \frac{in}{ft} \times \frac{F_b' \times S }{w} $$</p>
-<p>and $L$ is,</p>
-<p>$$L = \sqrt{120 \frac{in}{ft}} \times \sqrt{\frac{F_b' \times S }{w}} $$</p>
-<p>$$L = 10.95 \sqrt{ \frac{in}{ft}} \times \sqrt{\frac{F_b' \times S }{w}} \textbf{ or if the units are just implied } L = 10.95 \times \sqrt{\frac{F_b' \times S }{w}}$$</p>
-<p>Where:</p>
-<ul>
-<li>$L$ is the distance between supports, in units of $inches$</li>
-<li>$F_b'$ is the allowable bending stress of the beam, in units of $psi$</li>
-<li>$S$ is the section modulus of the beam, in units of $in^3$</li>
-<li>$w$ is the uniformly distributed load on the beam, in units of $plf$</li>
-</ul>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Span-Limit-when-Shear-Controls">Span Limit when Shear Controls<a class="anchor-link" href="#Span-Limit-when-Shear-Controls">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Span%20Limit%20when%20Shear%20Controls%20pt1.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href = "http://i.imgur.com/E2UUjpH.png"><img src="http://i.imgur.com/E2UUjpH.png" alt = "Concrete Beam"style="max-width:300px; max-height:300px; border:1px solid blue; float:right; margin-left:10px;"/></a></p>
-<p>Like with bending, and deflection before, the value for the maximum shear, in a beam supported over three or more spans, is not the same as for a simply supported beam.</p>
-<p>From Table 6-1 in the Formwork text we find,</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>$$V_{max} = 0.6 \times w \times L \times \frac{1 ft}{12 in} \left(\text{ or } V_{max} = 1.2 \times w \times \frac{L}{2} \times \frac{1 ft}{12 in} \right)$$ </p>
-<p>Where:</p>
-<ul>
-<li>$V_{max}$ is the maximum shear in a beam supported over three or more spans, in units of $lbs$</li>
-<li>$w$ is the uniformly distributed load on the beam, in units of $plf$</li>
-<li>$L$ is the distance between supports, in units of $inches$</li>
-</ul>
-<p>For beams that are loaded on the opposite side from the supports, we can take advantage of Section 3.4.3 in the Timber NDS. That section states, the maximum shear may be measured at a distance $d$ over from the edge of the supports.  This is instead of the usual way, which is right at the supports.  You may recall something similar to this from studying concrete beams.  Instead of going over that explanation again, I&#39;ve included the drawing of a concrete beam, failing in shear, to serve as a reminder about why this can be done.</p>
-<p><em>(Continued on the next slide.)</em></p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Span%20Limit%20when%20Shear%20Controls%20pt2.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>After accounting for this allowance, the maximum shear equation becomes,</p>
-<p>$$V_{max} =  1.2 \times w \times \left( \frac{L}{2} - d \right) \times \frac{1 ft}{12 in} \text{ or }$$ </p>
-<p>$$V_{max} =  0.6 \times w \times \left( L - 2d \right) \times \frac{1 ft}{12 in} = \frac{0.6 ft}{12 in} \times w \times \left( L - 2d \right) $$ </p>
-<p>$$V_{max} = \frac{1 ft}{20 in} \times w \times \left( L - 2d \right) $$ </p>
-<p>By rewriting $V_{max}$ in terms of allowable shear stress we get,</p>
-<p>$$F_v' = \frac{3}{2}\frac{V_{max}}{A} = \frac{3}{2 \times A}\frac{1 ft}{20 in} \times w \times \left( L - 2d \right) $$ </p>
-<p>$$F_v' = \left(\frac{3 ft}{40 in} \times \frac{w}{A}\right) \times \left( L - 2d \right) $$ </p>
-<p><em>(Continues on the next slide.)</em></p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Span%20Limit%20when%20Shear%20Controls%20pt3.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we solve for $L$.</p>
-<p>$$F_v' = \left(\frac{3 ft}{40 in} \times \frac{w}{A}\right) \times \left( L - 2d \right) \Rightarrow \left( L - 2d \right) = F_v' \times \left(\frac{40 in}{3 ft} \times \frac{A}{w}\right) $$ </p>
-<p>by adding $2d$ to both sides we get,</p>
-<p>$$ L =  \frac{40 in}{3 ft} \times \frac{F_v' \times A}{w} + 2d  $$ </p>
-<p>$$ L =  13.33\frac{ in}{ ft} \times \frac{F_v' \times A}{w} + 2d  \text{ or just,}$$ </p>
-<p>$$ L =  13.33\times \frac{F_v' \times A}{w} + 2d $$ </p>
-<p>Where:</p>
-<ul>
-<li>$L$ is the distance between supports, in units of $inches$</li>
-<li>$F_v'$ is the maximum allowable shear stress in the beam, in units of $psi$</li>
-<li>$A$ is the cross sectional area of the beam, in units of $in^2$</li>
-<li>$w$ is the uniformly distributed load on the beam, in units of $plf$</li>
-<li>$d$ is the width of the beam, in units of $in$</li>
-</ul>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Plywood-Rolling-Shear">Plywood Rolling Shear<a class="anchor-link" href="#Plywood-Rolling-Shear">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Plywood%20Rolling%20Shear.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The span limit for plywood panels, supported over three or more spans, due to rolling shear, can be found using Equation 11 from the <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/D510.pdf">APA Panel Design Specification</a>.</p>
-<p>$$w  = \frac{20 F_s' (Ib/Q)}{L} $$ </p>
-<p>Since plywood is designed using a per unit foot procedure$*$, this equation, (as well as all the other equations, when they are used with plywood), results in $w$ being in units of, $\frac{plf}{1 ft}$.  We convert it to the units we want to use by multiplying both sides by $1 ft$.</p>
-<p>$$w \times 1 ft = \frac{20 F_s' (Ib/Q)}{L}\times 1 ft $$</p>
-<p>Solving for $L$ we get,</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>$$L  = \frac{20 F_s' (Ib/Q)}{w} $$</p>
-<p>Where:</p>
-<ul>
-<li>$L$ is the distance between supports, in units of $inches$</li>
-<li>$F_s'$ is the maximum allowable rolling shear stress in the panel, in units of $psi$</li>
-<li>$Ib/Q$ is the rolling shear constant of the panel, in units of $in^2/ft$</li>
-<li>$w$ is the uniformly distributed load on the panel, in units of $plf$</li>
-</ul>
-<p>Sometimes this equation is written in a way that $L$ comes out in feet.  This looks like,</p>
-<p>$$L  = \frac{F_s' (Ib/Q)}{0.6 w} $$</p>
-<p>Note: In both versions of this equation $F_s' = F_s \times C_D$.</p>
-<p><em>( $*$ - See the slide below for the explanation of why the per unit foot procedure is used.)</em></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/Explanation%20of%20why%20the%20per%20unit%20foot%20procedure%20is%20used.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Because plywood panels are regularly cut to irregular widths, the writing of tables that contain all the section properties, for all the possible widths, is not only a daunting task, but it would take forever to accomplish.  However, tables written in a per-unit-width basis can be used to find any section property by simply multiplying the table values by that particular plywood section&#39;s width.</p>
-<p>In practice, plywood is typically designed to resist a pressure load.  It can be shown that, if you use the pressure load in the analysis, instead of an actual line load, and you use the values straight from the per-unit-width table, you will get the same result.  The reason for this is that the width of a plywood section and the tributary width for the section are the same, and during the analysis, these two values cancel each other out.</p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-use-the-Span-Length-Limits">How to use the Span Length Limits<a class="anchor-link" href="#How-to-use-the-Span-Length-Limits">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<audio controls data-autoplay preload>
- <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Lecture%20Audio/Week%206/Span%20Length%20Derivations/How%20to%20use%20the%20Span%20Length%20Limits.mp3"
-         type='audio/mp3'>
- <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
-</audio>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In this class, our typical set of span length equations are:</p>
-<p>$$L = 10.95 \times \sqrt{\frac{F_b' \times S }{w}} \text{ (For bending)}$$
-$$L = 13.33\times \frac{F_v' \times A}{w} + 2d \text{ (For shear for everthing but plywood)}$$ 
-$$L = \frac{20 F_s' (Ib/Q)}{w} \text{ (For rolling shear for plywood only)}$$
-$$L = 1.69 \sqrt[3]{ \frac{ E' I}{w}} \text{ (For limiting deflections to L/360)}$$
-$$L = 3.23 \sqrt[4]{ \frac{ E' I}{w}} \text{ (For limiting deflections to 1/16")}$$</p>
-<p><em>(See the slide below for all the variable definitions.)</em></p>
-<p>For a given member being used as a beam, you will solve four of these span length equations.  What you will end up with is a list of four maximum span lengths. Each of these span lengths corresponds the particular failure mode of its original equation.  Since any span greater than the smallest length will result in that member failing, and failing in the failure mode of the smallest length, we have to set the support spacing to something less than that.  For instance:</p>
-<ul>
-<li>$L_{bend} = 20.5"$</li>
-<li>$L_{shear} = 36.1"$</li>
-<li>$L_{L/360} = 25.6"$</li>
-<li>$L_{1/16"} = 23.2"$</li>
-</ul>
-<p>For this beam, bending controls, and we cannot set our supports any farther apart than $20.5"$, or the beam will fail in bending.  However, $20.5"$ is not the <em>optimal</em> support spacing; it&#39;s just the limit.  Since this optimal value will depend on the use case, we will discuss it more when we cover formwork for walls, and again when we discuss slab forms.</p>
+<p>Due to the loading requirements for scaffolding, it is always more cost effective to use scaffold planks than regular lumber.  Scaffold planks are typically Laminated Veneer Lumber (LVL), though there are timber planks available.  These timber planks are of a much high grade than you will find at a home improvement store and are machine certified instead of visual grading.  A new scaffold plank should also be labeled as OSHA compliant.
+Scaffold supplies should provide you with information pertaining to the ratings of their products.  Below is an example from Trus Joist &reg; (source: <a href="http://www.mccauseylumber.com/3060.pdf">http://www.mccauseylumber.com/3060.pdf</a>).</p>
 </div>
 </div>
 </div></section><section>
@@ -2306,24 +2097,36 @@ $$L = 3.23 \sqrt[4]{ \frac{ E' I}{w}} \text{ (For limiting deflections to 1/16")
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In the span length equations:</p>
-<ul>
-<li>$L$ is the spacing between supports, in units of $inches (in)$</li>
-<li><p>$w$ is the uniformly distributed load on the beam, in units of $plf$</p>
-</li>
-<li><p>$d$ is the width of the beam, in units of $in$</p>
-</li>
-<li>$A$ is the cross sectional area of the beam, in units of $in^2$ </li>
-<li>$S$ is the section modulus of the beam, in units of $in^3$ (or $in^3/ft$ for plywood)</li>
-<li><p>$I$ is the moment of inertia of the beam, in units of $in^4$ (or $in^4/ft$ for plywood)</p>
-</li>
-<li><p>$F_b'$ is the maximum allowable bending stress of the beam, in units of $psi$</p>
-</li>
-<li>$F_v'$ is the maximum allowable shear stress in the beam, in units of $psi$</li>
-<li>$F_s'$ is the maximum allowable rolling shear stress in the panel, in units of $psi$</li>
-<li>$E'$ is the adjusted Young&#39;s modulus of the beam&#39;s material, in units of $psi$</li>
-<li>$Ib/Q$ is the rolling shear constant of the panel, in units of $in^2/ft$</li>
-</ul>
+<p><a href="http://www.mccauseylumber.com/3060.pdf">
+<img src="http://i.imgur.com/ahwjqpV.png" alt="Span Table" width = 70% height = 70% border="0">
+</a></p>
+<p><em>(Continued below.)</em></p>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="http://www.mccauseylumber.com/3060.pdf">
+<img src="http://i.imgur.com/EZf5ye6.png" alt="Span Table notes" width = 70% height = 70% border="0">
+</a></p>
+<p>Once you know what you are going to need the scaffold for (e.g. placing concrete with a hose with two people,) you determine the controlling load (e.g. personnel controls), then determine the maximum span you can you use  with your scaffold planks.  Alternatively, you determine what size planks you will need for your scaffold spans.</p>
 </div>
 </div>
 </div></section>
@@ -2335,7 +2138,7 @@ $$L = 3.23 \sqrt[4]{ \frac{ E' I}{w}} \text{ (For limiting deflections to 1/16")
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="References:">References:<a class="anchor-link" href="#References:">&#182;</a></h2>
+<h2 id="Plank-Properties">Plank Properties<a class="anchor-link" href="#Plank-Properties">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -2345,106 +2148,279 @@ $$L = 3.23 \sqrt[4]{ \frac{ E' I}{w}} \text{ (For limiting deflections to 1/16")
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/D510.pdf">APA Panel Design Specification</a></p>
-<p><a href="https://elearning2.courses.ufl.edu/portal/site/UFL-BCN4423C-40908-52014">Class website</a> <em>(Use this link to if you are taking the course on e-learning.)</em></p>
-<p><a href="http://damontallen.github.io/Construction-Lectures/">Github.io version of course website</a> <em>(Do not use this link is you are taking this course in Summer A or B.)</em></p>
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
 </div>
 </div>
-</div><div style=display:none>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now that you have the spans determined you can determine the type of scaffold you can use.  To do that you need to know about the loads again (including the plank weight.)  </p>
+<p>The physical properties of these scaffold planks are as follows:</p>
+<p><a href="http://www.mccauseylumber.com/3060.pdf">
+<img src="http://i.imgur.com/aeV33jr.png" alt="Plank Weights (plf)" width = 70% height = 70% border="0">
+</a></p>
+<p><em>(Optional material below.)</em></p>
+</div>
+</div>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>CSS stylesheet</p>
-<head>
-<style>
-important {font:italic bold 16px arial;}
-.missing {color:Red}
-fragment {color:LightBlue;}
-subslide {color:DarkBlue;}
-
-.rgt {float:right;}
-
-.lt {float:left;}
-
-.cnt {text-align:center; vertical-align:text-top;}
-
-.box { border:1px solid blue; float:left; margin-right:3px;}
-
-.max {max-width:300px; max-height:300px;}
-
-.fix {max-height:200px; max-width:200px;}
-
-</style>
-</head>
-
-<pre><code>###Useful Tip:
-
-If you use Firefox or Chrome then installing one of the following extensions will make viewing images in lectures easier.
-
-* Firefox - [Thumbnail Zoom Plus](https://addons.mozilla.org/en-US/firefox/addon/thumbnail-zoom-plus/?src=search)
-* Chrome - [Hover Free](https://chrome.google.com/webstore/detail/hover-free/hcmnnggnaofmhflgomfjfbndngdoogkj) (Not to be confused with Hover Zoom.)
-
-/* class = &quot;max box&quot; for img tags
-
-
-Audio Player:
-&lt;audio controls data-autoplay preload&gt;
- &lt;source src=&quot;https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3&quot;
-         type=&#39;audio/mp3&#39;&gt;
- &lt;p&gt;&lt;strong&gt;Your user agent does not support the HTML5 Audio element or the files are missing.&lt;/strong&gt;&lt;/p&gt;
-&lt;/audio&gt;&lt;a&gt;&lt;/a&gt;
-
-*/
-class = &quot;max box&quot; == style=&quot;max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;&quot;
-important == &lt;strong&gt;&lt;font style=&quot;font:italic bold 16px arial;&quot;&gt; Text here &lt;/font&gt;&lt;/strong&gt;
-Example &lt;important class=&quot;missing&quot;&gt;Video Placeholder&lt;/important&gt;
-
-Picture Examples: 
-(Right side)
-&lt;a href = &quot;http://i.imgur.com/h7H0m0b.png&quot;&gt;&lt;img src=&quot;http://i.imgur.com/h7H0m0b.png&quot; alt = &quot;Elevated Slab with Worker&quot;style=&quot;max-width:300px; max-height:300px; border:1px solid blue; float:right; margin-left:10px;&quot;/&gt;&lt;/a&gt;
-
-(Left side)
-&lt;a href = &quot;http://i.imgur.com/EWHj3eh.png&quot;&gt;&lt;img src=&quot;http://i.imgur.com/EWHj3eh.png&quot; alt = &quot;Braced Slab&quot; Title = &quot;Braced Slab&quot;style=&quot;max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;&quot;/&gt;&lt;/a&gt;
-
-(hover over image)
-&lt;a href=&quot;http://i.imgur.com/aTxezXX.png&quot; id=&quot;Top Down Slab&quot;&gt;
-    &lt;img title=&quot;Top Down Slab (Bracing in the 60 ft direction)&quot; alt = &quot;Top Down Slab&quot;
-        src=&quot;http://i.imgur.com/EL2FYDQ.png&quot; 
-        onmouseover=&quot;this.src=&#39;http://i.imgur.com/aTxezXX.png&#39;&quot;.
-        onmouseout=&quot;this.src=&#39;http://i.imgur.com/EL2FYDQ.png&#39;&quot; 
-        style=&quot;max-width:300px; max-height:300px; border:1px solid blue; 
-                float:right; margin-left:10px;&quot;/&gt;
-&lt;/a&gt;
-
-Video:
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/g43sFmgHOCk&quot; frameborder=&quot;0&quot; allowfullscreen style=&quot; float:left; margin-right:20px;&quot;&gt;&lt;/iframe&gt;
-</code></pre>
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
 </div>
 </div>
 </div>
-    </div><div style=display:none>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It is unlikely you will need the information below, but I am providing it to you just in case you do.</p>
+<p><a href="http://www.mccauseylumber.com/3060.pdf">
+<img src="http://i.imgur.com/CUINDNF.png" alt="Plank Properties" width = 70% height = 70% border="0">
+</a></p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(hover over image)
-    <a href="http://i.imgur.com/aTxezXX.png" id="Top Down Slab">
-        <img title="Top Down Slab (Bracing in the 60 ft direction)" alt = "Top Down Slab"
-            src="http://i.imgur.com/EL2FYDQ.png" 
-            onmouseover="this.src='http://i.imgur.com/aTxezXX.png'".
-            onmouseout="this.src='http://i.imgur.com/EL2FYDQ.png'" 
-            style="max-width:300px; max-height:300px; border:1px solid blue; 
-                    float:right; margin-left:10px;"/>
-    </a></p>
+<h2 id="Metal-Shoring-/-Frame-Scaffold">Metal Shoring / Frame Scaffold<a class="anchor-link" href="#Metal-Shoring-/-Frame-Scaffold">&#182;</a></h2>
 </div>
 </div>
 </div>
-    </div></section>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you are using metal scaffolding it will have been designed with LRFD and thus there will not be a need to double the ASCE 37-02 loads. </p>
+<p>For the scaffold we have been designing (two people placing concrete with a hose) we know have to re-examine the loads to determine the maximum.  Assuming you are using 5 foot wide scaffold, which is typical, the loads you need to consider are as follows:</p>
+<ul>
+<li>The light duty construction load of 25 psf is equivalent to 125 plf across the span of the scaffold</li>
+<li>The two construction workers - 500 lbs</li>
+<li>The weight of the planks, 4.8 plf times 5 planks wide is equivalent to 24 plf across the span of the scaffold</li>
+<li>The weight of the frames themselves (assume 150 lbs per layer).</li>
+</ul>
+<p>If the scaffold frames are 7 ft on center (typical for this application) then the loads that should be considered are </p>
+<ul>
+<li>CD     - Scaffold planks (@ 7ft span is 168 lbs) and frames (allow 150 lbs per layer)</li>
+<li>CP     - Personnel and equipment load (either 500 lb or 125 plf (which @ 7 ft span is 875 lbs))</li>
+</ul>
+<p>If we only need to go up 10 ft (300 lbs for frames) we can now calculate the load combinations.</p>
+<p>Load combinations:</p>
+<ul>
+<li>$1.4D+1.4CD+1.2CFML+1.4CVML $<ul>
+<li>$1.4(168 + 300) = 655.2 lbs$</li>
+</ul>
+</li>
+<li>$1.2D+1.2CD+1.2CFML+1.4CVML+1.6CP+1.6CH+0.5L$<ul>
+<li>$1.2(168 + 300) + 1.6(875 \text{ or } 500 \text{, whichever is greater}) = 1961.6 lbs$</li>
+</ul>
+</li>
+<li>If wind or earthquake loading need to be considered, use an engineer.</li>
+</ul>
+<p>(see page 2 for variable definitions)</p>
+<p>Looking at some frame capacities from Waco Scaffolding &amp; Equipment &reg; to find what we need...</p>
+<p>(source: <a href="http://wacoscaf.com/pdf/shoring.pdf">http://wacoscaf.com/pdf/shoring.pdf</a>)</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Metal-Frames">Metal Frames<a class="anchor-link" href="#Metal-Frames">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="http://wacoscaf.com/pdf/shoring.pdf"><img src="http://i.imgur.com/c604vGS.png" alt="Frame Numbers" width = 40% height = 40% border="0"></a></p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Frame-Capacity-Table">Frame Capacity Table<a class="anchor-link" href="#Frame-Capacity-Table">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="http://wacoscaf.com/pdf/shoring.pdf"><img src="http://i.imgur.com/jz5Fz0q.png" alt="Frame Capacities" width = 50% height = 50% border="0"></a></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>OSHA requires a factor of safety of four for scaffolding so we will need to adjust our loads up to compensate for the Waco&#39;s lower factor of safety.</p>
+<p>$$\frac{1961.6 lbs}{2 \frac{1}{2}} \times 4 = 3138.56 lbs$$</p>
+<p>We can use 5&#39;1” end frames (0155-00) two layers high and with up to 48” of screw extension if needed, i.e. setting up over stairs.</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Design-Summary">Design Summary<a class="anchor-link" href="#Design-Summary">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In summary: A design for a 10 ft tall scaffold needed for two workers to place concrete with a hose follows.</p>
+<p>Loads:</p>
+<ul>
+<li>Personnel loading<ul>
+<li>2 construction workers (250 lb each)</li>
+<li>Light construction load (25 psf)</li>
+</ul>
+</li>
+<li>Construction dead load<ul>
+<li>Scaffold planks (4.8 psf)</li>
+<li>Frames (150 lbs for each layer)</li>
+</ul>
+</li>
+</ul>
+<p>Dimensions:</p>
+<ul>
+<li>Height – 10 feet</li>
+<li>Width – 5 feet</li>
+<li>Span – 7 feet</li>
+</ul>
+<p>Design:</p>
+<ul>
+<li>Scaffold planks:<ul>
+<li>Two workers control - use 1 ½” x 11 ¾” planks for conveyance</li>
+</ul>
+</li>
+<li>Frame load combinations:<ul>
+<li>$1.4D+1.4CD+1.2CFML+1.4CVML $<ul>
+<li>$1.4(168 + 300) = 655.2 lbs$</li>
+</ul>
+</li>
+<li>$1.2D+1.2CD+1.2CFML+1.4CVML+1.6CP+1.6CH+0.5L$<ul>
+<li>$1.2(168 + 300) + 1.6(875 \text{ or } 500 \text{, whichever is greater}) = 1961.6 lbs$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Correct Waco&#39;s factor of safety (is 2.5 should be 4 for scaffold):<ul>
+<li>$\frac{1961.6 lbs}{2 \frac{1}{2}} \times 4 = 3138.56 lbs$</li>
+</ul>
+</li>
+<li>Pick frames that go up 10 ft:<ul>
+<li>Use two layers of 5&#39;1” end frames (0155-00) with up to 48” of screw extension.</li>
+</ul>
+</li>
+</ul>
+<p><em>Note: The factor of safety would not have to be corrected if the frames were being used for shoring instead of scaffolding.  The loading would include the slab, formwork, personnel, and equipment.</em></p>
+</div>
+</div>
+</div></section>
     </section>
 </div>
 </div>
