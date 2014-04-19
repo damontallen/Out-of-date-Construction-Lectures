@@ -45,8 +45,38 @@ Week 6
 
 Week 7
 
+* <a href="http://nbviewer.ipython.org/urls/raw.githubusercontent.com/damontallen/Construction-Lectures/master/Week%207%20-%20Wall%20Forms.ipynb">Wall Forms</a>
+* <a href="http://nbviewer.ipython.org/urls/raw.githubusercontent.com/damontallen/Construction-Lectures/master/Week%207%20-%20Wall%20Forms%20-%20Using%20Tables.ipynb">Wall Forms - Using Formwork Tables</a>
+
+Week 8
+
+* <a href="http://nbviewer.ipython.org/urls/raw.githubusercontent.com/damontallen/Construction-Lectures/master/Week%208%20-%20Column%20Forms.ipynb">Column Forms</a>
+
+Week 9
+
+* <a href="http://nbviewer.ipython.org/urls/raw.githubusercontent.com/damontallen/Construction-Lectures/master/Week%209%20-%20Slab%20Forms.ipynb">Formwork for Slabs</a>
+* <a href="http://nbviewer.ipython.org/urls/raw.githubusercontent.com/damontallen/Construction-Lectures/master/Week%209%20-%20Slab%20Forms%20-%20Using%20Tables.ipynb">Slab Forms - Using Formwork Tables</a>
+
+Week 10
+
+* <a href="http://nbviewer.ipython.org/urls/raw.githubusercontent.com/damontallen/Construction-Lectures/master/Week%2010%20-%20Reshoring.ipynb">Slab Reshoring</a>
+
+Week 11
+
+* <a href="http://nbviewer.ipython.org/urls/raw.githubusercontent.com/damontallen/Construction-Lectures/master/Week%2011%20-%20Scaffolding.ipynb">Scaffold Design</a>
+
+
+Week 12
+
+* <a href="http://nbviewer.ipython.org/urls/raw.githubusercontent.com/damontallen/Construction-Lectures/master/Week%2012%20-%20Excavation.ipynb">Excavation Shoring</a>
+
+
+Week 13
+
+* <a href="http://nbviewer.ipython.org/urls/raw.githubusercontent.com/damontallen/Construction-Lectures/master/Week%2013%20-%20Equipment.ipynb">Equipment</a>
 
 
 
+References
 
  <a href="http://nbviewer.ipython.org/github/damontallen/Construction-Lectures/blob/master/Resources.ipynb">Opensource software credit</a>
