@@ -3461,6 +3461,7 @@ ${}$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a href = "http://i.imgur.com/lCGtXNz.png"><img src="http://i.imgur.com/lCGtXNz.png" alt = "Slab Form Bearing" title = "Slab Form Bearing" style="max-width:300px; max-height:300px; border:1px solid blue; float:right; margin-left:10px;"/></a></p>
 <p>We need to check the bearing pressure for both where the joist cross the stringers and where the stingers are supported by the shores.</p>
 </div>
 </div>
@@ -3487,7 +3488,7 @@ In&nbsp;[32]:
 <span class="n">s2</span> <span class="o">=</span> <span class="n">stringer_spacing</span><span class="p">[</span><span class="s">&#39;in feet&#39;</span><span class="p">]</span>
 <span class="n">c1</span> <span class="o">=</span> <span class="n">joist</span><span class="o">.</span><span class="n">b</span> <span class="c">#contact dimension</span>
 <span class="n">c2</span> <span class="o">=</span> <span class="n">stringer</span><span class="o">.</span><span class="n">b</span> <span class="c">#contact dimension</span>
-<span class="n">bearing_loads</span> <span class="o">=</span> <span class="n">bearing_info</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">)</span>
+<span class="n">bearing_loads</span> <span class="o">=</span> <span class="n">bearing_info</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="s">&#39;joist width&#39;</span><span class="p">,</span> <span class="s">&#39;stringer width&#39;</span><span class="p">)</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">bearing_loads</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span>
 <span class="n">P</span> <span class="o">=</span> <span class="n">bearing_loads</span><span class="p">[</span><span class="s">&#39;load&#39;</span><span class="p">]</span>
 </pre></div>
@@ -3530,7 +3531,7 @@ In&nbsp;[33]:
 
 
 <div class="output_latex output_subarea output_pyout">
-$$\text{Bearing load } P = \text{pressure} \times \text{Tributary Area}$$$$P = p \times s_1 \times s_2$$ $$P = 180.50 psf \times 16" \times 48" \times \left(\frac{1 ft}{12 in}\right)^2$$ $$P = 962.67 lbs$$ ${}$ $$\text{Contact Area }=A_{bearing} = \text{length}\times\text{width}$$ $$A_{bearing} = 3.5" \times 3.5"$$ $$A_{bearing} = 12.25 in^2$$ 
+$$\text{Bearing load } P = \text{pressure} \times \text{Tributary Area}$$$$P = p \times s_1 \times s_2$$ $$P = 180.50 psf \times 16" \times 48" \times \left(\frac{1 ft}{12 in}\right)^2$$ $$P = 962.67 lbs$$ ${}$ $$\text{Contact Area }=A_{bearing} = \text{joist width}\times\text{stringer width}$$ $$A_{bearing} = 3.5" \times 3.5"$$ $$A_{bearing} = 12.25 in^2$$ 
 </div>
 
 </div>
@@ -3626,7 +3627,7 @@ In&nbsp;[35]:
 <span class="n">s2</span> <span class="o">=</span> <span class="n">stringer_spacing</span><span class="p">[</span><span class="s">&#39;in feet&#39;</span><span class="p">]</span>
 <span class="n">c1</span> <span class="o">=</span> <span class="n">Shore_section_b</span> <span class="c">#contact dimension</span>
 <span class="n">c2</span> <span class="o">=</span> <span class="n">Shore_section_d</span> <span class="c">#in #contact dimension</span>
-<span class="n">bearing_loads</span> <span class="o">=</span> <span class="n">bearing_info</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">)</span>
+<span class="n">bearing_loads</span> <span class="o">=</span> <span class="n">bearing_info</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="s">&#39;shore width&#39;</span><span class="p">,</span> <span class="s">&quot;shore depth&quot;</span><span class="p">)</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">bearing_loads</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span>
 <span class="n">P</span> <span class="o">=</span> <span class="n">bearing_loads</span><span class="p">[</span><span class="s">&#39;load&#39;</span><span class="p">]</span>
 </pre></div>
@@ -3669,7 +3670,7 @@ In&nbsp;[36]:
 
 
 <div class="output_latex output_subarea output_pyout">
-$$\text{Bearing load } P = \text{pressure} \times \text{Tributary Area}$$$$P = p \times s_1 \times s_2$$ $$P = 180.50 psf \times 56" \times 48" \times \left(\frac{1 ft}{12 in}\right)^2$$ $$P = 3369.33 lbs$$ ${}$ $$\text{Contact Area }=A_{bearing} = \text{length}\times\text{width}$$ $$A_{bearing} = 3.5" \times 5.5"$$ $$A_{bearing} = 19.25 in^2$$ 
+$$\text{Bearing load } P = \text{pressure} \times \text{Tributary Area}$$$$P = p \times s_1 \times s_2$$ $$P = 180.50 psf \times 56" \times 48" \times \left(\frac{1 ft}{12 in}\right)^2$$ $$P = 3369.33 lbs$$ ${}$ $$\text{Contact Area }=A_{bearing} = \text{shore width}\times\text{shore depth}$$ $$A_{bearing} = 3.5" \times 5.5"$$ $$A_{bearing} = 19.25 in^2$$ 
 </div>
 
 </div>

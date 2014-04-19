@@ -2260,7 +2260,7 @@ built.</p>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[1]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2303,7 +2303,7 @@ In&nbsp;[]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[1]:
+In&nbsp;[2]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2319,10 +2319,10 @@ In&nbsp;[1]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[1]:</div>
+    Out[2]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
+<strong>Action taken: Pour a Slab</strong><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th rowspan = 2>Level</th>
@@ -2365,10 +2365,19 @@ In&nbsp;[1]:
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When we add a second slab the first slab cannot move so the load is carried by the level 1 shores.</p>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[2]:
+In&nbsp;[3]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2384,10 +2393,10 @@ In&nbsp;[2]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[2]:</div>
+    Out[3]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
+<strong>Action taken: Pour a Slab on Level 2</strong><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th rowspan = 2>Level</th>
@@ -2447,7 +2456,175 @@ In&nbsp;[2]:
 </div>
 </div>
 
-</div></section>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As for the table approach, we start with one slab load being carried by the level 1 shores, (this comes from the previous ending loads).  When we add a new slab we must distribute 1 slab dead load through the supports.  This is a little unusual in this method since the slabs cannot move to react, so no loads can be carried by the slabs.  Next we get to the shore loads.  At level 2, there is one slab above and it is not carying any load so the shore must carry 1 slab dead load.  At level 1, there are two slabs above those shores, but neither slab is carrying any load, so they must carry 2 slab dead loads.  This process will become a little clearer when we are up a couple levels above the gound.</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Remove-Level-1-Shores">Remove Level 1 Shores<a class="anchor-link" href="#Remove-Level-1-Shores">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When we remove the shores on level 1 the level 1 slab can now sag, but as it sags the shores and the level 2 slab also move down the same amount.  This means that once the first slab sags enough to carry its own weight then level 2&#39;s slab has sagged enough to carry its own weight as well.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_shore</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[4]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Remove Shores at Level 1</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">2</th>
+      <th>Slab</th>
+      <td> 0</td>
+      <td>  </td>
+      <td> 1</td>
+      <td>  </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td> 1</td>
+      <td>  </td>
+      <td>  </td>
+      <td> 0</td>
+      <td> 0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1</th>
+      <th>Slab</th>
+      <td> 0</td>
+      <td>  </td>
+      <td> 1</td>
+      <td>  </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td> 2</td>
+      <td> 2</td>
+      <td>  </td>
+      <td>  </td>
+      <td>  </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In terms of the table the load carried by the level 1 shores must now be spread across the slabs above equally.  This means since there are two slabs above the level 1 shores half of the load previously carried by the level 1 shores will now be carried by each slab.  Add that load to the starting slab loads for each level and we now get the the new reactions of the slabs.  Since the slab reactions equal to the loads at each level nothing is being carried by the shores.  Thus we get our ending loads.</p>
+</div>
+</div>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">reshore</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Reshore does not affect loads.  To show the reshore step set show_reshore to True
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
     </section><section>
     <section>
     
@@ -2456,7 +2633,7 @@ In&nbsp;[2]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Remove-Level-1-Shores">Remove Level 1 Shores<a class="anchor-link" href="#Remove-Level-1-Shores">&#182;</a></h2>
+<h2 id="Add-a-Slab-to-Level-3">Add a Slab to Level 3<a class="anchor-link" href="#Add-a-Slab-to-Level-3">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -2474,220 +2651,14 @@ In&nbsp;[2]:
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
-In&nbsp;[3]:
 </div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_shore</span>
-</pre></div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>By having all slabs either shored or reshored to restrict their movement the load of a new slab must be carried by the shores all the way to the ground.</p>
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[3]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th rowspan = 2>Level</th>
-      <th rowspan = 2>Item</th>
-      <th rowspan = 2>Starting Loads</th>
-      <th rowspan = 2>Load to be Distributed</th>
-      <th rowspan = 2>New Slab Reactions</th>
-      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
-      <th rowspan = 2>Ending Loads</th>
-      <th rowspan = 2>Symbol</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="2" valign="top">2</th>
-      <th>Slab</th>
-      <td> 0</td>
-      <td>  </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Shores</th>
-      <td> 1</td>
-      <td>  </td>
-      <td>  </td>
-      <td> 0</td>
-      <td> 0</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">1</th>
-      <th>Slab</th>
-      <td> 0</td>
-      <td>  </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Empty</th>
-      <td> 2</td>
-      <td> 2</td>
-      <td>  </td>
-      <td>  </td>
-      <td>  </td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[4]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">reshore</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Reshore does not affect loads.  To show the reshore step set show_reshore to True
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[5]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">add_slab</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[5]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th rowspan = 2>Level</th>
-      <th rowspan = 2>Item</th>
-      <th rowspan = 2>Starting Loads</th>
-      <th rowspan = 2>Load to be Distributed</th>
-      <th rowspan = 2>New Slab Reactions</th>
-      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
-      <th rowspan = 2>Ending Loads</th>
-      <th rowspan = 2>Symbol</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="2" valign="top">3</th>
-      <th>Slab</th>
-      <td>  </td>
-      <td> 1</td>
-      <td> 0</td>
-      <td>  </td>
-      <td> 0</td>
-      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Shores</th>
-      <td>  </td>
-      <td>  </td>
-      <td>  </td>
-      <td> 1</td>
-      <td> 1</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">2</th>
-      <th>Slab</th>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Shores</th>
-      <td> 0</td>
-      <td>  </td>
-      <td>  </td>
-      <td> 1</td>
-      <td> 1</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">1</th>
-      <th>Slab</th>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Reshores</th>
-      <td> 0</td>
-      <td>  </td>
-      <td>  </td>
-      <td> 1</td>
-      <td> 1</td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2696,7 +2667,7 @@ In&nbsp;[6]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_reshore</span>
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">add_slab</span>
 </pre></div>
 
 </div>
@@ -2711,7 +2682,7 @@ In&nbsp;[6]:
     Out[6]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
+<strong>Action taken: Reshore level 1, and Pour a Slab on Level 3</strong><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th rowspan = 2>Level</th>
@@ -2728,56 +2699,56 @@ In&nbsp;[6]:
     <tr>
       <th rowspan="2" valign="top">3</th>
       <th>Slab</th>
+      <td>  </td>
+      <td> 1</td>
       <td> 0</td>
       <td>  </td>
-      <td> 0.3333333</td>
-      <td>          </td>
-      <td> 0.3333333</td>
+      <td> 0</td>
       <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Shores</th>
-      <td> 1</td>
       <td>  </td>
-      <td>          </td>
-      <td> 0.6666667</td>
-      <td> 0.6666667</td>
+      <td>  </td>
+      <td>  </td>
+      <td> 1</td>
+      <td> 1</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">2</th>
       <th>Slab</th>
       <td> 1</td>
       <td>  </td>
-      <td>  1.333333</td>
-      <td>          </td>
-      <td>  1.333333</td>
+      <td> 1</td>
+      <td>  </td>
+      <td> 1</td>
       <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Shores</th>
-      <td> 1</td>
+      <td> 0</td>
       <td>  </td>
-      <td>          </td>
-      <td> 0.3333333</td>
-      <td> 0.3333333</td>
+      <td>  </td>
+      <td> 1</td>
+      <td> 1</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">1</th>
       <th>Slab</th>
       <td> 1</td>
       <td>  </td>
-      <td>  1.333333</td>
-      <td>          </td>
-      <td>  1.333333</td>
-      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+      <td> 1</td>
+      <td>  </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
-      <th>Empty</th>
+      <th>Reshores</th>
+      <td> 0</td>
+      <td>  </td>
+      <td>  </td>
       <td> 1</td>
       <td> 1</td>
-      <td>          </td>
-      <td>          </td>
-      <td>          </td>
     </tr>
   </tbody>
 </table>
@@ -2789,220 +2760,43 @@ In&nbsp;[6]:
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Remove-Level-1's-Reshores">Remove Level 1's Reshores<a class="anchor-link" href="#Remove-Level-1's-Reshores">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can now begin to see the use of this table in organizing the slab and shore loads.  By removing the reshores on level 1 we must distribute the single slab dead load equally to the three slabs above, $\frac{1}{3} D$ to each slab.  This load is added to the load already carried by each slab at each level.  Since level 3&#39;s slab was not originally carrying any load it only caries $\frac{1}{3}$ of its own dead load.  Level 2 and level 1&#39;s slabs each must carry $\frac{1}{3}$ additional of their own dead load to compensate for the load that was previously carried by level 1&#39;s reshores.</p>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
 In&nbsp;[7]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="c">#print(struct._show_all())</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[8]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_shore</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[8]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th rowspan = 2>Level</th>
-      <th rowspan = 2>Item</th>
-      <th rowspan = 2>Starting Loads</th>
-      <th rowspan = 2>Load to be Distributed</th>
-      <th rowspan = 2>New Slab Reactions</th>
-      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
-      <th rowspan = 2>Ending Loads</th>
-      <th rowspan = 2>Symbol</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="2" valign="top">3</th>
-      <th>Slab</th>
-      <td> 0.3333333</td>
-      <td>          </td>
-      <td> 0.5</td>
-      <td>    </td>
-      <td> 0.5</td>
-      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Shores</th>
-      <td> 0.6666667</td>
-      <td>          </td>
-      <td>    </td>
-      <td> 0.5</td>
-      <td> 0.5</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">2</th>
-      <th>Slab</th>
-      <td>  1.333333</td>
-      <td>          </td>
-      <td> 1.5</td>
-      <td>    </td>
-      <td> 1.5</td>
-      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Empty</th>
-      <td> 0.3333333</td>
-      <td> 0.3333333</td>
-      <td>    </td>
-      <td>    </td>
-      <td>    </td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[9]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">reshore</span>
-<span class="n">struct</span><span class="o">.</span><span class="n">show</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Reshore does not affect loads.  To show the reshore step set show_reshore to True
-
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[9]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th rowspan = 2>Level</th>
-      <th rowspan = 2>Item</th>
-      <th rowspan = 2>Starting Loads</th>
-      <th rowspan = 2>Load to be Distributed</th>
-      <th rowspan = 2>New Slab Reactions</th>
-      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
-      <th rowspan = 2>Ending Loads</th>
-      <th rowspan = 2>Symbol</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="2" valign="top">3</th>
-      <th>Slab</th>
-      <td> 0.5</td>
-      <td> </td>
-      <td> 0.5</td>
-      <td>    </td>
-      <td> 0.5</td>
-      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Shores</th>
-      <td> 0.5</td>
-      <td> </td>
-      <td>    </td>
-      <td> 0.5</td>
-      <td> 0.5</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">2</th>
-      <th>Slab</th>
-      <td> 1.5</td>
-      <td> </td>
-      <td> 1.5</td>
-      <td>    </td>
-      <td> 1.5</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Reshores</th>
-      <td>    </td>
-      <td> </td>
-      <td>    </td>
-      <td>   0</td>
-      <td>   0</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">1</th>
-      <th>Slab</th>
-      <td>   1</td>
-      <td> </td>
-      <td>   1</td>
-      <td>    </td>
-      <td>   1</td>
-      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Empty</th>
-      <td>    </td>
-      <td> </td>
-      <td>    </td>
-      <td>    </td>
-      <td>    </td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[10]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3018,10 +2812,10 @@ In&nbsp;[10]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[10]:</div>
+    Out[7]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
+<strong>Action taken: Remove Reshores at Level 1</strong><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th rowspan = 2>Level</th>
@@ -3038,8 +2832,136 @@ In&nbsp;[10]:
     <tr>
       <th rowspan="2" valign="top">3</th>
       <th>Slab</th>
-      <td> 0.5</td>
+      <td> 0</td>
       <td>  </td>
+      <td> 0.3333333</td>
+      <td>          </td>
+      <td> 0.3333333</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td> 1</td>
+      <td>  </td>
+      <td>          </td>
+      <td> 0.6666667</td>
+      <td> 0.6666667</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">2</th>
+      <th>Slab</th>
+      <td> 1</td>
+      <td>  </td>
+      <td>  1.333333</td>
+      <td>          </td>
+      <td>  1.333333</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td> 1</td>
+      <td>  </td>
+      <td>          </td>
+      <td> 0.3333333</td>
+      <td> 0.3333333</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1</th>
+      <th>Slab</th>
+      <td> 1</td>
+      <td>  </td>
+      <td>  1.333333</td>
+      <td>          </td>
+      <td>  1.333333</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td> 1</td>
+      <td> 1</td>
+      <td>          </td>
+      <td>          </td>
+      <td>          </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we come to the shore loads.  Level 3&#39;s shores see 1 slab dead load above them and the slab above them is only carrying $\frac{1}{3}$ of it.  This means that Level 3&#39;s shores must carry the remaining $\frac{2}{3} D$.  At level 2, the shores see 2 slab dead loads above but between level 3 and level 2&#39;s slabs there are a total reaction of $1 \frac{2}{3} D$.  This means that level 2&#39;s shores must only carry $2 D- 1 \frac{2}{3} D$ or $\frac{1}{3}$ slab ead loads.  Now we have solved all of our loads and we can write them in the Ending Loads column.</p>
+</div>
+</div>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c">#print(struct._show_all())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_shore</span> <span class="c">#use show all</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[9]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Remove Shores at Level 2</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">3</th>
+      <th>Slab</th>
+      <td> 0.3333333</td>
+      <td>          </td>
       <td> 0.5</td>
       <td>    </td>
       <td> 0.5</td>
@@ -3047,8 +2969,8 @@ In&nbsp;[10]:
     </tr>
     <tr>
       <th>Shores</th>
-      <td> 0.5</td>
-      <td>  </td>
+      <td> 0.6666667</td>
+      <td>          </td>
       <td>    </td>
       <td> 0.5</td>
       <td> 0.5</td>
@@ -3056,8 +2978,8 @@ In&nbsp;[10]:
     <tr>
       <th rowspan="2" valign="top">2</th>
       <th>Slab</th>
-      <td> 1.5</td>
-      <td>  </td>
+      <td>  1.333333</td>
+      <td>          </td>
       <td> 1.5</td>
       <td>    </td>
       <td> 1.5</td>
@@ -3065,8 +2987,8 @@ In&nbsp;[10]:
     </tr>
     <tr>
       <th>Empty</th>
-      <td>   0</td>
-      <td> 0</td>
+      <td> 0.3333333</td>
+      <td> 0.3333333</td>
       <td>    </td>
       <td>    </td>
       <td>    </td>
@@ -3081,142 +3003,157 @@ In&nbsp;[10]:
 </div>
 </div>
 
+</div>
+    </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Remove-Level-2's-Shores">Remove Level 2's Shores<a class="anchor-link" href="#Remove-Level-2's-Shores">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>By removing the shores on level 2 we must distribute the load carried by those shores to the two slabs above.  Thant means that the slabs on levels 2 and 3 must now carry an additional $\frac{1}{6} D$ bring their reactions up to 1.5 and 0.5 respectively.  There is an additional distrubution that occures as well though.  That $\frac{1}{3} D$ carried by the level 2 shores no longer needs to be supported by the level 1 slab.  Since the the load in no longer is no longer being suppported by the level 1 slab, it only has to carry its own self weight now.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">show_all</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[10]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Remove Shores at Level 2</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">3</th>
+      <th>Slab</th>
+      <td> 0.3333333</td>
+      <td>          </td>
+      <td> 0.5</td>
+      <td>    </td>
+      <td> 0.5</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td> 0.6666667</td>
+      <td>          </td>
+      <td>    </td>
+      <td> 0.5</td>
+      <td> 0.5</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">2</th>
+      <th>Slab</th>
+      <td>  1.333333</td>
+      <td>          </td>
+      <td> 1.5</td>
+      <td>    </td>
+      <td> 1.5</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td> 0.3333333</td>
+      <td> 0.3333333</td>
+      <td>    </td>
+      <td>    </td>
+      <td>    </td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1</th>
+      <th>Slab</th>
+      <td>  1.333333</td>
+      <td>          </td>
+      <td>   1</td>
+      <td>    </td>
+      <td>   1</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>          </td>
+      <td>          </td>
+      <td>    </td>
+      <td>    </td>
+      <td>    </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>At this point we can see the general procedure of distributing loads from below the top slab.  Add equal portions to the slabs above, and since all the slabs below are no longer carrying extra loads their reactions drop to self weight only.  Again, this when we are not adding any new loads but rather redistribution existing slab reactions.  To prove this just add all the slab starting loads together, and all the ending slab loads together, and compare the two values.</p>
+<p>$$0.3333333+1.333333+ 1.333333 = 3$$
+$$0.5 +1.5 + 1 = 3$$</p>
+<p>To finish this stage in the analysis, the shores on level 3 see one slab dead load above and $\frac{1}{2}$ a slab dead load reaction, so the level 3 shores must only support $1 D - 0.5 D = 0.5 D$.</p>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
 In&nbsp;[11]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span> <span class="o">=</span> <span class="n">building</span><span class="p">()</span>
-<span class="n">struct</span><span class="o">.</span><span class="n">show</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[11]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th rowspan = 2>Level</th>
-      <th rowspan = 2>Item</th>
-      <th rowspan = 2>Starting Loads</th>
-      <th rowspan = 2>Load to be Distributed</th>
-      <th rowspan = 2>New Slab Reactions</th>
-      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
-      <th rowspan = 2>Ending Loads</th>
-      <th rowspan = 2>Symbol</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="2" valign="top">1</th>
-      <th>Slab</th>
-      <td> </td>
-      <td> 1</td>
-      <td> 0</td>
-      <td>  </td>
-      <td> 0</td>
-      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Shores</th>
-      <td> </td>
-      <td>  </td>
-      <td>  </td>
-      <td> 1</td>
-      <td> 1</td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[12]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_shore</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[12]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th rowspan = 2>Level</th>
-      <th rowspan = 2>Item</th>
-      <th rowspan = 2>Starting Loads</th>
-      <th rowspan = 2>Load to be Distributed</th>
-      <th rowspan = 2>New Slab Reactions</th>
-      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
-      <th rowspan = 2>Ending Loads</th>
-      <th rowspan = 2>Symbol</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="2" valign="top">1</th>
-      <th>Slab</th>
-      <td> 0</td>
-      <td>  </td>
-      <td> 1</td>
-      <td> </td>
-      <td> 1</td>
-      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Empty</th>
-      <td> 1</td>
-      <td> 1</td>
-      <td>  </td>
-      <td> </td>
-      <td>  </td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[13]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3243,11 +3180,46 @@ Reshore does not affect loads.  To show the reshore step set show_reshore to Tru
 </div>
 </div>
 
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reshore-Level-2-and-Pour-a-Slab">Reshore Level 2 and Pour a Slab<a class="anchor-link" href="#Reshore-Level-2-and-Pour-a-Slab">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Again we add a slab to the top of the building but not before reshoring at level 2.  This reshore allows us to distribute the new slab load to three levels below.  This is different than rearranging existing reaction.  In this case we are clearly adding a new load to the slabs below.</p>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[14]:
+In&nbsp;[12]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3263,10 +3235,10 @@ In&nbsp;[14]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[14]:</div>
+    Out[12]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
+<strong>Action taken: Reshore level 2, and Pour a Slab on Level 4</strong><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th rowspan = 2>Level</th>
@@ -3281,40 +3253,76 @@ In&nbsp;[14]:
   </thead>
   <tbody>
     <tr>
-      <th rowspan="2" valign="top">2</th>
+      <th rowspan="2" valign="top">4</th>
       <th>Slab</th>
-      <td>  </td>
+      <td>    </td>
       <td> 1</td>
-      <td> 0</td>
-      <td>  </td>
-      <td> 0</td>
+      <td>         0</td>
+      <td>          </td>
+      <td>         0</td>
       <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Shores</th>
+      <td>    </td>
       <td>  </td>
-      <td>  </td>
-      <td>  </td>
-      <td> 1</td>
-      <td> 1</td>
+      <td>          </td>
+      <td>         1</td>
+      <td>         1</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">1</th>
+      <th rowspan="2" valign="top">3</th>
       <th>Slab</th>
-      <td> 1</td>
+      <td> 0.5</td>
       <td>  </td>
-      <td> 1</td>
+      <td> 0.8333333</td>
+      <td>          </td>
+      <td> 0.8333333</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td> 0.5</td>
       <td>  </td>
-      <td> 1</td>
+      <td>          </td>
+      <td>  1.166667</td>
+      <td>  1.166667</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">2</th>
+      <th>Slab</th>
+      <td> 1.5</td>
+      <td>  </td>
+      <td>  1.833333</td>
+      <td>          </td>
+      <td>  1.833333</td>
       <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Reshores</th>
-      <td> 0</td>
+      <td>   0</td>
       <td>  </td>
+      <td>          </td>
+      <td> 0.3333333</td>
+      <td> 0.3333333</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1</th>
+      <th>Slab</th>
+      <td>   1</td>
       <td>  </td>
-      <td> 1</td>
-      <td> 1</td>
+      <td>  1.333333</td>
+      <td>          </td>
+      <td>  1.333333</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>    </td>
+      <td>  </td>
+      <td>          </td>
+      <td>          </td>
+      <td>          </td>
     </tr>
   </tbody>
 </table>
@@ -3327,10 +3335,55 @@ In&nbsp;[14]:
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Level 4&#39;s shores see 1 dead load and no support above so they must carry a whole slab dead load.  At level 3, there are 2 dead loads above and $0.83333 D$ of support above.  This means they must carry $2 D- 0.83333 D$ or $1.1666667 D$. At level 2 the calculation for the shores becomes $3 D - 0.833333 D - 1.833333 D = 0.333333 D$.  </p>
+<p>We can now transfer the loads from New Slab Reactions and the shore loads to the Ending Loads column.</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Removing-Shores-from-Level-3">Removing Shores from Level 3<a class="anchor-link" href="#Removing-Shores-from-Level-3">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are 2 slabs above and below the level 3 shores.  That means the each of these slabs&#39; reactions will either gain $\frac{1.16667 D}{2} = 0.583333 D$, or drop to just self weight.  Level 4&#39;s slab gains it as well as level 3&#39;s slab.  There reactions become $0.583333 D$ and $1.416667 D$ respectively.  Since the loads on level 2 and level 1&#39;s slabs&#39; are reduced by a total of $1.166667 D$, they wind up dropping down to supporting self weight alone.</p>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[15]:
+In&nbsp;[13]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3346,10 +3399,10 @@ In&nbsp;[15]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[15]:</div>
+    Out[13]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
+<strong>Action taken: Remove Shores at Level 3</strong><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th rowspan = 2>Level</th>
@@ -3364,40 +3417,76 @@ In&nbsp;[15]:
   </thead>
   <tbody>
     <tr>
-      <th rowspan="2" valign="top">2</th>
+      <th rowspan="2" valign="top">4</th>
       <th>Slab</th>
-      <td> 0</td>
-      <td>  </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
+      <td>         0</td>
+      <td>         </td>
+      <td> 0.5833333</td>
+      <td>          </td>
+      <td> 0.5833333</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>         1</td>
+      <td>         </td>
+      <td>          </td>
+      <td> 0.4166667</td>
+      <td> 0.4166667</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">3</th>
+      <th>Slab</th>
+      <td> 0.8333333</td>
+      <td>         </td>
+      <td>  1.416667</td>
+      <td>          </td>
+      <td>  1.416667</td>
       <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Empty</th>
-      <td> 1</td>
-      <td> 1</td>
-      <td>  </td>
-      <td>  </td>
-      <td>  </td>
+      <td>  1.166667</td>
+      <td> 1.166667</td>
+      <td>          </td>
+      <td>          </td>
+      <td>          </td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">1</th>
+      <th rowspan="2" valign="top">2</th>
       <th>Slab</th>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
+      <td>  1.833333</td>
+      <td>         </td>
+      <td>         1</td>
+      <td>          </td>
+      <td>         1</td>
       <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Reshores</th>
-      <td> 1</td>
-      <td>  </td>
-      <td>  </td>
-      <td> 0</td>
-      <td> 0</td>
+      <td> 0.3333333</td>
+      <td>         </td>
+      <td>          </td>
+      <td>         0</td>
+      <td>         0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1</th>
+      <th>Slab</th>
+      <td>  1.333333</td>
+      <td>         </td>
+      <td>         1</td>
+      <td>          </td>
+      <td>         1</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>          </td>
+      <td>         </td>
+      <td>          </td>
+      <td>          </td>
+      <td>          </td>
     </tr>
   </tbody>
 </table>
@@ -3410,10 +3499,21 @@ In&nbsp;[15]:
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Level 4&#39;s shores see a single slab dead load above which is only partially supported by an ammount of $0.583333 D$, so they must carry $1 D - 0.583333 D = 0.416667 D$.  There are still reshores on level 2.  Above them there are three slabs of dead load, but there are also some reactions.  This mmeans that we can calculate the load on theose reshores by:</p>
+<p>$$3 D - 0.583333 D - 1.1416667 D - 1 D = 0 D$$</p>
+<p>This is actuall obvious since there is an empty level at level 3 and every layer of shores and reshores below must carry no load since none can be transmitted pace level 3.</p>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[16]:
+In&nbsp;[14]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3440,7 +3540,315 @@ Reshore does not affect loads.  To show the reshore step set show_reshore to Tru
 </div>
 </div>
 
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-Rest-of-the-Building">The Rest of the Building<a class="anchor-link" href="#The-Rest-of-the-Building">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What I am showing here is the same table from the previous slide.  From here on out, adding slabs, removing shores, and reshores will just follow the same processes as we have already seen.  To be clear this example is more for illistration than an appropriate reshoing sequence.  The sequence you will have to follow will depend on how much time you need to keep the slab forms in place and how much time you have in the schedule for a pour.  As a general rule of thumb, the more levels of slabs that our poured before stripping the greater the strength of the the form work nedds to be, especially the shores.  Another idea you should take away from this is that the more levels of reshores you have in place the more slabs will be carrying the load of a new slab and the less likely any one will fail.</p>
+<p>For now, the rest of this example&#39;s building sequence will be on the slides below.  I will be indicating what actions the next slide below will show from here on down and I recommend that you take some notebook paper and try to calculate what you think will be the new ending loads on that slide.  The slide below shows the results of reshoring level 3 and pouring level 5&#39;s slab.</p>
+<p>When you feel confident that you will be able to calculate the loads resulting from a specific action given the current condition in the form of a table, then continue to the right.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[15]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">show</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[15]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Reshore level 3</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">4</th>
+      <th>Slab</th>
+      <td> 0.5833333</td>
+      <td> </td>
+      <td> 0.5833333</td>
+      <td>          </td>
+      <td> 0.5833333</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td> 0.4166667</td>
+      <td> </td>
+      <td>          </td>
+      <td> 0.4166667</td>
+      <td> 0.4166667</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">3</th>
+      <th>Slab</th>
+      <td>  1.416667</td>
+      <td> </td>
+      <td>  1.416667</td>
+      <td>          </td>
+      <td>  1.416667</td>
+      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Reshores</th>
+      <td>          </td>
+      <td> </td>
+      <td>          </td>
+      <td>         0</td>
+      <td>         0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">2</th>
+      <th>Slab</th>
+      <td>         1</td>
+      <td> </td>
+      <td>         1</td>
+      <td>          </td>
+      <td>         1</td>
+      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Reshores</th>
+      <td>         0</td>
+      <td> </td>
+      <td>          </td>
+      <td>         0</td>
+      <td>         0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1</th>
+      <th>Slab</th>
+      <td>         1</td>
+      <td> </td>
+      <td>         1</td>
+      <td>          </td>
+      <td>         1</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>          </td>
+      <td> </td>
+      <td>          </td>
+      <td>          </td>
+      <td>          </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[16]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">add_slab</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[16]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Reshore level 3, and Pour a Slab on Level 5</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">5</th>
+      <th>Slab</th>
+      <td>          </td>
+      <td> 1</td>
+      <td>         0</td>
+      <td>         </td>
+      <td>         0</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>          </td>
+      <td>  </td>
+      <td>          </td>
+      <td>        1</td>
+      <td>         1</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">4</th>
+      <th>Slab</th>
+      <td> 0.5833333</td>
+      <td>  </td>
+      <td> 0.8333333</td>
+      <td>         </td>
+      <td> 0.8333333</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td> 0.4166667</td>
+      <td>  </td>
+      <td>          </td>
+      <td> 1.166667</td>
+      <td>  1.166667</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">3</th>
+      <th>Slab</th>
+      <td>  1.416667</td>
+      <td>  </td>
+      <td>  1.666667</td>
+      <td>         </td>
+      <td>  1.666667</td>
+      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Reshores</th>
+      <td>         0</td>
+      <td>  </td>
+      <td>          </td>
+      <td>      0.5</td>
+      <td>       0.5</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">2</th>
+      <th>Slab</th>
+      <td>         1</td>
+      <td>  </td>
+      <td>      1.25</td>
+      <td>         </td>
+      <td>      1.25</td>
+      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Reshores</th>
+      <td>         0</td>
+      <td>  </td>
+      <td>          </td>
+      <td>     0.25</td>
+      <td>      0.25</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1</th>
+      <th>Slab</th>
+      <td>         1</td>
+      <td>  </td>
+      <td>      1.25</td>
+      <td>         </td>
+      <td>      1.25</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>          </td>
+      <td>  </td>
+      <td>          </td>
+      <td>         </td>
+      <td>          </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Next slide below contains the results of pouring a slab on level 6</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -3463,7 +3871,7 @@ In&nbsp;[17]:
     Out[17]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
+<strong>Action taken: Pour a Slab on Level 6</strong><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th rowspan = 2>Level</th>
@@ -3478,58 +3886,112 @@ In&nbsp;[17]:
   </thead>
   <tbody>
     <tr>
-      <th rowspan="2" valign="top">3</th>
+      <th rowspan="2" valign="top">6</th>
       <th>Slab</th>
-      <td>  </td>
+      <td>          </td>
       <td> 1</td>
-      <td> 0</td>
-      <td>  </td>
-      <td> 0</td>
+      <td>        0</td>
+      <td>         </td>
+      <td>        0</td>
       <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Shores</th>
+      <td>          </td>
       <td>  </td>
+      <td>         </td>
+      <td>        1</td>
+      <td>        1</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">5</th>
+      <th>Slab</th>
+      <td>         0</td>
       <td>  </td>
+      <td>      0.2</td>
+      <td>         </td>
+      <td>      0.2</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>         1</td>
       <td>  </td>
-      <td> 1</td>
-      <td> 1</td>
+      <td>         </td>
+      <td>      1.8</td>
+      <td>      1.8</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">4</th>
+      <th>Slab</th>
+      <td> 0.8333333</td>
+      <td>  </td>
+      <td> 1.033333</td>
+      <td>         </td>
+      <td> 1.033333</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>  1.166667</td>
+      <td>  </td>
+      <td>         </td>
+      <td> 1.766667</td>
+      <td> 1.766667</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">3</th>
+      <th>Slab</th>
+      <td>  1.666667</td>
+      <td>  </td>
+      <td> 1.866667</td>
+      <td>         </td>
+      <td> 1.866667</td>
+      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Reshores</th>
+      <td>       0.5</td>
+      <td>  </td>
+      <td>         </td>
+      <td>      0.9</td>
+      <td>      0.9</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">2</th>
       <th>Slab</th>
-      <td> 1</td>
+      <td>      1.25</td>
       <td>  </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
+      <td>     1.45</td>
+      <td>         </td>
+      <td>     1.45</td>
       <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Reshores</th>
-      <td> 0</td>
+      <td>      0.25</td>
       <td>  </td>
-      <td>  </td>
-      <td> 1</td>
-      <td> 1</td>
+      <td>         </td>
+      <td>     0.45</td>
+      <td>     0.45</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">1</th>
       <th>Slab</th>
-      <td> 1</td>
+      <td>      1.25</td>
       <td>  </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+      <td>     1.45</td>
+      <td>         </td>
+      <td>     1.45</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
-      <th>Reshores</th>
-      <td> 0</td>
+      <th>Empty</th>
+      <td>          </td>
       <td>  </td>
-      <td>  </td>
-      <td> 1</td>
-      <td> 1</td>
+      <td>         </td>
+      <td>         </td>
+      <td>         </td>
     </tr>
   </tbody>
 </table>
@@ -3542,6 +4004,18 @@ In&nbsp;[17]:
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Again the shore loads were high.  The next slide show the results from removing reshores from level 2.</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -3549,10 +4023,132 @@ In&nbsp;[18]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">backup</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">df</span>
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_reshore</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[18]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Remove Reshores at Level 2</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">6</th>
+      <th>Slab</th>
+      <td>        0</td>
+      <td>     </td>
+      <td>     0.09</td>
+      <td>         </td>
+      <td>     0.09</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>        1</td>
+      <td>     </td>
+      <td>         </td>
+      <td>     0.91</td>
+      <td>     0.91</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">5</th>
+      <th>Slab</th>
+      <td>      0.2</td>
+      <td>     </td>
+      <td>     0.29</td>
+      <td>         </td>
+      <td>     0.29</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>      1.8</td>
+      <td>     </td>
+      <td>         </td>
+      <td>     1.62</td>
+      <td>     1.62</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">4</th>
+      <th>Slab</th>
+      <td> 1.033333</td>
+      <td>     </td>
+      <td> 1.123333</td>
+      <td>         </td>
+      <td> 1.123333</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td> 1.766667</td>
+      <td>     </td>
+      <td>         </td>
+      <td> 1.496667</td>
+      <td> 1.496667</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">3</th>
+      <th>Slab</th>
+      <td> 1.866667</td>
+      <td>     </td>
+      <td> 1.956667</td>
+      <td>         </td>
+      <td> 1.956667</td>
+      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Reshores</th>
+      <td>      0.9</td>
+      <td>     </td>
+      <td>         </td>
+      <td>     0.54</td>
+      <td>     0.54</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">2</th>
+      <th>Slab</th>
+      <td>     1.45</td>
+      <td>     </td>
+      <td>     1.54</td>
+      <td>         </td>
+      <td>     1.54</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>     0.45</td>
+      <td> 0.45</td>
+      <td>         </td>
+      <td>         </td>
+      <td>         </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -3562,10 +4158,13 @@ In&nbsp;[18]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now let&#39;s look at what happens if you don&#39;t remove the shores and replace them with reshores.</p>
+<p>Level 3&#39;s slab is almost carrying twice its own weight.  The next slide shore the results from removing the reshores on level 3.</p>
 </div>
 </div>
-</div>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -3573,7 +4172,7 @@ In&nbsp;[19]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">add_slab</span>
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_reshore</span>
 </pre></div>
 
 </div>
@@ -3588,7 +4187,7 @@ In&nbsp;[19]:
     Out[19]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
+<strong>Action taken: Remove Reshores at Level 3</strong><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th rowspan = 2>Level</th>
@@ -3603,76 +4202,76 @@ In&nbsp;[19]:
   </thead>
   <tbody>
     <tr>
-      <th rowspan="2" valign="top">4</th>
+      <th rowspan="2" valign="top">6</th>
       <th>Slab</th>
-      <td>  </td>
-      <td> 1</td>
-      <td> 0</td>
-      <td>  </td>
-      <td> 0</td>
+      <td>     0.09</td>
+      <td>     </td>
+      <td>    0.225</td>
+      <td>         </td>
+      <td>    0.225</td>
       <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Shores</th>
-      <td>  </td>
-      <td>  </td>
-      <td>  </td>
-      <td> 1</td>
-      <td> 1</td>
+      <td>     0.91</td>
+      <td>     </td>
+      <td>         </td>
+      <td>    0.775</td>
+      <td>    0.775</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">5</th>
+      <th>Slab</th>
+      <td>     0.29</td>
+      <td>     </td>
+      <td>    0.425</td>
+      <td>         </td>
+      <td>    0.425</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>     1.62</td>
+      <td>     </td>
+      <td>         </td>
+      <td>     1.35</td>
+      <td>     1.35</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">4</th>
+      <th>Slab</th>
+      <td> 1.123333</td>
+      <td>     </td>
+      <td> 1.258333</td>
+      <td>         </td>
+      <td> 1.258333</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td> 1.496667</td>
+      <td>     </td>
+      <td>         </td>
+      <td> 1.091667</td>
+      <td> 1.091667</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">3</th>
       <th>Slab</th>
-      <td> 0</td>
-      <td>  </td>
-      <td> 0</td>
-      <td>  </td>
-      <td> 0</td>
-      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+      <td> 1.956667</td>
+      <td>     </td>
+      <td> 2.091667</td>
+      <td>         </td>
+      <td> 2.091667</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
-      <th>Shores</th>
-      <td> 1</td>
-      <td>  </td>
-      <td>  </td>
-      <td> 2</td>
-      <td> 2</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">2</th>
-      <th>Slab</th>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Reshores</th>
-      <td> 1</td>
-      <td>  </td>
-      <td>  </td>
-      <td> 2</td>
-      <td> 2</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">1</th>
-      <th>Slab</th>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Reshores</th>
-      <td> 1</td>
-      <td>  </td>
-      <td>  </td>
-      <td> 2</td>
-      <td> 2</td>
+      <th>Empty</th>
+      <td>     0.54</td>
+      <td> 0.54</td>
+      <td>         </td>
+      <td>         </td>
+      <td>         </td>
     </tr>
   </tbody>
 </table>
@@ -3690,336 +4289,17 @@ In&nbsp;[19]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The loads on our shores are twice what we designed them for!</p>
+<p>We next remove the shores on level 4.</p>
 </div>
 </div>
-</div>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
 In&nbsp;[20]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_reshore</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[20]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th rowspan = 2>Level</th>
-      <th rowspan = 2>Item</th>
-      <th rowspan = 2>Starting Loads</th>
-      <th rowspan = 2>Load to be Distributed</th>
-      <th rowspan = 2>New Slab Reactions</th>
-      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
-      <th rowspan = 2>Ending Loads</th>
-      <th rowspan = 2>Symbol</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="2" valign="top">4</th>
-      <th>Slab</th>
-      <td> 0</td>
-      <td>  </td>
-      <td> 0.5</td>
-      <td>    </td>
-      <td> 0.5</td>
-      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Shores</th>
-      <td> 1</td>
-      <td>  </td>
-      <td>    </td>
-      <td> 0.5</td>
-      <td> 0.5</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">3</th>
-      <th>Slab</th>
-      <td> 0</td>
-      <td>  </td>
-      <td> 0.5</td>
-      <td>    </td>
-      <td> 0.5</td>
-      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Shores</th>
-      <td> 2</td>
-      <td>  </td>
-      <td>    </td>
-      <td>   1</td>
-      <td>   1</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">2</th>
-      <th>Slab</th>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1.5</td>
-      <td>    </td>
-      <td> 1.5</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Reshores</th>
-      <td> 2</td>
-      <td>  </td>
-      <td>    </td>
-      <td> 0.5</td>
-      <td> 0.5</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">1</th>
-      <th>Slab</th>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1.5</td>
-      <td>    </td>
-      <td> 1.5</td>
-      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Empty</th>
-      <td> 2</td>
-      <td> 2</td>
-      <td>    </td>
-      <td>    </td>
-      <td>    </td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[21]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">backup</span>
-<span class="n">struct</span><span class="o">.</span><span class="n">show</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[21]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th rowspan = 2>Level</th>
-      <th rowspan = 2>Item</th>
-      <th rowspan = 2>Starting Loads</th>
-      <th rowspan = 2>Load to be Distributed</th>
-      <th rowspan = 2>New Slab Reactions</th>
-      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
-      <th rowspan = 2>Ending Loads</th>
-      <th rowspan = 2>Symbol</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="2" valign="top">3</th>
-      <th>Slab</th>
-      <td>  </td>
-      <td> 1</td>
-      <td> 0</td>
-      <td>  </td>
-      <td> 0</td>
-      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Shores</th>
-      <td>  </td>
-      <td>  </td>
-      <td>  </td>
-      <td> 1</td>
-      <td> 1</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">2</th>
-      <th>Slab</th>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Reshores</th>
-      <td> 0</td>
-      <td>  </td>
-      <td>  </td>
-      <td> 1</td>
-      <td> 1</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">1</th>
-      <th>Slab</th>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Reshores</th>
-      <td> 0</td>
-      <td>  </td>
-      <td>  </td>
-      <td> 1</td>
-      <td> 1</td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[22]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_reshore</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[22]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th rowspan = 2>Level</th>
-      <th rowspan = 2>Item</th>
-      <th rowspan = 2>Starting Loads</th>
-      <th rowspan = 2>Load to be Distributed</th>
-      <th rowspan = 2>New Slab Reactions</th>
-      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
-      <th rowspan = 2>Ending Loads</th>
-      <th rowspan = 2>Symbol</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="2" valign="top">3</th>
-      <th>Slab</th>
-      <td> 0</td>
-      <td>  </td>
-      <td> 0.3333333</td>
-      <td>          </td>
-      <td> 0.3333333</td>
-      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Shores</th>
-      <td> 1</td>
-      <td>  </td>
-      <td>          </td>
-      <td> 0.6666667</td>
-      <td> 0.6666667</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">2</th>
-      <th>Slab</th>
-      <td> 1</td>
-      <td>  </td>
-      <td>  1.333333</td>
-      <td>          </td>
-      <td>  1.333333</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Reshores</th>
-      <td> 1</td>
-      <td>  </td>
-      <td>          </td>
-      <td> 0.3333333</td>
-      <td> 0.3333333</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">1</th>
-      <th>Slab</th>
-      <td> 1</td>
-      <td>  </td>
-      <td>  1.333333</td>
-      <td>          </td>
-      <td>  1.333333</td>
-      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Empty</th>
-      <td> 1</td>
-      <td> 1</td>
-      <td>          </td>
-      <td>          </td>
-      <td>          </td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[23]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4035,10 +4315,10 @@ In&nbsp;[23]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[23]:</div>
+    Out[20]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
+<strong>Action taken: Remove Shores at Level 4</strong><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th rowspan = 2>Level</th>
@@ -4053,58 +4333,58 @@ In&nbsp;[23]:
   </thead>
   <tbody>
     <tr>
-      <th rowspan="2" valign="top">3</th>
+      <th rowspan="2" valign="top">6</th>
       <th>Slab</th>
-      <td> 0.3333333</td>
+      <td>    0.225</td>
+      <td>         </td>
+      <td> 0.5888889</td>
       <td>          </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
+      <td> 0.5888889</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>    0.775</td>
+      <td>         </td>
+      <td>          </td>
+      <td> 0.4111111</td>
+      <td> 0.4111111</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">5</th>
+      <th>Slab</th>
+      <td>    0.425</td>
+      <td>         </td>
+      <td> 0.7888889</td>
+      <td>          </td>
+      <td> 0.7888889</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>     1.35</td>
+      <td>         </td>
+      <td>          </td>
+      <td> 0.6222222</td>
+      <td> 0.6222222</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">4</th>
+      <th>Slab</th>
+      <td> 1.258333</td>
+      <td>         </td>
+      <td>  1.622222</td>
+      <td>          </td>
+      <td>  1.622222</td>
       <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Empty</th>
-      <td> 0.6666667</td>
-      <td> 0.6666667</td>
-      <td>  </td>
-      <td>  </td>
-      <td>  </td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">2</th>
-      <th>Slab</th>
-      <td>  1.333333</td>
-      <td>          </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Reshores</th>
-      <td> 0.3333333</td>
-      <td>          </td>
-      <td>  </td>
-      <td> 0</td>
-      <td> 0</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">1</th>
-      <th>Slab</th>
-      <td>  1.333333</td>
-      <td>          </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Empty</th>
+      <td> 1.091667</td>
+      <td> 1.091667</td>
       <td>          </td>
       <td>          </td>
-      <td>  </td>
-      <td>  </td>
-      <td>  </td>
+      <td>          </td>
     </tr>
   </tbody>
 </table>
@@ -4117,14 +4397,24 @@ In&nbsp;[23]:
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Add reshores to level 4, and pour a slab on level 7 adn what would you get?</p>
+</div>
+</div>
+</div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[24]:
+In&nbsp;[21]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">_show_all</span><span class="p">())</span>
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">reshore</span>
 </pre></div>
 
 </div>
@@ -4138,77 +4428,7 @@ In&nbsp;[24]:
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr style=&quot;text-align: right;&quot;&gt;
-      &lt;th rowspan = 2&gt;Level&lt;/th&gt;
-      &lt;th rowspan = 2&gt;Item&lt;/th&gt;
-      &lt;th rowspan = 2&gt;Starting Loads&lt;/th&gt;
-      &lt;th rowspan = 2&gt;Load to be Distributed&lt;/th&gt;
-      &lt;th rowspan = 2&gt;New Slab Reactions&lt;/th&gt;
-      &lt;th  rowspan = 2 style=&quot;text-align: right;&quot;&gt;Number of Slabs Above&lt;br&gt;- Slab Reactions&lt;/th&gt;
-      &lt;th rowspan = 2&gt;Ending Loads&lt;/th&gt;
-      &lt;th rowspan = 2&gt;Symbol&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th rowspan=&quot;2&quot; valign=&quot;top&quot;&gt;3&lt;/th&gt;
-      &lt;th&gt;Slab&lt;/th&gt;
-      &lt;td&gt; 0.3333333&lt;/td&gt;
-      &lt;td&gt;          &lt;/td&gt;
-      &lt;td&gt; 1&lt;/td&gt;
-      &lt;td&gt;  &lt;/td&gt;
-      &lt;td&gt; 1&lt;/td&gt;
-      &lt;td rowspan=2&gt;&lt;img src=&quot;http://i.imgur.com/f9HJsu6.png&quot; alt = &quot;Unshored Slab&quot; title = &quot;Unshored Slab&quot;style=&quot;max-width:50px; max-height:50px;  float:left; margin-right:3px;&quot;/&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Empty&lt;/th&gt;
-      &lt;td&gt; 0.6666667&lt;/td&gt;
-      &lt;td&gt; 0.6666667&lt;/td&gt;
-      &lt;td&gt;  &lt;/td&gt;
-      &lt;td&gt;  &lt;/td&gt;
-      &lt;td&gt;  &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th rowspan=&quot;2&quot; valign=&quot;top&quot;&gt;2&lt;/th&gt;
-      &lt;th&gt;Slab&lt;/th&gt;
-      &lt;td&gt;  1.333333&lt;/td&gt;
-      &lt;td&gt;          &lt;/td&gt;
-      &lt;td&gt; 1&lt;/td&gt;
-      &lt;td&gt;  &lt;/td&gt;
-      &lt;td&gt; 1&lt;/td&gt;
-      &lt;td rowspan=2&gt;&lt;img src=&quot;http://i.imgur.com/vMgiW58.png&quot; alt = &quot;Reshored Slab&quot; title = &quot;Reshored Slab&quot;style=&quot;max-width:50px; max-height:50px;  float:left; margin-right:3px;&quot;/&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Reshores&lt;/th&gt;
-      &lt;td&gt; 0.3333333&lt;/td&gt;
-      &lt;td&gt;          &lt;/td&gt;
-      &lt;td&gt;  &lt;/td&gt;
-      &lt;td&gt; 0&lt;/td&gt;
-      &lt;td&gt; 0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th rowspan=&quot;2&quot; valign=&quot;top&quot;&gt;1&lt;/th&gt;
-      &lt;th&gt;Slab&lt;/th&gt;
-      &lt;td&gt;  1.333333&lt;/td&gt;
-      &lt;td&gt;          &lt;/td&gt;
-      &lt;td&gt; 1&lt;/td&gt;
-      &lt;td&gt;  &lt;/td&gt;
-      &lt;td&gt; 1&lt;/td&gt;
-      &lt;td rowspan=2&gt;&lt;img src=&quot;http://i.imgur.com/f9HJsu6.png&quot; alt = &quot;Unshored Slab&quot; title = &quot;Unshored Slab&quot;style=&quot;max-width:50px; max-height:50px;  float:left; margin-right:3px;&quot;/&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Empty&lt;/th&gt;
-      &lt;td&gt;          &lt;/td&gt;
-      &lt;td&gt;          &lt;/td&gt;
-      &lt;td&gt;  &lt;/td&gt;
-      &lt;td&gt;  &lt;/td&gt;
-      &lt;td&gt;  &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
+Reshore does not affect loads.  To show the reshore step set show_reshore to True
 
 </pre>
 </div>
@@ -4217,6 +4437,400 @@ In&nbsp;[24]:
 </div>
 </div>
 
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[22]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">add_slab</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[22]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Reshore level 4, and Pour a Slab on Level 7</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">7</th>
+      <th>Slab</th>
+      <td>          </td>
+      <td> 1</td>
+      <td>         0</td>
+      <td>         </td>
+      <td>         0</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>          </td>
+      <td>  </td>
+      <td>          </td>
+      <td>        1</td>
+      <td>         1</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">6</th>
+      <th>Slab</th>
+      <td> 0.5888889</td>
+      <td>  </td>
+      <td> 0.8388889</td>
+      <td>         </td>
+      <td> 0.8388889</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td> 0.4111111</td>
+      <td>  </td>
+      <td>          </td>
+      <td> 1.161111</td>
+      <td>  1.161111</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">5</th>
+      <th>Slab</th>
+      <td> 0.7888889</td>
+      <td>  </td>
+      <td>  1.038889</td>
+      <td>         </td>
+      <td>  1.038889</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td> 0.6222222</td>
+      <td>  </td>
+      <td>          </td>
+      <td> 1.122222</td>
+      <td>  1.122222</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">4</th>
+      <th>Slab</th>
+      <td>  1.622222</td>
+      <td>  </td>
+      <td>  1.872222</td>
+      <td>         </td>
+      <td>  1.872222</td>
+      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Reshores</th>
+      <td>         0</td>
+      <td>  </td>
+      <td>          </td>
+      <td>     0.25</td>
+      <td>      0.25</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">3</th>
+      <th>Slab</th>
+      <td>         1</td>
+      <td>  </td>
+      <td>      1.25</td>
+      <td>         </td>
+      <td>      1.25</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>          </td>
+      <td>  </td>
+      <td>          </td>
+      <td>         </td>
+      <td>          </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Removing the reshores on level 4 results in what?</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[23]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_reshore</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[23]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Remove Reshores at Level 4</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">7</th>
+      <th>Slab</th>
+      <td>         0</td>
+      <td>     </td>
+      <td>    0.0625</td>
+      <td>          </td>
+      <td>    0.0625</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>         1</td>
+      <td>     </td>
+      <td>          </td>
+      <td>    0.9375</td>
+      <td>    0.9375</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">6</th>
+      <th>Slab</th>
+      <td> 0.8388889</td>
+      <td>     </td>
+      <td> 0.9013889</td>
+      <td>          </td>
+      <td> 0.9013889</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>  1.161111</td>
+      <td>     </td>
+      <td>          </td>
+      <td>  1.036111</td>
+      <td>  1.036111</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">5</th>
+      <th>Slab</th>
+      <td>  1.038889</td>
+      <td>     </td>
+      <td>  1.101389</td>
+      <td>          </td>
+      <td>  1.101389</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>  1.122222</td>
+      <td>     </td>
+      <td>          </td>
+      <td> 0.9347222</td>
+      <td> 0.9347222</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">4</th>
+      <th>Slab</th>
+      <td>  1.872222</td>
+      <td>     </td>
+      <td>  1.934722</td>
+      <td>          </td>
+      <td>  1.934722</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>      0.25</td>
+      <td> 0.25</td>
+      <td>          </td>
+      <td>          </td>
+      <td>          </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Removing the shores on level 5 is next.</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[24]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_shore</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[24]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Remove Shores at Level 5</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">7</th>
+      <th>Slab</th>
+      <td>    0.0625</td>
+      <td>          </td>
+      <td> 0.3740741</td>
+      <td>          </td>
+      <td> 0.3740741</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>    0.9375</td>
+      <td>          </td>
+      <td>          </td>
+      <td> 0.6259259</td>
+      <td> 0.6259259</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">6</th>
+      <th>Slab</th>
+      <td> 0.9013889</td>
+      <td>          </td>
+      <td>  1.212963</td>
+      <td>          </td>
+      <td>  1.212963</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>  1.036111</td>
+      <td>          </td>
+      <td>          </td>
+      <td>  0.412963</td>
+      <td>  0.412963</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">5</th>
+      <th>Slab</th>
+      <td>  1.101389</td>
+      <td>          </td>
+      <td>  1.412963</td>
+      <td>          </td>
+      <td>  1.412963</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td> 0.9347222</td>
+      <td> 0.9347222</td>
+      <td>          </td>
+      <td>          </td>
+      <td>          </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Reshore level 5 and oure level 8.</p>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -4248,7 +4862,10 @@ Reshore does not affect loads.  To show the reshore step set show_reshore to Tru
 </div>
 </div>
 
-</div>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -4271,7 +4888,7 @@ In&nbsp;[26]:
     Out[26]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
+<strong>Action taken: Reshore level 5, and Pour a Slab on Level 8</strong><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th rowspan = 2>Level</th>
@@ -4286,75 +4903,93 @@ In&nbsp;[26]:
   </thead>
   <tbody>
     <tr>
-      <th rowspan="2" valign="top">4</th>
+      <th rowspan="2" valign="top">8</th>
       <th>Slab</th>
-      <td>  </td>
-      <td> 1</td>
-      <td>        0</td>
       <td>          </td>
+      <td> 1</td>
+      <td>         0</td>
+      <td>         </td>
       <td>         0</td>
       <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Shores</th>
+      <td>          </td>
       <td>  </td>
-      <td>  </td>
-      <td>         </td>
-      <td>         1</td>
+      <td>          </td>
+      <td>        1</td>
       <td>         1</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">3</th>
+      <th rowspan="2" valign="top">7</th>
       <th>Slab</th>
-      <td> 1</td>
+      <td> 0.3740741</td>
       <td>  </td>
-      <td> 1.333333</td>
+      <td> 0.6240741</td>
+      <td>         </td>
+      <td> 0.6240741</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td> 0.6259259</td>
+      <td>  </td>
       <td>          </td>
-      <td>  1.333333</td>
+      <td> 1.375926</td>
+      <td>  1.375926</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">6</th>
+      <th>Slab</th>
+      <td>  1.212963</td>
+      <td>  </td>
+      <td>  1.462963</td>
+      <td>         </td>
+      <td>  1.462963</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>  0.412963</td>
+      <td>  </td>
+      <td>          </td>
+      <td> 0.912963</td>
+      <td>  0.912963</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">5</th>
+      <th>Slab</th>
+      <td>  1.412963</td>
+      <td>  </td>
+      <td>  1.662963</td>
+      <td>         </td>
+      <td>  1.662963</td>
       <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Reshores</th>
-      <td> 0</td>
+      <td>         0</td>
       <td>  </td>
-      <td>         </td>
-      <td> 0.6666667</td>
-      <td> 0.6666667</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">2</th>
-      <th>Slab</th>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1.333333</td>
       <td>          </td>
-      <td>  1.333333</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+      <td>     0.25</td>
+      <td>      0.25</td>
     </tr>
     <tr>
-      <th>Reshores</th>
-      <td> 0</td>
-      <td>  </td>
-      <td>         </td>
-      <td> 0.3333333</td>
-      <td> 0.3333333</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">1</th>
+      <th rowspan="2" valign="top">4</th>
       <th>Slab</th>
-      <td> 1</td>
+      <td>         1</td>
       <td>  </td>
-      <td> 1.333333</td>
-      <td>          </td>
-      <td>  1.333333</td>
+      <td>      1.25</td>
+      <td>         </td>
+      <td>      1.25</td>
       <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Empty</th>
-      <td>  </td>
-      <td>  </td>
-      <td>         </td>
       <td>          </td>
+      <td>  </td>
+      <td>          </td>
+      <td>         </td>
       <td>          </td>
     </tr>
   </tbody>
@@ -4368,6 +5003,18 @@ In&nbsp;[26]:
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What would happen to the loads on Level 5&#39;s slab and level 6&#39;s shores if we remove the reshores on level 5?</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -4390,7 +5037,7 @@ In&nbsp;[27]:
     Out[27]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
+<strong>Action taken: Remove Reshores at Level 5</strong><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th rowspan = 2>Level</th>
@@ -4405,57 +5052,75 @@ In&nbsp;[27]:
   </thead>
   <tbody>
     <tr>
-      <th rowspan="2" valign="top">4</th>
+      <th rowspan="2" valign="top">8</th>
       <th>Slab</th>
       <td>         0</td>
-      <td>          </td>
-      <td> 0.1111111</td>
-      <td>          </td>
-      <td> 0.1111111</td>
+      <td>     </td>
+      <td>    0.0625</td>
+      <td>         </td>
+      <td>    0.0625</td>
       <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Shores</th>
       <td>         1</td>
+      <td>     </td>
       <td>          </td>
-      <td>          </td>
-      <td> 0.8888889</td>
-      <td> 0.8888889</td>
+      <td>   0.9375</td>
+      <td>    0.9375</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">3</th>
+      <th rowspan="2" valign="top">7</th>
       <th>Slab</th>
-      <td>  1.333333</td>
-      <td>          </td>
-      <td>  1.444444</td>
-      <td>          </td>
-      <td>  1.444444</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+      <td> 0.6240741</td>
+      <td>     </td>
+      <td> 0.6865741</td>
+      <td>         </td>
+      <td> 0.6865741</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
-      <th>Reshores</th>
-      <td> 0.6666667</td>
+      <th>Shores</th>
+      <td>  1.375926</td>
+      <td>     </td>
       <td>          </td>
-      <td>          </td>
-      <td> 0.4444444</td>
-      <td> 0.4444444</td>
+      <td> 1.250926</td>
+      <td>  1.250926</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">2</th>
+      <th rowspan="2" valign="top">6</th>
       <th>Slab</th>
-      <td>  1.333333</td>
+      <td>  1.462963</td>
+      <td>     </td>
+      <td>  1.525463</td>
+      <td>         </td>
+      <td>  1.525463</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>  0.912963</td>
+      <td>     </td>
       <td>          </td>
-      <td>  1.444444</td>
-      <td>          </td>
-      <td>  1.444444</td>
+      <td> 0.725463</td>
+      <td>  0.725463</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">5</th>
+      <th>Slab</th>
+      <td>  1.662963</td>
+      <td>     </td>
+      <td>  1.725463</td>
+      <td>         </td>
+      <td>  1.725463</td>
       <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Empty</th>
-      <td> 0.3333333</td>
-      <td> 0.3333333</td>
+      <td>      0.25</td>
+      <td> 0.25</td>
       <td>          </td>
-      <td>          </td>
+      <td>         </td>
       <td>          </td>
     </tr>
   </tbody>
@@ -4469,6 +5134,18 @@ In&nbsp;[27]:
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Next remove the shores on level 6.</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -4491,7 +5168,7 @@ In&nbsp;[28]:
     Out[28]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
+<strong>Action taken: Remove Shores at Level 6</strong><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th rowspan = 2>Level</th>
@@ -4506,57 +5183,227 @@ In&nbsp;[28]:
   </thead>
   <tbody>
     <tr>
-      <th rowspan="2" valign="top">4</th>
+      <th rowspan="2" valign="top">8</th>
       <th>Slab</th>
-      <td> 0.1111111</td>
+      <td>    0.0625</td>
+      <td>         </td>
+      <td>  0.304321</td>
+      <td>         </td>
+      <td>  0.304321</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>    0.9375</td>
+      <td>         </td>
       <td>          </td>
+      <td> 0.695679</td>
+      <td>  0.695679</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">7</th>
+      <th>Slab</th>
+      <td> 0.6865741</td>
+      <td>         </td>
+      <td> 0.9283951</td>
+      <td>         </td>
+      <td> 0.9283951</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>  1.250926</td>
+      <td>         </td>
+      <td>          </td>
+      <td> 0.767284</td>
+      <td>  0.767284</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">6</th>
+      <th>Slab</th>
+      <td>  1.525463</td>
+      <td>         </td>
+      <td>  1.767284</td>
+      <td>         </td>
+      <td>  1.767284</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>  0.725463</td>
+      <td> 0.725463</td>
+      <td>          </td>
+      <td>         </td>
+      <td>          </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Remove the shores on level 7.</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[29]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_shore</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[29]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Remove Shores at Level 7</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">8</th>
+      <th>Slab</th>
+      <td>  0.304321</td>
+      <td>         </td>
+      <td> 0.687963</td>
+      <td>         </td>
+      <td> 0.687963</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>  0.695679</td>
+      <td>         </td>
+      <td>         </td>
+      <td> 0.312037</td>
+      <td> 0.312037</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">7</th>
+      <th>Slab</th>
+      <td> 0.9283951</td>
+      <td>         </td>
+      <td> 1.312037</td>
+      <td>         </td>
+      <td> 1.312037</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>  0.767284</td>
+      <td> 0.767284</td>
+      <td>         </td>
+      <td>         </td>
+      <td>         </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Remove the shores on level 8.</p>
+</div>
+</div>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[30]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_shore</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[30]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Remove Shores at Level 8</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">8</th>
+      <th>Slab</th>
+      <td> 0.687963</td>
+      <td>         </td>
       <td> 1</td>
-      <td>  </td>
+      <td> </td>
       <td> 1</td>
       <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Empty</th>
-      <td> 0.8888889</td>
-      <td> 0.8888889</td>
+      <td> 0.312037</td>
+      <td> 0.312037</td>
       <td>  </td>
-      <td>  </td>
-      <td>  </td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">3</th>
-      <th>Slab</th>
-      <td>  1.444444</td>
-      <td>          </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Reshores</th>
-      <td> 0.4444444</td>
-      <td>          </td>
-      <td>  </td>
-      <td> 0</td>
-      <td> 0</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">2</th>
-      <th>Slab</th>
-      <td>  1.444444</td>
-      <td>          </td>
-      <td> 1</td>
-      <td>  </td>
-      <td> 1</td>
-      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Empty</th>
-      <td>          </td>
-      <td>          </td>
-      <td>  </td>
-      <td>  </td>
+      <td> </td>
       <td>  </td>
     </tr>
   </tbody>
@@ -4570,14 +5417,392 @@ In&nbsp;[28]:
 </div>
 
 </div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[29]:
+In&nbsp;[31]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">reshore</span>
+<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">show_all</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[31]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Remove Shores at Level 8</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">8</th>
+      <th>Slab</th>
+      <td> 0.687963</td>
+      <td>         </td>
+      <td> 1</td>
+      <td> </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td> 0.312037</td>
+      <td> 0.312037</td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">7</th>
+      <th>Slab</th>
+      <td> 1.312037</td>
+      <td>         </td>
+      <td> 1</td>
+      <td> </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>         </td>
+      <td>         </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">6</th>
+      <th>Slab</th>
+      <td>        1</td>
+      <td>         </td>
+      <td> 1</td>
+      <td> </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>         </td>
+      <td>         </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">5</th>
+      <th>Slab</th>
+      <td>        1</td>
+      <td>         </td>
+      <td> 1</td>
+      <td> </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>         </td>
+      <td>         </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">4</th>
+      <th>Slab</th>
+      <td>        1</td>
+      <td>         </td>
+      <td> 1</td>
+      <td> </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>         </td>
+      <td>         </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">3</th>
+      <th>Slab</th>
+      <td>        1</td>
+      <td>         </td>
+      <td> 1</td>
+      <td> </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>         </td>
+      <td>         </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">2</th>
+      <th>Slab</th>
+      <td>        1</td>
+      <td>         </td>
+      <td> 1</td>
+      <td> </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>         </td>
+      <td>         </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1</th>
+      <th>Slab</th>
+      <td>        1</td>
+      <td>         </td>
+      <td> 1</td>
+      <td> </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td>         </td>
+      <td>         </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Lowest-Loads-from-the-Simplist-Procedure">Lowest Loads from the Simplist Procedure<a class="anchor-link" href="#Lowest-Loads-from-the-Simplist-Procedure">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<audio controls data-autoplay preload>
+ <source src="https://github.com/damontallen/Construction-Lectures/raw/master/Intro/FILE%20NAME.mp3"
+         type='audio/mp3'>
+ <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
+</audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The following series of pouring, removal of shores and adding reshores will result in the lowest loads you can have in a pour.  The idea is to reshore every level and strip the forms and reshore before every pour.  In this way no slab will carry omre than its own self weight and the shores and reshore will only ever carry one slab weight per level.  You can only do this if you can afford to have shore and reshores on every level.</p>
+<p>I&#39;m arranging these slides vertically as well since it becomes obvious why this is alway the case in a rather short while.</p>
+</div>
+</div>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[32]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">Lowest_Loads</span> <span class="o">=</span> <span class="n">building</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[33]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">Lowest_Loads</span><span class="o">.</span><span class="n">show</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[33]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Pour a Slab</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">1</th>
+      <th>Slab</th>
+      <td> </td>
+      <td> 1</td>
+      <td> 0</td>
+      <td>  </td>
+      <td> 0</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td> </td>
+      <td>  </td>
+      <td>  </td>
+      <td> 1</td>
+      <td> 1</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[34]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">Lowest_Loads</span><span class="o">.</span><span class="n">remove_shore</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[34]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Remove Shores at Level 1</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">1</th>
+      <th>Slab</th>
+      <td> 0</td>
+      <td>  </td>
+      <td> 1</td>
+      <td> </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td> 1</td>
+      <td> 1</td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[35]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">Lowest_Loads</span><span class="o">.</span><span class="n">reshore</span>
 </pre></div>
 
 </div>
@@ -4601,14 +5826,16 @@ Reshore does not affect loads.  To show the reshore step set show_reshore to Tru
 </div>
 
 </div>
+    </div></section><section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[30]:
+In&nbsp;[37]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">add_slab</span>
+<div class="highlight"><pre><span class="n">Lowest_Loads</span><span class="o">.</span><span class="n">add_slab</span>
 </pre></div>
 
 </div>
@@ -4620,10 +5847,10 @@ In&nbsp;[30]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[30]:</div>
+    Out[37]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
+<strong>Action taken: Reshore level 1, and Pour a Slab on Level 2</strong><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th rowspan = 2>Level</th>
@@ -4638,76 +5865,259 @@ In&nbsp;[30]:
   </thead>
   <tbody>
     <tr>
-      <th rowspan="2" valign="top">5</th>
+      <th rowspan="2" valign="top">2</th>
       <th>Slab</th>
       <td>  </td>
       <td> 1</td>
-      <td>        0</td>
-      <td>          </td>
-      <td>         0</td>
+      <td> 0</td>
+      <td>  </td>
+      <td> 0</td>
       <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Shores</th>
       <td>  </td>
       <td>  </td>
-      <td>         </td>
-      <td>         1</td>
-      <td>         1</td>
+      <td>  </td>
+      <td> 1</td>
+      <td> 1</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">4</th>
+      <th rowspan="2" valign="top">1</th>
       <th>Slab</th>
       <td> 1</td>
       <td>  </td>
-      <td> 1.333333</td>
-      <td>          </td>
-      <td>  1.333333</td>
+      <td> 1</td>
+      <td>  </td>
+      <td> 1</td>
       <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
       <th>Reshores</th>
       <td> 0</td>
       <td>  </td>
-      <td>         </td>
-      <td> 0.6666667</td>
-      <td> 0.6666667</td>
+      <td>  </td>
+      <td> 1</td>
+      <td> 1</td>
     </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[38]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">Lowest_Loads</span><span class="o">.</span><span class="n">remove_shore</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[38]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Remove Shores at Level 2</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">2</th>
+      <th>Slab</th>
+      <td> 0</td>
+      <td>  </td>
+      <td> 1</td>
+      <td>  </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Empty</th>
+      <td> 1</td>
+      <td> 1</td>
+      <td>  </td>
+      <td>  </td>
+      <td>  </td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1</th>
+      <th>Slab</th>
+      <td> 1</td>
+      <td>  </td>
+      <td> 1</td>
+      <td>  </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Reshores</th>
+      <td> 1</td>
+      <td>  </td>
+      <td>  </td>
+      <td> 0</td>
+      <td> 0</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[39]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">Lowest_Loads</span><span class="o">.</span><span class="n">reshore</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Reshore does not affect loads.  To show the reshore step set show_reshore to True
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[40]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">Lowest_Loads</span><span class="o">.</span><span class="n">add_slab</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[40]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<strong>Action taken: Reshore level 2, and Pour a Slab on Level 3</strong><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th rowspan = 2>Level</th>
+      <th rowspan = 2>Item</th>
+      <th rowspan = 2>Starting Loads</th>
+      <th rowspan = 2>Load to be Distributed</th>
+      <th rowspan = 2>New Slab Reactions</th>
+      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
+      <th rowspan = 2>Ending Loads</th>
+      <th rowspan = 2>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
       <th rowspan="2" valign="top">3</th>
       <th>Slab</th>
-      <td> 1</td>
       <td>  </td>
-      <td> 1.333333</td>
-      <td>          </td>
-      <td>  1.333333</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Reshores</th>
+      <td> 1</td>
       <td> 0</td>
       <td>  </td>
-      <td>         </td>
-      <td> 0.3333333</td>
-      <td> 0.3333333</td>
+      <td> 0</td>
+      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Shores</th>
+      <td>  </td>
+      <td>  </td>
+      <td>  </td>
+      <td> 1</td>
+      <td> 1</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">2</th>
       <th>Slab</th>
       <td> 1</td>
       <td>  </td>
-      <td> 1.333333</td>
-      <td>          </td>
-      <td>  1.333333</td>
-      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+      <td> 1</td>
+      <td>  </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
     </tr>
     <tr>
-      <th>Empty</th>
+      <th>Reshores</th>
+      <td> 0</td>
       <td>  </td>
       <td>  </td>
-      <td>         </td>
-      <td>          </td>
-      <td>          </td>
+      <td> 1</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1</th>
+      <th>Slab</th>
+      <td> 1</td>
+      <td>  </td>
+      <td> 1</td>
+      <td>  </td>
+      <td> 1</td>
+      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
+    </tr>
+    <tr>
+      <th>Reshores</th>
+      <td> 0</td>
+      <td>  </td>
+      <td>  </td>
+      <td> 1</td>
+      <td> 1</td>
     </tr>
   </tbody>
 </table>
@@ -4723,100 +6133,29 @@ In&nbsp;[30]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[31]:
+In&nbsp;[]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">remove_reshore</span>
+<div class="highlight"><pre> 
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[31]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<strong>Action taken: ...</strong><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th rowspan = 2>Level</th>
-      <th rowspan = 2>Item</th>
-      <th rowspan = 2>Starting Loads</th>
-      <th rowspan = 2>Load to be Distributed</th>
-      <th rowspan = 2>New Slab Reactions</th>
-      <th  rowspan = 2 style="text-align: right;">Number of Slabs Above<br>- Slab Reactions</th>
-      <th rowspan = 2>Ending Loads</th>
-      <th rowspan = 2>Symbol</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="2" valign="top">5</th>
-      <th>Slab</th>
-      <td>         0</td>
-      <td>          </td>
-      <td> 0.1111111</td>
-      <td>          </td>
-      <td> 0.1111111</td>
-      <td rowspan=2><img src="http://i.imgur.com/W6Tqme1.png" alt = "Shored Slab" title = "Shored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Shores</th>
-      <td>         1</td>
-      <td>          </td>
-      <td>          </td>
-      <td> 0.8888889</td>
-      <td> 0.8888889</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">4</th>
-      <th>Slab</th>
-      <td>  1.333333</td>
-      <td>          </td>
-      <td>  1.444444</td>
-      <td>          </td>
-      <td>  1.444444</td>
-      <td rowspan=2><img src="http://i.imgur.com/vMgiW58.png" alt = "Reshored Slab" title = "Reshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Reshores</th>
-      <td> 0.6666667</td>
-      <td>          </td>
-      <td>          </td>
-      <td> 0.4444444</td>
-      <td> 0.4444444</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">3</th>
-      <th>Slab</th>
-      <td>  1.333333</td>
-      <td>          </td>
-      <td>  1.444444</td>
-      <td>          </td>
-      <td>  1.444444</td>
-      <td rowspan=2><img src="http://i.imgur.com/f9HJsu6.png" alt = "Unshored Slab" title = "Unshored Slab"style="max-width:50px; max-height:50px;  float:left; margin-right:3px;"/> </td>
-    </tr>
-    <tr>
-      <th>Empty</th>
-      <td> 0.3333333</td>
-      <td> 0.3333333</td>
-      <td>          </td>
-      <td>          </td>
-      <td>          </td>
-    </tr>
-  </tbody>
-</table>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre> 
+</pre></div>
 
 </div>
-
-</div>
-
 </div>
 </div>
 
