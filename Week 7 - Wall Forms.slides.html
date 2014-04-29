@@ -1757,8 +1757,10 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>By this point in your education you should be aware that concrete does not dry out but rather it cures.  This curing occurs at a specific rate based on the chemistry of the concrete, and the temperature at which it was cast.  Because concrete starts as a liquid but then cures over time, it is possible that if you pour for long enough then at one point the first concrete you poured would have converted into a solid.  This has an effect on the amount of force necessary to contain the in the form work.  Specifically ACI has put out empirical equations, for wall forms, that are allowed to be used to find this lower pressure.</p>
-<p>To start with you have the maximum, hydrostatic pressure.  Normal weight concrete weighs 150 pcf in both solid and liquid states.  So the maximum pressure on a concrete form containing normal weight concrete is just,</p>
+<p>By this point in your education you should be aware that concrete does not dry, but rather it cures.  This curing occurs at a specific rate based on the chemistry of the concrete, and the temperature at which it is cast.  Because, concrete starts as a liquid but then cures over time, it is possible that if you pour for long enough, or slow enough, then at some time, the first concrete you poured will have solidified.  This has an effect on the amount of force necessary to contain the concrete in the form work.  Specifically ACI has put out empirical equations, for wall forms, that are allowed to be used to find this lower pressure.</p>
+<p>The maximum pressure in a form is just hydrostatic pressure.  Normal weight concrete is 150 pcf in both solid and liquid states.  So the maximum pressure on a concrete form, containing normal weight concrete, is just,</p>
+<p>$P = 150 pcf \times h$</p>
+<p>but this can be modified by the chemistry or the density of the concrete so the full equation is,</p>
 <p>$P = C_W \times C_C \times 150 pcf \times h$</p>
 <p>Where:</p>
 <ul>
@@ -1793,7 +1795,8 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For pour rates of less than $7 \frac{ft}{hr}$,</p>
+<p>To account for the effect of curing, ACI replaces the, relatively fixed, height term, with terms that affect the rate of change in the concrete pressure.  Specifically, they replace $h$ with functions based on temperature, and pour rate.</p>
+<p>For pour rates of less than $7 \frac{ft}{hr}$, </p>
 <p>$P = C_W \times C_C \times \left(150 +\frac{9000 \times R}{T}\right)$</p>
 <p>Where:</p>
 <ul>
@@ -1841,7 +1844,7 @@ div.output_prompt {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href = "http://i.imgur.com/HTuUtPz.png"><img src="http://i.imgur.com/HTuUtPz.png" alt = "Wall Form Image (without braces or ties)"style="max-width:300px; max-height:300px; border:1px solid blue; float:right; margin-left:10px;"/></a></p>
-<p>A typicall wall form is made with a sheathing material, usually plywood or plyform, which is used to contain and shape the liquid concrete.  This sheathing is supported by studs which are, in turn, supported by wales.  The wales are usually made from the same lumber as the studs, but just aranged in a doubled up configuration.  These wale are supported by ties simular to the one seen below, but there are many other versions like can be seen <a href="https://www.google.com/search?q=concrete+wall+form+ties&amp;client=ubuntu&amp;channel=fs&amp;tbm=isch&amp;tbo=u&amp;source=univ&amp;sa=X&amp;ei=m6k1U6q9DKmw2gXJ1oGADA&amp;ved=0CDEQsAQ&amp;biw=1280&amp;bih=665">here</a>.</p>
+<p>A typically wall form begins with a sheathing material, usually plywood or plyform, which is used to contain, and shape the liquid concrete.  This sheathing is supported by studs which, in turn, are supported by wales.  The wales are commonly made from the same lumber as the studs, but just arranged in a doubled up configuration.  The wales are supported by ties, and ties typically consist of a deformed metal rod that passes through, and remains in, the concrete.  I&#39;ve shown a couple examples of ties below, but many <a href="https://www.google.com/search?q=concrete+wall+form+ties&amp;client=ubuntu&amp;channel=fs&amp;tbm=isch&amp;tbo=u&amp;source=univ&amp;sa=X&amp;ei=m6k1U6q9DKmw2gXJ1oGADA&amp;ved=0CDEQsAQ&amp;biw=1280&amp;bih=665">other versions are available</a>.</p>
 <p><a></a>
 <a href = "http://www.sweethaven02.com/BldgConst/Bldg02/fig0611.jpg"><img src="http://www.sweethaven02.com/BldgConst/Bldg02/fig0611.jpg" alt = "Snap Tie" Title = "Snap Tie"style="max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-right:3px;"/></a></p>
 <p><a href = "http://www.sweethaven02.com/BldgConst/Bldg02/fig0612.jpg"><img src="http://www.sweethaven02.com/BldgConst/Bldg02/fig0612.jpg" alt = "Wall Form Image (without braces or ties)"style="max-width:300px; max-height:300px; border:1px solid blue; float:left; margin-left:3px;"/></a></p>
@@ -1889,20 +1892,22 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>At this point I need to mention that I may be reffering to the following:</p>
+<p>At this point I need to mention that you should download the following two files since we <em>may</em> be using values in them in some calculations:</p>
 <ul>
 <li><a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/V345.pdf">APA&#39;s Design/Construction Guide: Concrete Forming</a></li>
 <li><a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/D510.pdf">Panel Design Specification</a></li>
 </ul>
-<p>and I <strong>will</strong> need you to download this...</p>
+<p>and you <strong>will</strong> need to download the file below since we <strong>will</strong> be using values from it.</p>
 <ul>
 <li><a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/Y510.pdf">Plywood Design Specification</a></li>
 </ul>
-<p>We will be using Table 2 (Effective Section Properties for Plywood) and Table 3 (Allowable Stresses for Plywood) in the <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/Y510.pdf">Plywood Design Specification</a>.  Though the Design/Construction Guide: Concrete Forming has information on Plyform, a large number of forms are not built using it.  Sanded plywood is commonly used in concrete form work.  </p>
-<p>Obviously plywood and Plyform are not the only forming material used in form work.  Steel is a common form material too.  However, if you are using steel forms then they will have been prefabricated, and you will not be involved in the design process.  This is the reason that we will be looking at designing forms using plywood.  We will also use Plyform for some formwork designs, but plywood is the material that you will most likely design for.  It is relatively inexpensive, versicle, and readily available.  Almost every structure of any size will have some plywood forms used in the construction process.</p>
-<p>The properties of Plyform can be found in <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/V345.pdf">APA&#39;s Design/Construction Guide: Concrete Forming</a>, specifically in Table 12 (Section Properties for Plyform Class I and Class II, and Structural I Plyform) and Table 13 (Allowable Stresses).  Though the properties can be found there, in this class, we will most likely be using the pre-calculated values in Table 7-2 in our Formwork for Concrete text.</p>
-<p>Finally, you may notice that the <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/Y510.pdf">Plywood Design Specification</a> was published in 1998 and the <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/D510.pdf">Panel Design Specification</a> was published in 2012.  Both of these contain the same information but it is arranged in very different formats.  For our purposes the <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/Y510.pdf">Plywood Design Specification</a> is arranged in the most compact fashion.  It will be easier to use the two tables in the 1998 publication than the six tables on the 2012 publication.  </p>
-<p>The 2012 publication does have some clear writing describing the properties of plywood so I would encourage you to down load the <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/D510.pdf">Panel Design Specification</a> and read sections 1.1 Plywood, 2.2.2 Grades, 2.3.3 Sanded, 4.1 Strength axis, and 4.4.4 Shear in the plane of the panel.  Concrete form work should <strong>alway</strong> be constructed with <strong>sanded</strong> plywood.  Otherwise it will adhere to the concrete and be damaged during removal.</p>
+<p>Specifically, we will be using Table 2 (Effective Section Properties for Plywood) and Table 3 (Allowable Stresses for Plywood).  </p>
+<p>You might wonder why the Plywood Design Specifications is more important than the Design/Construction Guide: Concrete Forming.  Even though the Design/Construction Guide: Concrete Forming is specifically about formwork, it mainly has information on Plyform, and many forms are not built using Plyform.  Sanded plywood is more commonly used in concrete form work than Plyform.  Thus the properties found in the Plywood Design Specifications are typically more important than the values in the Design/Construction Guide: Concrete Forming.  </p>
+<p>Obviously plywood and Plyform are not the only forming material used in form work.  Steel is also a common form material, but if you are using steel forms, then they will have been prefabricated, and it is unlikely that you were involved in the design process.  For this reason, we will be studying designing forms using plywood.  One of the reasons it is so common, is that plywood is relatively inexpensive, versicle, and readily available.  Because of this, almost every structure of any size has had plywood forms used, at some stage, in its construction.</p>
+<p>We <em>will</em> use Plyform for <em>some</em> formwork designs.  The properties of Plyform can be found in <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/V345.pdf">APA&#39;s Design/Construction Guide: Concrete Forming</a>, specifically in Table 12 (Section Properties for Plyform Class I and Class II, and Structural I Plyform) and Table 13 (Allowable Stresses).  However, in this class, we will most likely be using the pre-calculated values in Table 7-2 in our Formwork for Concrete text.</p>
+<p>While reading you may notice that the <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/Y510.pdf">Plywood Design Specification</a> I&#39;m having you download was published in 1998, while the <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/D510.pdf">Panel Design Specification</a> was published in 2012.  Both of these files contain the same information, but it is arranged in them in very different formats.  For our purposes the <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/Y510.pdf">Plywood Design Specification</a> is arranged in the most compact fashion.  It will be easier to use the two tables in the 1998 publication than the six tables on the 2012 publication.  </p>
+<p>That being said, the 2012 publication does have some clear writing describing the properties of plywood so I would encourage you to download the <a href="http://www.apawood.org/pdfs/download_pdf.cfm?PDFFilename=managed/D510.pdf">Panel Design Specification</a>, and read sections 1.1 Plywood, 2.2.2 Grades, 2.3.3 Sanded, 4.1 Strength axis, and 4.4.4 Shear in the plane of the panel.  </p>
+<p>Finally, when looking up any values for plywood, keep in mind that you should always use the <strong>sanded plywood</strong> values.  When non-sanded plywood is used in concrete form work, it will adhere to the concrete, and both be damaged, and damage the concrete during its removal.</p>
 </div>
 </div>
 </div></section>
@@ -1929,6 +1934,15 @@ div.output_prompt {
          type='audio/mp3'>
  <p>Your user agent does not support the HTML5 Audio element or the files are missing.</p>
 </audio>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let&#39;s look at an example to see how the design process works.</p>
 </div>
 </div>
 </div>
@@ -2076,7 +2090,7 @@ div.output_prompt {
 <li>All lumber will be 2x4 S4S lumber, No.2 Douglas Fir-Larch with no splits</li>
 <li>Sheathing will be 3/4&quot; plywood from Group 1 species with an S-1 stress rating (Wet)</li>
 <li>Use double wales</li>
-<li>Ties are in standard strengths of 3000 and 4000 lb working loads</li>
+<li>Ties strengths available are 3000 and 4000 lb working loads</li>
 </ul>
 </div>
 </div>
@@ -2085,7 +2099,7 @@ div.output_prompt {
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[1]:
+In&nbsp;[24]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2130,7 +2144,7 @@ In&nbsp;[1]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[2]:
+In&nbsp;[25]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2151,7 +2165,7 @@ In&nbsp;[2]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[3]:
+In&nbsp;[26]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2167,13 +2181,13 @@ In&nbsp;[3]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[3]:</div>
+    Out[26]:</div>
 
 
 <div class="output_latex output_subarea output_pyout">
 $$\text{Since R = 10}\frac{ft}{hr}  \text{ then } P =  150 + \frac{43,400}{T} + \frac{2800 \times R}{T}$$ 
 ${}$
- $$P = 150 + \frac{43,000}{ 80 }+\frac{2800 \times 10 }{ 80 } =  1042 psf $$ 
+ $$P = 150 + \frac{43,400}{ 80 }+\frac{2800 \times 10 }{ 80 } =  1042 psf $$ 
 ${}$
  $$P_{max} = 150 pcf \times h= 150 pcf \times 15 ft$$ 
 ${}$
@@ -2255,7 +2269,7 @@ ${}$
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[4]:
+In&nbsp;[27]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2288,7 +2302,7 @@ In&nbsp;[4]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[5]:
+In&nbsp;[28]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2309,7 +2323,7 @@ In&nbsp;[5]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[6]:
+In&nbsp;[29]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2325,7 +2339,7 @@ In&nbsp;[6]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[6]:</div>
+    Out[29]:</div>
 
 
 <div class="output_latex output_subarea output_pyout">
@@ -2381,7 +2395,7 @@ $$\text{From the Plywood Properties Tables:}$$ $$t_{nom} = 3/4"$$ $$A = 2.884 (i
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For plywood the only adjustment factor you use is the load duraction factor $C_D$.</p>
+<p>For plywood the only adjustment factor we use is the load duraction factor $C_D$.</p>
 <p>So,</p>
 </div>
 </div>
@@ -2389,7 +2403,7 @@ $$\text{From the Plywood Properties Tables:}$$ $$t_{nom} = 3/4"$$ $$A = 2.884 (i
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[7]:
+In&nbsp;[30]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2405,7 +2419,7 @@ In&nbsp;[7]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[7]:</div>
+    Out[30]:</div>
 
 
 <div class="output_latex output_subarea output_pyout">
@@ -2452,7 +2466,7 @@ ${}$
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[8]:
+In&nbsp;[31]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2469,7 +2483,7 @@ In&nbsp;[8]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[9]:
+In&nbsp;[32]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2485,7 +2499,7 @@ In&nbsp;[9]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[9]:</div>
+    Out[32]:</div>
 
 
 <div class="output_latex output_subarea output_pyout">
@@ -2493,7 +2507,7 @@ $$\text{For a pressure of }1042 psf \text{ the line load equals }  1042 plf $$
 ${}$
  $$L = 10.95 \sqrt{\frac{F_b' S}{w}} = 10.95 \sqrt{\frac{1788 psi  \times 0.412 in^3 }{ 1042 plf }} =9.20" \text{ (due to bending)}$$ 
 ${}$
- $$L = \frac{F_s'}{0.6 w}\times \frac{I b }{Q} \times \frac{12 in}{1 ft} =\frac{55 psi }{0.6 \times  1042 plf }\times  6.762 in^2 \times \frac{12 in}{1 ft} = 7.13" \text{ (due to rolling shear)}$$ 
+ $$L = \frac{20 \times F_s'}{w}\times \frac{I b }{Q} =\frac{20 \times 55 psi }{ 1042 plf }\times  6.762 in^2  = 7.13" \text{ (due to rolling shear)}$$ 
 ${}$
  $$L = 1.69 \sqrt[3]{\frac{E' I}{w}} =1.69 \sqrt[3]{\frac{1.50E+06 psi  \times  0.197 in^4 }{ 1042 plf }} =11.10" \text{ (for }\Delta = L/360 \text{)}$$ 
 ${}$
@@ -2550,19 +2564,19 @@ ${}$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We want the spacing such that the edges of the sheet of plywood are always supported by a stud.  To do this you should know that the standard size of a sheet of plywood, and Plyform, is 4ft by 8ft (48&quot;x96&quot;).  Since the long direction of the plywood will be perpendicular to the studs, if we <em>only</em> support the edges of the plywood with studs then the spacing would be 96&quot; on center.</p>
+<p>We want the spacing such that the edges of the sheet of plywood are always supported by a stud.  To do this you should know that the standard size of sheets of plywood, and Plyforms, is 4ft by 8ft (48&quot;x96&quot;).  Since the long direction of the plywood will be perpendicular to the studs, if we <em>only</em> support the edges of the plywood with studs then the spacing would be 96&quot; on center.</p>
 <p><a href = "http://i.imgur.com/Bu5KLIj.png"><img src="http://i.imgur.com/Bu5KLIj.png" alt = 'Studs at 96" on Center' Title = 'Studs at 96" on Center' style="max-width:200px; max-height:200px; border:1px solid blue; float:left; margin-right:3px;"/></a></p>
 <p>If we add another stud we can cut the spacing in half to 48&quot; on center.</p>
 <p>$\frac{96}{2} = 48"$</p>
 <p>Adding another stud our spacing becomes,</p>
 <p>$\frac{96}{3} = 32"$ on center.</p>
-<p>Every time we add another stud we have a whole number in the divisor.  We use that to our advantage we determining the appropriate spacing of our supports. For instance if we take the minimum limit we found for the stud support spacing, 7.13&quot; and divide 8 ft (96&quot;) by it.</p>
+<p>Every time we add another stud we have a whole number in the divisor.  We use that to our advantage we determining the appropriate spacing of our supports. For instance if we take the minimum limit we found for the stud support spacing, 7.13&quot;, and divide 8 ft (96&quot;) by it.</p>
 <p>$\frac{96"}{7.13"}= 13.46 \text{ This is not a whole number.}$</p>
 <p><a href = "http://i.imgur.com/KLrjVl0.jpg"><img src="http://i.imgur.com/KLrjVl0.jpg" alt = "Tape Measure's Black Diamond" Title = "Tape Measure's Black Diamond" style="max-width:200px; max-height:200px; border:1px solid blue; float:right; margin-left:10px;"/></a></p>
 <p>We need a spacing that is smaller than our rolling shear limit, and divides evenly into 96&quot;, but results in the least number of studs.</p>
-<p>I happen to know that the next larger number than 13.46 that divides 96&quot; evenly is 16.</p>
+<p>I happen to know that the next number larger than 13.46 that divides 96&quot; evenly is 16.</p>
 <p>$\frac{96"}{16} = 6"$ on center.</p>
-<p>The reason I didn&#39;t use 14 is that you cannot find 6.8571&quot; on any tape measure.  You need to remember that this form is gonig to be built by construction workers and they will need to be able to not only easily find the spacing you pick on their tape measures, but also all the multiples of that spacing.  Those values that can easily be found for an 8 ft sheet of plywood are, 3&quot;, 4&quot;, 6&quot;, 8&quot;, 12&quot; (1 ft), 16&quot;, 19.2&quot;, 24&quot; (2 ft), 32&quot;, and 48&quot; (4 ft).  Why is 19.2&quot; on the list?  In the picture of the tape measure you&#39;ll see a black diamond at 19.2&quot;.  This corresponds to 96&quot;/5.  There are special indicators for every 16&quot; and 1 ft increment too.  A complete list of usable spacings can be found <a href="https://www.dropbox.com/s/pyzxpv0aipadbri/Allowable%20Spacings.pdf">here</a>.</p>
+<p>The reason I didn&#39;t use 14 is that you cannot find 6.8571&quot; on any tape measure.  You need to remember that this form is gonig to be built by construction workers, and they will need to be able to not only easily find the spacing you pick on their tape measures, but also all the multiples of that spacing.  Those values that can easily be found for an 8 ft sheet of plywood are, 3&quot;, 4&quot;, 6&quot;, 8&quot;, 12&quot; (1 ft), 16&quot;, 19.2&quot;, 24&quot; (2 ft), 32&quot;, and 48&quot; (4 ft).  Why is 19.2&quot; on the list?  In the picture of the tape measure you&#39;ll see a black diamond at 19.2&quot;.  This corresponds to 96&quot;/5.  There are special indicators for every 16&quot; and 1 ft increment too.  A complete list of usable spacings can be found <a href="https://www.dropbox.com/s/pyzxpv0aipadbri/Allowable%20Spacings.pdf">here</a>.</p>
 </div>
 </div>
 </div></section>
@@ -2596,7 +2610,7 @@ ${}$
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[10]:
+In&nbsp;[33]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2629,7 +2643,7 @@ No.2 Douglas Fir-Larch
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[11]:
+In&nbsp;[34]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2683,7 +2697,7 @@ E = 1.600E+06 psi
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[12]:
+In&nbsp;[35]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2699,11 +2713,11 @@ In&nbsp;[12]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[12]:</div>
+    Out[35]:</div>
 
 
 <div class="output_latex output_subarea output_pyout">
-$$F_b'=F_b \times C_D \times C_F \times C_M \times C_r$$ $$F_b'=900 psi\times 1.25 \times 1.5 \times 0.85 \times 1.15$$  $$F_b' = 1649.53 psi$$ 
+$$F_b'=F_b \times C_D \times C_F \times C_M \times C_r$$ $$F_b'=900 psi\times 1.25 \times 1.5 \times 0.85 \times 1.15 $$ $$F_b' = 1649.53 psi$$ 
 ${}$
  $$F_v'=F_v \times C_D \times C_M $$ $$F_v'=180 psi \times 1.25 \times 0.97 $$ $$F_v' = 218.25 psi$$ 
 ${}$
@@ -2725,7 +2739,7 @@ ${}$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We apply $C_r$ to the bending stress because the studs are connected to the plywood and are spaced less than 24&quot; appart.  The $C_M$ factor is applied to all the values because the problem statement indictated that all the lumber was wet.</p>
+<p>We apply $C_r$ to the bending stress because the studs are connected to the plywood, and are spaced less than 24&quot; appart.  The $C_M$ factor is applied to all the values, because the problem statement indictated that all the lumber was wet.</p>
 </div>
 </div>
 </div></section>
@@ -2767,7 +2781,7 @@ ${}$
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[13]:
+In&nbsp;[36]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2783,7 +2797,7 @@ In&nbsp;[13]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[13]:</div>
+    Out[36]:</div>
 
 
 <div class="output_latex output_subarea output_pyout">
@@ -2808,7 +2822,7 @@ $$\text{Line load} = w = \text{pressure}\times\text{tributary width}$$ $$w = P \
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[14]:
+In&nbsp;[37]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2824,7 +2838,7 @@ In&nbsp;[14]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[14]:</div>
+    Out[37]:</div>
 
 
 <div class="output_latex output_subarea output_pyout">
@@ -2881,7 +2895,7 @@ ${}$
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href = "http://i.imgur.com/z279ije.png"><img src="http://i.imgur.com/z279ije.png" alt = "Bearing Area" title = "Bearing Area"style="max-width:300px; max-height:300px; border:1px solid blue; float:right; margin-left:10px;"/></a></p>
-<p>Where the studs are supported by the wales there is a lot of force being transmitted through a relatively small area.  That area is just,</p>
+<p>Where the studs are supported by the wales there is a lot of force being transmitted through a relatively small area.  In this case, that area is,</p>
 <p>$A_{bearing} = (1.5" \times 1.5") \times 2 = 4.5 in^2$</p>
 <p>The load that is on that area is the pressure times the tributary area, or,</p>
 <p>$\text{Bearing Load } = P_{bearing} = P \times A_{trib}$</p>
@@ -2894,7 +2908,7 @@ ${}$
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[15]:
+In&nbsp;[38]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2910,7 +2924,7 @@ In&nbsp;[15]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[16]:
+In&nbsp;[39]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2926,7 +2940,7 @@ In&nbsp;[16]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[16]:</div>
+    Out[39]:</div>
 
 
 <div class="output_latex output_subarea output_pyout">
@@ -2977,7 +2991,7 @@ ${}$
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[17]:
+In&nbsp;[40]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3002,7 +3016,7 @@ In&nbsp;[17]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[18]:
+In&nbsp;[41]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3018,7 +3032,7 @@ In&nbsp;[18]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[18]:</div>
+    Out[41]:</div>
 
 
 <div class="output_latex output_subarea output_pyout">
@@ -3036,8 +3050,8 @@ $$\text{Line load} = w = \text{pressure}\times\text{tributary width}$$ $$w = P \
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Since the wales are simply twice as wide of the studs and are made of the same material we can reuse some of the allowable stresses from the studs.  </p>
-<p>$F_v'$, and $E'$ are exactly the same.  $F_b'$ is almost the same except when we calculate it we cannot apply the adjustment factor $C_r$.  This is because the wals are not in direct contact with the plywood.  So instead of</p>
+<p>Since the wales are simply twice as wide of the studs, and are made of the same material, we can reuse some of the allowable stresses from the studs.  </p>
+<p>$F_v'$, and $E'$ are exactly the same.  $F_b'$ is almost the same except when we calculate it we cannot apply the adjustment factor $C_r$.  This is because the wales are not in direct contact with the plywood.  So instead of</p>
 <p>$F_{b,studs}' = F_b \times C_D \times C_F \times C_M \times C_r$ we have,</p>
 <p>$F_{b,wales}' = F_b \times C_D \times C_F \times C_M$ so,</p>
 <p>$$F_{b, wales}' = \frac{F_{b,studs}'}{C_r}$$</p>
@@ -3089,7 +3103,7 @@ $$\text{Line load} = w = \text{pressure}\times\text{tributary width}$$ $$w = P \
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[19]:
+In&nbsp;[42]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3107,7 +3121,7 @@ In&nbsp;[19]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[20]:
+In&nbsp;[43]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3123,7 +3137,7 @@ In&nbsp;[20]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[20]:</div>
+    Out[43]:</div>
 
 
 <div class="output_latex output_subarea output_pyout">
@@ -3178,7 +3192,7 @@ ${}$
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[21]:
+In&nbsp;[44]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3203,7 +3217,7 @@ In&nbsp;[21]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[22]:
+In&nbsp;[45]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3219,7 +3233,7 @@ In&nbsp;[22]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[22]:</div>
+    Out[45]:</div>
 
 
 <div class="output_latex output_subarea output_pyout">
@@ -3267,7 +3281,7 @@ ${}$
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[23]:
+In&nbsp;[46]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3283,7 +3297,7 @@ In&nbsp;[23]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[23]:</div>
+    Out[46]:</div>
 
 
 <div class="output_latex output_subarea output_pyout">
@@ -3329,7 +3343,7 @@ ${}$
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[46]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
