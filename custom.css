@@ -2,9 +2,9 @@
 /*background-color: #f6f6f6;*/
 /*background-image:url("Dorsey and Gable Trim Dec 2003 001.jpg");*/
 body {
-/*background-color: #B0E0E7;*/
-background-image:url("college_logo_big.png");
-background-repeat: no-repeat;
+background-color: #B0E0E7;
+/*background-image:url("college_logo_big.png");*/
+/*background-repeat: no-repeat;*/
 
 }
 .reveal p {
