@@ -13,9 +13,9 @@ color: white;
 .reveal ul, ol {
 color: white;
 }
-div.output_area pre {
+/*div.output_area pre {
 color: white;
-}
+}*/
 div.output_stderr {
 background: #F00;
 }
