@@ -2499,13 +2499,13 @@ ${}$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If we were using wooden yokes, we would need to determine the load on the corner fasteners of the yoke based on our $18.23"$ spacing.  This load is approximately:</p>
+<p>If we were using wooden yokes, we would need to determine the load on the corner fasteners of the yoke based on our $13.86"$ spacing.  This load is approximately:</p>
 <p>$F = \text{Pressure} \times \text{Tributary Area} \times \sqrt{2}$</p>
 <p>The $\sqrt{2}$ is because the load is coming from two sides of the form.</p>
 <p>$\text{Tributary Area} = \frac{1}{2} \text{Concrete Width}\times\text{Clamp Spacing}$  so,</p>
-<p>$F = 1500 psf \times \frac{20"}{2} \times \frac{1 ft}{12 in}\times 18.23"\times \frac{1 ft}{12 in} \times \sqrt{2}$</p>
-<p>$F = 2686 lbs$</p>
-<p>That is too high for a nailed connection so we would need to bolt it.  Additionally, we would need to determine if 2x4 yokes are even strong enough to carry the line load of $w = 1500 psf \times 18.23" \times \frac{1 ft}{12 in} = 2279 plf$ over the span of $24.5"$.   We can see that it probably would not be adequate, since our maximum stud spacing, on the flat, is $18.23"$.  We would either need to reduce our yoke spacing or use larger material.  </p>
+<p>$F = 1500 psf \times \frac{20"}{2} \times \frac{1 ft}{12 in}\times 13.86"\times \frac{1 ft}{12 in} \times \sqrt{2}$</p>
+<p>$F = 2042 lbs$</p>
+<p>That is too high for a nailed connection so we would need to bolt it.  Additionally, we would need to determine if 2x4 yokes are even strong enough to carry the line load of $w = 1500 psf \times 13.86" \times \frac{1 ft}{12 in} = 1733 plf$ over the span of $24.5"$.   We can see that it probably would not be adequate, since our maximum stud support spacing, on the flat, is $13.86"$.  We would either need to reduce our yoke spacing or use larger material.  </p>
 <p>Additionally this is just for the bottom yoke.  We would need to recalculate everything for every yoke above that one.  You can see why column clamps are so popular.</p>
 </div>
 </div>
@@ -2539,14 +2539,51 @@ ${}$
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[12]:
+In&nbsp;[13]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre> 
+<div class="highlight"><pre><span class="n">yoke</span><span class="o">=</span><span class="n">two_by_four</span><span class="p">()</span> 
+<span class="n">yoke</span><span class="o">.</span><span class="n">F_b</span> <span class="o">=</span> <span class="mi">900</span> <span class="c">#psi</span>
+<span class="n">yoke</span><span class="o">.</span><span class="n">F_v</span> <span class="o">=</span> <span class="mi">180</span> <span class="c">#psi</span>
+<span class="n">yoke</span><span class="o">.</span><span class="n">F_c_p</span> <span class="o">=</span> <span class="mi">625</span> <span class="c">#psi</span>
+<span class="n">yoke</span><span class="o">.</span><span class="n">E</span> <span class="o">=</span> <span class="mi">1600000</span> <span class="c">#psi</span>
+<span class="n">yoke</span><span class="o">.</span><span class="n">C_D</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">yoke</span><span class="o">.</span><span class="n">C_F</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">yoke</span><span class="o">.</span><span class="n">C_fu</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">yoke</span><span class="o">.</span><span class="n">C_M</span><span class="o">.</span><span class="n">wet</span><span class="o">=</span><span class="n">Wet</span>
+<span class="n">yoke_spacing</span> <span class="o">=</span> <span class="n">board_test</span><span class="p">(</span><span class="n">yoke</span><span class="p">,</span><span class="n">w</span><span class="p">,</span> <span class="n">wale</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">yoke_spacing</span><span class="p">[</span><span class="s">&#39;work&#39;</span><span class="p">]</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[13]:</div>
+
+
+<div class="output_latex output_subarea output_pyout">
+$$\text{For a line load of }w =  1125 plf $$ 
+${}$
+ $$L = 10.95 \sqrt{\frac{F_b' S}{w}} = 10.95 \sqrt{\frac{1148 psi  \times 3.062 in^3 }{ 1125 plf }} =19.35" \text{ (due to bending)}$$ 
+${}$
+ $$L = 13.33 \times \frac{F_v' b d}{w} + 2 d = 13.33 \times \frac{175 psi \times 1.50" \times 3.50" }{ 1125 plf } + 2 \times 3.50"  = 17.86"  \text{ (due to shear)} $$ 
+${}$
+ $$L = 1.69 \sqrt[3]{\frac{E' I}{w}} =1.69 \sqrt[3]{\frac{1.44E+06 psi  \times  5.359 in^4 }{ 1125 plf }} =32.11" \text{ (for }\Delta = L/360 \text{)}$$ 
+${}$
+ $$L = 3.23 \sqrt[4]{\frac{E' I}{w}} =3.23 \sqrt[4]{\frac{1.44E+06 psi  \times  5.359 in^4 }{ 1125 plf }} =29.40" \text{ (for }\Delta = 1/16" \text{)}$$ 
+${}$
+ $$\text{The maximum spacing between clamps is 17.86".}$$
+</div>
+
+</div>
+
 </div>
 </div>
 
